@@ -16,7 +16,7 @@ if ( $navbar_toggle != 'none' ) {
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>' ); ?>
-					<?php echo apply_filters( 'smallermobs_navbar_brand', '<a class="navbar-brand text" href="' . home_url('/') . '">' . get_bloginfo( 'name' ) . '</a>' ); ?>
+					<?php //echo apply_filters( 'smallermobs_navbar_brand', '<a class="navbar-brand text" href="' . home_url('/') . '">' . get_bloginfo( 'name' ) . '</a>' ); ?>
 				</div>
 				<?php if ( has_action( 'smallermobs_pre_main_nav' ) ) : ?>
 					<div class="nav-extras">

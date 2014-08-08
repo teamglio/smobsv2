@@ -6,8 +6,11 @@ function smallermobs_scripts() {
 
 	$stylesheet_url = apply_filters( 'smallermobs_main_stylesheet_url', smallermobs_ASSETS_URL . '/css/style-default.css' );
 	$stylesheet_ver = apply_filters( 'smallermobs_main_stylesheet_ver', null );
+	$smobs_css_url = apply_filters( 'smobs_css_url', smallermobs_ASSETS_URL . '/css/smobs.css' );
+	$smobs_css_ver = apply_filters( 'smobs_css_ver', null );
 
 	wp_enqueue_style( 'smallermobs_css', $stylesheet_url, false, $stylesheet_ver );
+	wp_enqueue_style( 'smobs_css', $smobs_css_url, false, $smobs_css_ver );
 
 	wp_register_script( 'modernizr', smallermobs_ASSETS_URL . '/js/vendor/modernizr-2.7.0.min.js', false, null, false );
 	wp_register_script( 'fitvids', smallermobs_ASSETS_URL . '/js/vendor/jquery.fitvids.js',false, null, true  );

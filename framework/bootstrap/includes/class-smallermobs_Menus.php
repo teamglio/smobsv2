@@ -244,8 +244,9 @@ if ( ! class_exists( 'smallermobs_Menus' ) ) {
 
 			if ( has_nav_menu( 'secondary_navigation' ) ) : ?>
 
-				<?php echo $ss_framework->open_container( 'div' ); ?>
-					<header class="secondary navbar navbar-default <?php echo self::navbar_class( 'secondary' ); ?>" role="banner">
+					<header class="secondary navbar navbar-default navbar-static-top <?php echo self::navbar_class( 'secondary' ); ?>" role="banner">
+						<?php echo $ss_framework->open_container( 'div' ); ?>
+						<div class="navbar-inner">
 						<button data-target=".nav-secondary" data-toggle="collapse" type="button" class="navbar-toggle">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -258,8 +259,9 @@ if ( ! class_exists( 'smallermobs_Menus' ) ) {
 						<nav class="nav-secondary navbar-collapse collapse" role="navigation">
 							<?php wp_nav_menu( array( 'theme_location' => 'secondary_navigation', 'menu_class' => apply_filters( 'smallermobs_nav_class', 'navbar-nav nav' ) ) ); ?>
 						</nav>
+						</div>
+						<?php echo $ss_framework->close_container( 'div' ); ?>
 					</header>
-				<?php echo $ss_framework->close_container( 'div' ); ?>
 
 			<?php endif;
 		}

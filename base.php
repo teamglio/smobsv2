@@ -14,10 +14,26 @@
 	<?php ss_get_template_part( apply_filters( 'smallermobs_top_bar_template', 'templates/top-bar' ) ); ?>
 
 	<?php do_action( 'smallermobs_pre_wrap' ); ?>
+	<?php  if ( is_front_page() ) {
+		while ( have_posts() ) : the_post();
+		    $image_id = get_post_thumbnail_id();
+		    $image_src = wp_get_attachment_image_src($image_id,'full', true);
+		    $image_url = $image_src[0];
+		    ?>
+		    <div class="home-feature" style="background: url(<?php echo $image_url; ?>);">
+		        <div class="container">
+		            <div class="home-tagline">
+		                <?php echo get_bloginfo('description');?>
+		            </div>
+		        </div>
+		    </div>
+		    <?php
+		endwhile;
+	}; ?>
 
 	<?php echo $ss_framework->open_container( 'div', 'wrap-main-section', 'wrap main-section' ); ?>
 
-		<?php do_action( 'smallermobs_pre_content' ); ?>
+	<?php do_action( 'smallermobs_pre_content' ); ?>
 
 		<div id="content" class="content">
 			<?php echo $ss_framework->open_row( 'div', null, 'bg' ); ?>

@@ -2,6 +2,7 @@
 function add_icons_styles(){
 ?>
 <style>
+
 #adminmenu .menu-icon-visual-form-builder div.wp-menu-image:before {
   content: '\f123';
 }
