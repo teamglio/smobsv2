@@ -1,8 +1,8 @@
 <?php
 
 // Define the theme version
-if ( ! defined( 'SHOESTRAP_VERSION' ) ) {
-	define( 'SHOESTRAP_VERSION', '3.2.6' );
+if ( ! defined( 'smallermobs_VERSION' ) ) {
+	define( 'smallermobs_VERSION', '3.2.6' );
 }
 
 if ( class_exists( 'BuddyPress' ) ) {
@@ -15,30 +15,30 @@ if ( ! defined( 'SS_FRAMEWORK' ) ) {
 	define( 'SS_FRAMEWORK', 'bootstrap' );
 }
 
-// define the 'SHOESTRAP_ASSETS_URL' constant.
-if ( ! defined( 'SHOESTRAP_ASSETS_URL' ) ) {
-	$shoestrap_assets_url = str_replace( 'http:', '', get_template_directory_uri() . '/assets' );
-	$shoestrap_assets_url = str_replace( 'https:', '', $shoestrap_assets_url );
-	define( 'SHOESTRAP_ASSETS_URL', $shoestrap_assets_url );
+// define the 'smallermobs_ASSETS_URL' constant.
+if ( ! defined( 'smallermobs_ASSETS_URL' ) ) {
+	$smallermobs_assets_url = str_replace( 'http:', '', get_template_directory_uri() . '/assets' );
+	$smallermobs_assets_url = str_replace( 'https:', '', $smallermobs_assets_url );
+	define( 'smallermobs_ASSETS_URL', $smallermobs_assets_url );
 }
 
 /*
- * The option that is used by Shoestrap in the database for all settings.
+ * The option that is used by smallermobs in the database for all settings.
  *
  * This can be overriden by adding this in your wp-config.php:
- * define( 'SHOESTRAP_OPT_NAME', 'custom_option' )
+ * define( 'smallermobs_OPT_NAME', 'custom_option' )
  */
-if ( ! defined( 'SHOESTRAP_OPT_NAME' ) ) {
-	define( 'SHOESTRAP_OPT_NAME', 'shoestrap' );
+if ( ! defined( 'smallermobs_OPT_NAME' ) ) {
+	define( 'smallermobs_OPT_NAME', 'smallermobs' );
 }
 
 global $ss_settings;
-$ss_settings = get_option( SHOESTRAP_OPT_NAME );
+$ss_settings = get_option( smallermobs_OPT_NAME );
 
-do_action( 'shoestrap_include_files' );
+do_action( 'smallermobs_include_files' );
 
-require_once locate_template( '/lib/class-Shoestrap_Color.php' );
-require_once locate_template( '/lib/class-Shoestrap_Image.php' );
+require_once locate_template( '/lib/class-smallermobs_Color.php' );
+require_once locate_template( '/lib/class-smallermobs_Image.php' );
 require_once locate_template( '/lib/functions-core.php' );
 
 // Get the framework
@@ -64,11 +64,6 @@ require_once locate_template( '/lib/deprecated.php' );   // Deprecated functions
 if ( ! class_exists( 'ReduxFramework' ) ) {
 	require_once locate_template( '/lib/class-TGM_Plugin_Activation.php' ); // TGM_Plugin_Activation
 	require_once locate_template( '/lib/dependencies.php' );                // load our dependencies
-}
-
-// Setup our custom updater
-if ( file_exists( locate_template( '/lib/updater/updater.php' ) ) ) {
-	require_once locate_template( '/lib/updater/updater.php' );
 }
 
 if ( class_exists( 'bbPress' ) ) {

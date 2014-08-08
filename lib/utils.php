@@ -15,7 +15,7 @@ function is_element_empty( $element ) {
  * @param array $options
  * @return string
  */
-function shoestrap_transliterate( $str ) {
+function smallermobs_transliterate( $str ) {
 
 	// Only process this if the mb_convert_encoding function is installed.
 	if ( function_exists( 'mb_convert_encoding' ) ) {

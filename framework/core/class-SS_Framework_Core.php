@@ -6,7 +6,7 @@
 class SS_Framework_Core {
 
 	function __construct() {
-		do_action( 'shoestrap_framework_include_modules' );
+		do_action( 'smallermobs_framework_include_modules' );
 	}
 
 	var $defines = array(
@@ -72,8 +72,8 @@ class SS_Framework_Core {
 
 		$classes = array();
 
-		if ( ! is_null( apply_filters( 'shoestrap_container_class', $this->defines['container'] ) ) ) {
-			$default_classes = explode( ' ', apply_filters( 'shoestrap_container_class', $this->defines['container'] ) );
+		if ( ! is_null( apply_filters( 'smallermobs_container_class', $this->defines['container'] ) ) ) {
+			$default_classes = explode( ' ', apply_filters( 'smallermobs_container_class', $this->defines['container'] ) );
 
 			foreach ( $default_classes as $default_class ) {
 				$classes[] = $default_class;

@@ -1,29 +1,29 @@
 <?php
 
 
-if ( ! class_exists( 'Shoestrap_Menus' ) ) {
+if ( ! class_exists( 'smallermobs_Menus' ) ) {
 
 	/**
 	* The "Menus" module
 	*/
-	class Shoestrap_Menus {
+	class smallermobs_Menus {
 
 		function __construct() {
 			global $ss_settings;
 
-			add_filter( 'shoestrap_nav_class',        array( $this, 'nav_class' ) );
-			add_action( 'shoestrap_inside_nav_begin', array( $this, 'navbar_pre_searchbox' ), 11 );
-			add_filter( 'shoestrap_navbar_class',     array( $this, 'navbar_class' ) );
+			add_filter( 'smallermobs_nav_class',        array( $this, 'nav_class' ) );
+			add_action( 'smallermobs_inside_nav_begin', array( $this, 'navbar_pre_searchbox' ), 11 );
+			add_filter( 'smallermobs_navbar_class',     array( $this, 'navbar_class' ) );
 			add_action( 'wp_enqueue_scripts',         array( $this, 'navbar_css' ), 101 );
-			add_filter( 'shoestrap_navbar_brand',     array( $this, 'navbar_brand' ) );
+			add_filter( 'smallermobs_navbar_brand',     array( $this, 'navbar_brand' ) );
 			add_filter( 'body_class',                 array( $this, 'navbar_body_class' ) );
 			add_action( 'widgets_init',               array( $this, 'sl_widgets_init' ), 40 );
-			add_action( 'shoestrap_post_main_nav',    array( $this, 'navbar_sidebar' ) );
-			add_action( 'shoestrap_pre_wrap',         array( $this, 'secondary_navbar' ) );
+			add_action( 'smallermobs_post_main_nav',    array( $this, 'navbar_sidebar' ) );
+			add_action( 'smallermobs_pre_wrap',         array( $this, 'secondary_navbar' ) );
 			add_action( 'widgets_init',               array( $this, 'slidedown_widgets_init' ), 50 );
 			add_action( 'wp_enqueue_scripts',         array( $this, 'megadrop_script' ), 200 );
-			add_action( 'shoestrap_pre_wrap',         array( $this, 'content_wrapper_static_left_open' ) );
-			add_action( 'shoestrap_after_footer',     array( $this, 'content_wrapper_static_left_close' ), 1 );
+			add_action( 'smallermobs_pre_wrap',         array( $this, 'content_wrapper_static_left_open' ) );
+			add_action( 'smallermobs_after_footer',     array( $this, 'content_wrapper_static_left_close' ), 1 );
 
 			if ( isset( $ss_settings['secondary_navbar_margin'] ) && $ss_settings['secondary_navbar_margin'] != 0 ) {
 				add_action( 'wp_enqueue_scripts', array( $this, 'secondary_navbar_margin' ), 101 );
@@ -32,14 +32,14 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 			if ( isset( $ss_settings['navbar_toggle'] ) ) {
 
 				if ( $ss_settings['navbar_toggle'] == 'left' ) {
-					$hook_navbar_slidedown_toggle = 'shoestrap_pre_content';
+					$hook_navbar_slidedown_toggle = 'smallermobs_pre_content';
 				} else {
-					$hook_navbar_slidedown_toggle = 'shoestrap_inside_nav_begin';
+					$hook_navbar_slidedown_toggle = 'smallermobs_inside_nav_begin';
 				}
 
 			} else {
 
-				$hook_navbar_slidedown_toggle = 'shoestrap_inside_nav_begin';
+				$hook_navbar_slidedown_toggle = 'smallermobs_inside_nav_begin';
 
 			}
 
@@ -48,14 +48,14 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 			if ( isset( $ss_settings['navbar_toggle'] ) ) {
 
 				if ( $ss_settings['navbar_toggle'] == 'left' ) {
-					$hook_navbar_slidedown_content = 'shoestrap_pre_content';
+					$hook_navbar_slidedown_content = 'smallermobs_pre_content';
 				} else {
-					$hook_navbar_slidedown_content = 'shoestrap_do_navbar';
+					$hook_navbar_slidedown_content = 'smallermobs_do_navbar';
 				}
 
 			} else {
 
-				$hook_navbar_slidedown_content = 'shoestrap_do_navbar';
+				$hook_navbar_slidedown_content = 'smallermobs_do_navbar';
 
 			}
 
@@ -85,8 +85,8 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 			$show_searchbox = $ss_settings['navbar_search'];
 			if ( $show_searchbox == '1' ) : ?>
 				<form role="search" method="get" id="searchform" class="form-search pull-right navbar-form" action="<?php echo home_url('/'); ?>">
-					<label class="hide" for="s"><?php _e('Search for:', 'shoestrap'); ?></label>
-					<input type="text" value="<?php if (is_search()) { echo get_search_query(); } ?>" name="s" id="s" class="form-control search-query" placeholder="<?php _e('Search', 'shoestrap'); ?> <?php bloginfo('name'); ?>">
+					<label class="hide" for="s"><?php _e('Search for:', 'smallermobs'); ?></label>
+					<input type="text" value="<?php if (is_search()) { echo get_search_query(); } ?>" name="s" id="s" class="form-control search-query" placeholder="<?php _e('Search', 'smallermobs'); ?> <?php bloginfo('name'); ?>">
 				</form>
 			<?php endif;
 		}
@@ -156,7 +156,7 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 
 			if ( $opacity != 1 && $opacity != '' ) {
 				$bg  = str_replace( '#', '', $ss_settings['navbar_bg'] );
-				$rgb = Shoestrap_Color::get_rgb( $bg, true );
+				$rgb = smallermobs_Color::get_rgb( $bg, true );
 				$opacityie = str_replace( '0.', '', $opacity );
 
 				$style .= '.navbar, .navbar-default {';
@@ -174,7 +174,7 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 				$style .= '.navbar-static-top { margin-top:'. $ss_settings['navbar_margin'] . 'px; margin-bottom:' . $ss_settings['navbar_margin'] . 'px; }';
 			}
 
-			wp_add_inline_style( 'shoestrap_css', $style );
+			wp_add_inline_style( 'smallermobs_css', $style );
 		}
 
 		/**
@@ -219,9 +219,9 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 		 */
 		function sl_widgets_init() {
 			register_sidebar( array(
-				'name'          => __( 'In-Navbar Widget Area', 'shoestrap' ),
+				'name'          => __( 'In-Navbar Widget Area', 'smallermobs' ),
 				'id'            => 'navbar',
-				'description'   => __( 'This widget area will show up in your NavBars. This is most useful when using a static-left navbar.', 'shoestrap' ),
+				'description'   => __( 'This widget area will show up in your NavBars. This is most useful when using a static-left navbar.', 'smallermobs' ),
 				'before_widget' => '<div id="in-navbar">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h1>',
@@ -256,7 +256,7 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 							SS_Framework_Bootstrap::navbar_social_links();
 						} ?>
 						<nav class="nav-secondary navbar-collapse collapse" role="navigation">
-							<?php wp_nav_menu( array( 'theme_location' => 'secondary_navigation', 'menu_class' => apply_filters( 'shoestrap_nav_class', 'navbar-nav nav' ) ) ); ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'secondary_navigation', 'menu_class' => apply_filters( 'smallermobs_nav_class', 'navbar-nav nav' ) ) ); ?>
 						</nav>
 					</header>
 				<?php echo $ss_framework->close_container( 'div' ); ?>
@@ -273,7 +273,7 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 			$secondary_navbar_margin = $ss_settings['secondary_navbar_margin'];
 			$style = '.secondary { margin-top:' . $secondary_navbar_margin . 'px !important; margin-bottom:'. $secondary_navbar_margin .'px !important; }';
 
-			wp_add_inline_style( 'shoestrap_css', $style );
+			wp_add_inline_style( 'smallermobs_css', $style );
 		}
 
 		/**
@@ -282,7 +282,7 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 		function slidedown_widgets_init() {
 			// Register widgetized areas
 			register_sidebar( array(
-				'name'          => __( 'Navbar Slide-Down Top', 'shoestrap' ),
+				'name'          => __( 'Navbar Slide-Down Top', 'smallermobs' ),
 				'id'            => 'navbar-slide-down-top',
 				'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
 				'after_widget'  => '</div></section>',
@@ -291,7 +291,7 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 			) );
 
 			register_sidebar( array(
-				'name'          => __( 'Navbar Slide-Down 1', 'shoestrap' ),
+				'name'          => __( 'Navbar Slide-Down 1', 'smallermobs' ),
 				'id'            => 'navbar-slide-down-1',
 				'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
 				'after_widget'  => '</div></section>',
@@ -300,7 +300,7 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 			) );
 
 			register_sidebar( array(
-				'name'          => __( 'Navbar Slide-Down 2', 'shoestrap' ),
+				'name'          => __( 'Navbar Slide-Down 2', 'smallermobs' ),
 				'id'            => 'navbar-slide-down-2',
 				'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
 				'after_widget'  => '</div></section>',
@@ -309,7 +309,7 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 			) );
 
 			register_sidebar( array(
-				'name'          => __( 'Navbar Slide-Down 3', 'shoestrap' ),
+				'name'          => __( 'Navbar Slide-Down 3', 'smallermobs' ),
 				'id'            => 'navbar-slide-down-3',
 				'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
 				'after_widget'  => '</div></section>',
@@ -318,7 +318,7 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 			) );
 
 			register_sidebar( array(
-				'name'          => __( 'Navbar Slide-Down 4', 'shoestrap' ),
+				'name'          => __( 'Navbar Slide-Down 4', 'smallermobs' ),
 				'id'            => 'navbar-slide-down-4',
 				'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
 				'after_widget'  => '</div></section>',
@@ -454,8 +454,8 @@ if ( ! class_exists( 'Shoestrap_Menus' ) ) {
 		 */
 		function megadrop_script() {
 			if ( is_active_sidebar( 'navbar-slide-down-top' ) || is_active_sidebar( 'navbar-slide-down-1' ) || is_active_sidebar( 'navbar-slide-down-2' ) || is_active_sidebar( 'navbar-slide-down-3' ) || is_active_sidebar( 'navbar-slide-down-4' ) ) {
-				wp_register_script( 'shoestrap_megadrop', get_template_directory_uri() . '/assets/js/megadrop.js', false, null, false );
-				wp_enqueue_script( 'shoestrap_megadrop' );
+				wp_register_script( 'smallermobs_megadrop', get_template_directory_uri() . '/assets/js/megadrop.js', false, null, false );
+				wp_enqueue_script( 'smallermobs_megadrop' );
 			}
 		}
 	}

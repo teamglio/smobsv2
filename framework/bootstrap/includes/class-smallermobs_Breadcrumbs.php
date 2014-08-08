@@ -1,12 +1,12 @@
 <?php
 
 
-if ( ! class_exists( 'Shoestrap_Breadcrumbs' ) ) {
+if ( ! class_exists( 'smallermobs_Breadcrumbs' ) ) {
 
 	/**
 	 * This class handles the Breadcrumbs generation and display
 	 */
-	class Shoestrap_Breadcrumbs {
+	class smallermobs_Breadcrumbs {
 
 		/**
 		 * Class constructor
@@ -157,7 +157,7 @@ if ( ! class_exists( 'Shoestrap_Breadcrumbs' ) ) {
 
 					$links[] = array( 'term' => $term );
 				} else if ( is_date() ) {
-					$bc = __( 'Archives for', 'shoestrap' );
+					$bc = __( 'Archives for', 'smallermobs' );
 
 					if ( is_day() ) {
 						global $wp_locale;
@@ -172,11 +172,11 @@ if ( ! class_exists( 'Shoestrap_Breadcrumbs' ) ) {
 						$links[] = array( 'text' => $bc . " " . get_query_var( 'year' ) );
 					}
 				} elseif ( is_author() ) {
-					$bc      = __( 'Archives for', 'shoestrap' );
+					$bc      = __( 'Archives for', 'smallermobs' );
 					$user    = $wp_query->get_queried_object();
 					$links[] = array( 'text' => $bc . " " . esc_html( $user->display_name ) );
 				} elseif ( is_search() ) {
-					$bc      = __( 'You searched for', 'shoestrap' );
+					$bc      = __( 'You searched for', 'smallermobs' );
 					$links[] = array( 'text' => $bc . ' "' . esc_html( get_search_query() ) . '"' );
 				} elseif ( is_404() ) {
 
@@ -186,7 +186,7 @@ if ( ! class_exists( 'Shoestrap_Breadcrumbs' ) ) {
 							$links[] = array( 'id' => $blog_page );
 						}
 
-						$bc = __( 'Archives for', 'shoestrap' );
+						$bc = __( 'Archives for', 'smallermobs' );
 
 
 						if ( 0 !== get_query_var( 'day' ) ) {
@@ -207,7 +207,7 @@ if ( ! class_exists( 'Shoestrap_Breadcrumbs' ) ) {
 						}
 					}
 					else {
-						$crumb404 = __( 'Error 404: Page not found', 'shoestrap' );
+						$crumb404 = __( 'Error 404: Page not found', 'smallermobs' );
 						$links[] = array( 'text' => $crumb404 );
 					}
 				}

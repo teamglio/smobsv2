@@ -1,12 +1,12 @@
 <?php
 
 
-if ( !class_exists( 'Shoestrap_Branding' ) ) {
+if ( !class_exists( 'smallermobs_Branding' ) ) {
 
 	/**
 	* The Branding module
 	*/
-	class Shoestrap_Branding {
+	class smallermobs_Branding {
 
 		function __construct() {
 			add_action( 'wp_head', array( $this, 'icons' ) );
@@ -20,17 +20,17 @@ if ( !class_exists( 'Shoestrap_Branding' ) ) {
 
 			// Add the favicon
 			if ( ! empty( $favicon_item['url'] ) && $favicon_item['url'] != '' ) {
-				$favicon = Shoestrap_Image::_resize( $favicon_item['url'], 32, 32, true, false );
+				$favicon = smallermobs_Image::_resize( $favicon_item['url'], 32, 32, true, false );
 
 				echo '<link rel="shortcut icon" href="'.$favicon['url'].'" type="image/x-icon" />';
 			}
 
 			// Add the apple icons
 			if ( ! empty( $apple_icon_item['url'] ) ) {
-				$iphone_icon        = Shoestrap_Image::_resize( $apple_icon_item['url'], 57, 57, true, false );
-				$iphone_icon_retina = Shoestrap_Image::_resize( $apple_icon_item['url'], 57, 57, true, true );
-				$ipad_icon          = Shoestrap_Image::_resize( $apple_icon_item['url'], 72, 72, true, false );
-				$ipad_icon_retina   = Shoestrap_Image::_resize( $apple_icon_item['url'], 72, 72, true, true );
+				$iphone_icon        = smallermobs_Image::_resize( $apple_icon_item['url'], 57, 57, true, false );
+				$iphone_icon_retina = smallermobs_Image::_resize( $apple_icon_item['url'], 57, 57, true, true );
+				$ipad_icon          = smallermobs_Image::_resize( $apple_icon_item['url'], 72, 72, true, false );
+				$ipad_icon_retina   = smallermobs_Image::_resize( $apple_icon_item['url'], 72, 72, true, true );
 				?>
 
 				<!-- For iPhone --><link rel="apple-touch-icon-precomposed" href="<?php echo $iphone_icon['url'] ?>">

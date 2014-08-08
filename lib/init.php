@@ -1,15 +1,15 @@
 <?php
 /**
- * Shoestrap initial setup and constants
+ * smallermobs initial setup and constants
  */
-function shoestrap_setup() {
+function smallermobs_setup() {
 	// Make theme available for translation
-	load_theme_textdomain( 'shoestrap', get_template_directory() . '/lang' );
+	load_theme_textdomain( 'smallermobs', get_template_directory() . '/lang' );
 
 	// Register wp_nav_menu() menus ( http://codex.wordpress.org/Function_Reference/register_nav_menus )
 	register_nav_menus( array(
-		'primary_navigation'   => __( 'Primary Navigation', 'shoestrap' ),
-		'secondary_navigation' => __( 'Secondary Navigation', 'shoestrap' ),
+		'primary_navigation'   => __( 'Primary Navigation', 'smallermobs' ),
+		'secondary_navigation' => __( 'Secondary Navigation', 'smallermobs' ),
 	 ) );
 
 	// Add post thumbnails ( http://codex.wordpress.org/Post_Thumbnails )
@@ -25,4 +25,4 @@ function shoestrap_setup() {
 	// Tell the TinyMCE editor to use a custom stylesheet
 	add_editor_style( '/assets/css/editor-style.css' );
 }
-add_action( 'after_setup_theme', 'shoestrap_setup' );
+add_action( 'after_setup_theme', 'smallermobs_setup' );

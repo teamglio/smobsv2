@@ -2,8 +2,8 @@
 # This file is distributed under the GPL v3 License.
 msgid ""
 msgstr ""
-"Project-Id-Version: Shoestrap 3 3.2.4\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/shoestrap-3\n"
+"Project-Id-Version: smallermobs 3 3.2.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/smallermobs-3\n"
 "POT-Creation-Date: 2014-04-15 14:12:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -100,13 +100,13 @@ msgid "You must be logged in to reply to this topic."
 msgstr ""
 
 #: bbpress/form-search.php:15
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:355
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:355
 #: templates/searchform.php:3
 msgid "Search for:"
 msgstr ""
 
 #: bbpress/form-search.php:18
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:356
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:356
 #: templates/searchform.php:4
 msgid "Search"
 msgstr ""
@@ -355,7 +355,7 @@ msgid "RSS Feed"
 msgstr ""
 
 #: buddypress/activity/index.php:71
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:276
+#: framework/bootstrap/includes/class-smallermobs_Social.php:276
 msgid "RSS"
 msgstr ""
 
@@ -372,7 +372,7 @@ msgid "Updates"
 msgstr ""
 
 #: buddypress/activity/index.php:84
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:376
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:376
 msgid "Comments"
 msgstr ""
 
@@ -420,155 +420,155 @@ msgstr ""
 msgid "My Profile"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:79
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:79
 msgid "Advanced"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:84
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:84
 msgid "Enable Retina mode"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:85
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:85
 msgid ""
 "By enabling your site's featured images will be retina ready. Requires "
 "images to be uploaded at 2x the typical size desired. Default: On"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:92
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:92
 msgid "Google Analytics ID"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:93
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:93
 msgid ""
 "Paste your Google Analytics ID here to enable analytics tracking. Only "
 "Universal Analytics properties. Your user ID should be in the form of UA-"
 "XXXXX-Y."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:102
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:102
 msgid ""
 "The following settings affect various areas of your site, most notably "
 "buttons."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:107
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:107
 msgid "Border-Radius"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:108
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:108
 msgid ""
 "You can adjust the corner-radius of all elements in your site here. This "
 "will affect buttons, navbars, widgets and many more. Default: 4"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:120
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:120
 msgid "Padding Base"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:121
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:121
 msgid ""
 "You can adjust the padding base. This affects buttons size and lots of other "
 "cool stuff too! Default: 8"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:133
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:133
 msgid "Root Relative URLs"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:134
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:134
 msgid ""
 "Return URLs such as <em>/assets/css/style.css</em> instead of <em>http://"
 "example.com/assets/css/style.css</em>. Default: ON"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:141
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:141
 msgid "Enable Nice Search"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:142
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:142
 msgid "Redirects /?s=query to /search/query/, convert %20 to +. Default: ON"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:149
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:149
 msgid "Custom CSS"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:150
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:150
 msgid ""
 "You can write your custom CSS here. This code will appear in a script tag "
 "appended in the header section of the page."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:159
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:159
 msgid "Custom LESS"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:160
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:160
 msgid ""
 "You can write your custom LESS here. This code will be compiled with the "
 "other LESS files of the theme and be appended to the header."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:170
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:170
 msgid "Custom JS"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:171
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:171
 msgid ""
 "You can write your custom JavaScript/jQuery here. The code will be included "
 "in a script tag appended to the bottom of the page."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:180
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:180
 msgid "Minimize CSS"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:181
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:181
 msgid ""
 "Minimize the genearated CSS. This should be ON for production sites. "
 "Default: OFF."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:189
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:189
 msgid "Toggle adminbar On/Off"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:190
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:190
 msgid "Turn the admin bar On or Off on the frontend. Default: Off."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Advanced.php:197
+#: framework/bootstrap/includes/class-smallermobs_Advanced.php:197
 msgid "Use Google CDN for jQuery"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Background.php:25
+#: framework/bootstrap/includes/class-smallermobs_Background.php:25
 #: framework/bootstrap/includes/customizer.php:14
 msgid "Background"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Background.php:30
+#: framework/bootstrap/includes/class-smallermobs_Background.php:30
 msgid "General Background Color"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Background.php:31
+#: framework/bootstrap/includes/class-smallermobs_Background.php:31
 msgid "Select a background color for your site. Default: #ffffff."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Background.php:42
+#: framework/bootstrap/includes/class-smallermobs_Background.php:42
 msgid "Content Background"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Background.php:43
+#: framework/bootstrap/includes/class-smallermobs_Background.php:43
 msgid ""
 "Background for the content area. Colors also affect input areas and other "
 "colors."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Background.php:58
+#: framework/bootstrap/includes/class-smallermobs_Background.php:58
 msgid "Content Background Color Opacity"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Background.php:59
+#: framework/bootstrap/includes/class-smallermobs_Background.php:59
 msgid ""
 "Select the opacity of your background color for the main content area so "
 "that background images will show through. Please note that if you have added "
@@ -578,45 +578,45 @@ msgid ""
 "by adding transparency to the PNG background image itself."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:52
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:52
 msgid "Blog"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:57
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:57
 msgid "Archives Display Mode"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:58
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:58
 msgid "Display the excerpt or the full post on post archives."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:63
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:63
 msgid "Excerpt"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:64
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:64
 msgid "Full Post"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:70
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:70
 msgid "Activate and order Post Meta elements"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:84
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:84
 msgid "Switch Date Meta in time_diff mode"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:85
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:85
 msgid ""
 "Replace Date Meta element by displaying the difference between post creation "
 "timestamp and current timestamp. Default: OFF."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:95
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:95
 msgid "Featured Images"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:96
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:96
 msgid ""
 "Here you can select if you want to display the featured images in post "
 "archives and individual posts.\n"
@@ -626,163 +626,163 @@ msgid ""
 "archives and individual posts view."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:103
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:103
 msgid "Featured Images on Archives"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:104
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:104
 msgid ""
 "Display featured Images on post archives ( such as categories, tags, month "
 "view etc ). Default: OFF."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:111
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:111
 msgid "Width of Featured Images on Archives"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:112
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:112
 msgid "Set dimensions of featured Images on Archives. Default: Full Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:116
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:160
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:116
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:160
 msgid "Full Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:117
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:161
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:117
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:161
 msgid "Custom Dimensions"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:122
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:122
 msgid "Archives Featured Image Custom Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:123
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:168
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:123
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:168
 msgid ""
 "Select the width of your featured images on single posts. Default: 550px"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:135
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:135
 msgid "Archives Featured Image Custom Height"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:136
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:136
 msgid ""
 "Select the height of your featured images on post archives. Default: 300px"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:148
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:148
 msgid "Featured Images on Posts"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:149
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:149
 msgid "Display featured Images on posts. Default: OFF."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:156
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:156
 msgid "Width of Featured Images on Posts"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:157
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:157
 msgid "Set dimensions of featured Images on Posts. Default: Full Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:167
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:167
 msgid "Posts Featured Image Custom Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:180
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:180
 msgid "Posts Featured Image Custom Height"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:181
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:181
 msgid ""
 "Select the height of your featured images on single posts. Default: 330px"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:202
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:202
 msgid "Disable featured images on single post types"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:210
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:210
 msgid "Post excerpt length"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:211
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:211
 msgid "Choose how many words should be used for post excerpt. Default: 40"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:222
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:222
 msgid "\"more\" text"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:223
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:223
 msgid "Text to display in case of excerpt too long. Default: Continued"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:225
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:225
 msgid "Continued"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:230
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:230
 msgid "Show Breadcrumbs"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:231
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:231
 msgid "Display Breadcrumbs. Default: OFF."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:238
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:238
 msgid "Show Post Meta in single posts"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:239
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:239
 msgid "Toggle Post Meta showing in the footer of single posts. Default: ON."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:258
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:258
 msgid "Categories: "
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:263
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:263
 msgid "Tags: "
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:266
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:266
 #: templates/content-single.php:23
 msgid "Pages:"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:283
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:284
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:283
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:284
 msgid ", "
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:324
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:324
 msgid "Sticky"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:330
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:330
 msgctxt "1: post format name. 2: date"
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:343
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:343
 msgid "Permalink to %s"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:368
-#: framework/bootstrap/includes/class-Shoestrap_Blog.php:384
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:368
+#: framework/bootstrap/includes/class-smallermobs_Blog.php:384
 msgid "View all posts by %s"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:23
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:23
 msgid "Colors"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:31
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:31
 msgid ""
 "The primary color you select will also affect other elements on your site, "
 "such as table borders, widgets colors, input elements, dropdowns etc. The "
@@ -791,256 +791,256 @@ msgid ""
 "primary color, since this will be used more often."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:36
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:36
 msgid "Enable Gradients"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:37
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:37
 msgid "Enable gradients for buttons and the navbar. Default: Off."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:45
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:45
 msgid "Brand Colors: Primary"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:46
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:46
 msgid ""
 "Select your primary branding color. Also referred to as an accent color. "
 "This will affect various areas of your site, including the color of your "
 "primary buttons, link color, the background of some elements and many more."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:55
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:55
 msgid "Brand Colors: Success"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:56
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:56
 msgid "Select your branding color for success messages etc. Default: #5cb85c."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:65
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:65
 msgid "Brand Colors: Warning"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:66
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:66
 msgid "Select your branding color for warning messages etc. Default: #f0ad4e."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:75
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:75
 msgid "Brand Colors: Danger"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:76
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:76
 msgid "Select your branding color for success messages etc. Default: #d9534f."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:85
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:85
 msgid "Brand Colors: Info"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Branding.php:86
+#: framework/bootstrap/includes/class-smallermobs_Branding.php:86
 msgid ""
 "Select your branding color for info messages etc. It will also be used for "
 "the Search button color as well as other areas where it semantically makes "
 "sense to use an 'info' class. Default: #5bc0de."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Breadcrumbs.php:160
-#: framework/bootstrap/includes/class-Shoestrap_Breadcrumbs.php:175
-#: framework/bootstrap/includes/class-Shoestrap_Breadcrumbs.php:189
+#: framework/bootstrap/includes/class-smallermobs_Breadcrumbs.php:160
+#: framework/bootstrap/includes/class-smallermobs_Breadcrumbs.php:175
+#: framework/bootstrap/includes/class-smallermobs_Breadcrumbs.php:189
 msgid "Archives for"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Breadcrumbs.php:179
+#: framework/bootstrap/includes/class-smallermobs_Breadcrumbs.php:179
 msgid "You searched for"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Breadcrumbs.php:210
+#: framework/bootstrap/includes/class-smallermobs_Breadcrumbs.php:210
 msgid "Error 404: Page not found"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:24
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:24
 msgid "Footer"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:29
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:29
 msgid "Footer Background Color"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:30
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:30
 msgid "Select the background color for your footer. Default: #282a2b."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:38
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:38
 msgid "Footer Background Opacity"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:39
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:39
 msgid "Select the opacity level for the footer bar. Default: 100%."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:49
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:49
 msgid "Footer Text Color"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:50
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:50
 msgid "Select the text color for your footer. Default: #8C8989."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:58
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:58
 msgid "Footer Text"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:59
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:59
 msgid ""
 "The text that will be displayed in your footer. You can use [year] and "
 "[sitename] and they will be replaced appropriately. Default: &copy; [year] "
 "[sitename]"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:83
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:83
 msgid "Footer Top Margin"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:84
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:84
 msgid "Select the top margin of footer in pixels. Default: 0px."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:93
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:93
 msgid "Show social icons in footer"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:94
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:94
 msgid "Show social icons in the footer. Default: On."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:101
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:101
 msgid "Footer social links column width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:102
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:102
 msgid ""
 "You can customize the width of the footer social links area. The footer text "
 "width will be adjusted accordingly. Default: 5."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:113
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:113
 msgid "Footer social icons open new window"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:114
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:114
 msgid "Social icons in footer will open a new window. Default: On."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:139
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:139
 #: lib/widgets.php:12
 msgid "Primary Sidebar"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:148
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:148
 #: lib/widgets.php:21
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:157
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:157
 msgid "Footer Widget Area 1"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:166
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:166
 msgid "Footer Widget Area 2"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:175
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:175
 msgid "Footer Widget Area 3"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Footer.php:184
+#: framework/bootstrap/includes/class-smallermobs_Footer.php:184
 msgid "Footer Widget Area 4"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:26
+#: framework/bootstrap/includes/class-smallermobs_Header.php:26
 msgid "Header"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:32
+#: framework/bootstrap/includes/class-smallermobs_Header.php:32
 msgid "Extra Branding Area"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:33
+#: framework/bootstrap/includes/class-smallermobs_Header.php:33
 msgid ""
 "You can enable an extra branding/header area. In this header you can add "
 "your logo, and any other widgets you wish."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:38
+#: framework/bootstrap/includes/class-smallermobs_Header.php:38
 msgid "Display the Header."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:39
+#: framework/bootstrap/includes/class-smallermobs_Header.php:39
 msgid "Turn this ON to display the header. Default: OFF"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:46
+#: framework/bootstrap/includes/class-smallermobs_Header.php:46
 msgid "Display branding on your Header."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:47
+#: framework/bootstrap/includes/class-smallermobs_Header.php:47
 msgid ""
 "Turn this ON to display branding ( Sitename or Logo )on your Header. "
 "Default: ON"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:55
+#: framework/bootstrap/includes/class-smallermobs_Header.php:55
 msgid "Header Background"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:56
+#: framework/bootstrap/includes/class-smallermobs_Header.php:56
 msgid "Specify the background for your header."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:67
+#: framework/bootstrap/includes/class-smallermobs_Header.php:67
 msgid "Header Background Opacity"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:68
+#: framework/bootstrap/includes/class-smallermobs_Header.php:68
 msgid "Select the background opacity for your header. Default: 100%."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:80
+#: framework/bootstrap/includes/class-smallermobs_Header.php:80
 msgid "Header Text Color"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:81
+#: framework/bootstrap/includes/class-smallermobs_Header.php:81
 msgid "Select the text color for your header. Default: #333333."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:90
+#: framework/bootstrap/includes/class-smallermobs_Header.php:90
 msgid "Header Top Margin"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:91
+#: framework/bootstrap/includes/class-smallermobs_Header.php:91
 msgid "Select the top margin of header in pixels. Default: 0px."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:101
+#: framework/bootstrap/includes/class-smallermobs_Header.php:101
 msgid "Header Bottom Margin"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:102
+#: framework/bootstrap/includes/class-smallermobs_Header.php:102
 msgid "Select the bottom margin of header in pixels. Default: 0px."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Header.php:125
+#: framework/bootstrap/includes/class-smallermobs_Header.php:125
 msgid "Header Area"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:27
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:33
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:164
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:27
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:33
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:164
 msgid "Jumbotron"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:34
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:34
 msgid ""
 "A 'Jumbotron', also known as 'Hero' area, is an area in your site where you "
 "can display in a prominent position things that matter to you. This can be a "
@@ -1049,31 +1049,31 @@ msgid ""
 "add a widget to it."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:39
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:39
 msgid "Jumbotron Background"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:40
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:40
 msgid "Select the background for your Jumbotron area."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:54
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:54
 msgid "Display Jumbotron only on the Frontpage."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:55
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:55
 msgid ""
 "When Turned OFF, the Jumbotron area is displayed in all your pages. If you "
 "wish to completely disable the Jumbotron, then please remove the widgets "
 "assigned to its area and it will no longer be displayed. Default: ON"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:62
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:67
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:62
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:67
 msgid "Full-Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:63
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:63
 msgid ""
 "When Turned ON, the Jumbotron is no longer restricted by the width of your "
 "page, taking over the full width of your screen. This option is useful when "
@@ -1081,131 +1081,131 @@ msgid ""
 "width to be the maximum width of the screen. Default: OFF."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:70
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:70
 msgid "Use fittext script for the title."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:71
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:71
 msgid ""
 "Use the fittext script to enlarge or scale-down the font-size of the widget "
 "title to fit the Jumbotron area. Default: OFF"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:78
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:78
 msgid "Center-align the content."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:79
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:79
 msgid ""
 "Turn this on to center-align the contents of the Jumbotron area. Default: OFF"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:86
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:86
 msgid "Jumbotron Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:87
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:87
 msgid "The font used in jumbotron."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:99
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:126
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:180
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:198
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:42
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:64
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:85
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:106
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:127
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:148
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:170
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:99
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:126
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:180
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:198
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:42
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:64
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:85
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:106
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:127
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:148
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:170
 msgid "This is my preview text!"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:107
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:107
 msgid "Jumbotron Header Overrides"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:108
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:108
 msgid ""
 "By enabling this you can specify custom values for each <h*> tag. Default: "
 "Off"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:116
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:116
 msgid "Jumbotron Headers Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:117
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:28
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:51
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:74
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:95
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:115
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:136
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:157
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:117
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:28
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:51
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:74
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:95
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:115
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:136
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:157
 msgid "The main font for your site."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Jumbotron.php:135
+#: framework/bootstrap/includes/class-smallermobs_Jumbotron.php:135
 msgid "Select the border options for your Jumbotron"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:54
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:75
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:54
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:75
 msgid "Layout"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:60
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:60
 msgid "Site Style"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:61
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:61
 msgid ""
 "Select the default site layout. Defaults to \"Wide\". Please note that if "
 "you select a non-responsive layout, you will have to trigger the compiler so "
 "that your changes take effect."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:66
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:66
 msgid "Static (Non-Responsive)"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:67
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:67
 msgid "Wide"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:68
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:68
 msgid "Boxed"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:69
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:69
 msgid "Fluid"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:76
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:76
 msgid ""
 "Select main content and sidebar arrangement. Choose between 1, 2 or 3 column "
 "layout."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:91
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:91
 msgid "Custom Layouts per Post Type"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:92
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:92
 msgid "Set a default layout for each post type on your site."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:102
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:102
 msgid "Override your default stylings. Choose between 1, 2 or 3 column layout."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:119
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:119
 msgid "Primary Sidebar Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:120
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:120
 msgid ""
 "Select the width of the Primary Sidebar. Please note that the values "
 "represent grid columns. The total width of the page is 12 columns, so "
@@ -1213,11 +1213,11 @@ msgid ""
 "( 4/12 ) of the total page width."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:134
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:134
 msgid "Secondary Sidebar Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:135
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:135
 msgid ""
 "Select the width of the Secondary Sidebar. Please note that the values "
 "represent grid columns. The total width of the page is 12 columns, so "
@@ -1225,129 +1225,129 @@ msgid ""
 "( 4/12 ) of the total page width."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:149
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:149
 msgid "Show sidebars on the frontpage"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:150
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:150
 msgid ""
 "OFF by default. If you want to display the sidebars in your frontpage, turn "
 "this ON."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:157
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:157
 msgid "Margin from top ( Works only in 'Boxed' mode )"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:158
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:158
 msgid ""
 "This will add a margin above the navbar. Useful if you've enabled the "
 "'Boxed' mode above. Default: 0px"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:170
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:170
 msgid "Widgets mode"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:171
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:171
 msgid "How do you want your widgets to be displayed?"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:175
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:175
 msgid "Panel"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:176
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:176
 msgid "Well"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:177
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:177
 msgid "None"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:183
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:183
 msgid "Body Top Margin"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:184
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:184
 msgid "Select the top margin of body element in pixels. Default: 0px."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:195
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:195
 msgid "Body Bottom Margin"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:196
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:196
 msgid "Select the bottom margin of body element in pixels. Default: 0px."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:207
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:207
 msgid "Custom Grid"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:208
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:208
 msgid "CAUTION:"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:208
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:208
 msgid ""
 "Only use this if you know what you are doing, as changing these values might "
 "break the way your site looks on some devices. The default settings should "
 "be fine for the vast majority of sites."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:215
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:215
 msgid "Small Screen / Tablet view"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:216
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:216
 msgid "The width of Tablet screens. Default: 768px"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:229
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:229
 msgid "Desktop Container Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:230
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:230
 msgid "The width of normal screens. Default: 992px"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:244
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:244
 msgid "Large Desktop Container Width"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:245
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:245
 msgid "The width of Large Desktop screens. Default: 1200px"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:258
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:258
 msgid "Columns Gutter"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Layout.php:259
+#: framework/bootstrap/includes/class-smallermobs_Layout.php:259
 msgid "The space between the columns in your grid. Default: 30px"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:47
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:47
 msgid "Menus"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:53
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:53
 msgid "Advanced NavBar Options"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:54
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:54
 msgid ""
 "You can activate or deactivate your Primary NavBar here, and define its "
 "properties. Please note that you might have to manually create a menu if it "
 "doesn't already exist."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:59
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:59
 msgid "Type of NavBar"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:60
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:60
 msgid ""
 "Choose the type of Navbar you want. Off completely hides the navbar, "
 "Alternative uses an alternative walker for the navigation menus. See <a "
@@ -1355,658 +1355,658 @@ msgid ""
 "\">here</a> for more details."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:60
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:60
 msgid ""
 "<strong>WARNING:</strong> The \"Static-Left\" option is ONLY compatible with "
 "fluid layouts. The width of the static-left navbar is controlled by the "
 "secondary sidebar width."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:64
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:64
 msgid "Off"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:65
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:65
 msgid "Normal"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:68
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:68
 msgid "Static-Left"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:75
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:75
 msgid "NavBar Styling Options"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:76
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:76
 msgid "Customize the look and feel of your navbar below."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:81
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:81
 msgid "NavBar Background Color"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:82
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:82
 msgid "Pick a background color for the NavBar. Default: #eeeeee."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:91
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:91
 msgid "NavBar Background Opacity"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:92
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:92
 msgid "Pick a background opacity for the NavBar. Default: 100%."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:102
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:102
 msgid "NavBar Menu Style"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:103
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:103
 msgid "You can use an alternative menu style for your NavBars."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:108
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:306
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:108
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:306
 msgid "Default"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:109
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:110
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:111
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:112
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:113
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:114
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:109
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:110
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:111
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:112
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:113
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:114
 msgid "Style"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:115
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:115
 msgid "Metro"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:120
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:120
 msgid "Display Branding ( Sitename or Logo ) on the NavBar"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:121
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:121
 msgid "Default: ON"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:128
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:128
 msgid "Use Logo ( if available ) for branding on the NavBar"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:129
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:129
 msgid ""
 "If this option is OFF, or there is no logo available, then the sitename will "
 "be displayed instead. Default: ON"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:136
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:136
 msgid "NavBar Positioning"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:137
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:147
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:137
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:147
 msgid ""
 "Using this option you can set the navbar to be fixed to top, fixed to bottom "
 "or normal. When you're using one of the 'fixed' options, the navbar will "
 "stay fixed on the top or bottom of the page. Default: Normal"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:140
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:140
 msgid "Fixed"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:141
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:141
 msgid "Scroll"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:146
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:146
 msgid "Fixed NavBar Position"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:151
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:151
 msgid "Bottom"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:152
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:152
 msgid "Top"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:157
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:157
 msgid "NavBar Height"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:158
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:158
 msgid ""
 "Select the height of the NavBar in pixels. Should be equal or greater than "
 "the height of your logo if you've added one."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:169
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:169
 msgid "Navbar Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:170
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:170
 msgid "The font used in navbars."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:187
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:187
 msgid "Branding Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:188
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:188
 msgid "The branding font for your site."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:205
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:205
 msgid "Responsive NavBar Threshold"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:206
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:206
 msgid "Point at which the navbar becomes uncollapsed"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:210
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:210
 msgid "Never"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:211
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:211
 msgid "Extra Small"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:212
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:212
 msgid "Small"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:213
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:213
 msgid "Desktop"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:214
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:214
 msgid "Large Desktop"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:215
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:215
 msgid "Always"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:222
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:222
 msgid "NavBar Margin"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:223
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:223
 msgid ""
 "Select the top and bottom margin of the NavBar in pixels. Applies only in "
 "static top navbar ( scroll condition ). Default: 0px."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:233
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:233
 msgid "Display social links in the NavBar."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:234
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:234
 msgid ""
 "Display social links in the NavBar. These can be setup in the 'Social' "
 "section on the left. Default: OFF"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:241
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:241
 msgid "Display social links as a Dropdown list or an Inline list."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:242
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:242
 msgid "How to display social links. Default: Dropdown list"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:245
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:245
 msgid "Inline"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:246
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:246
 msgid "Dropdown"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:252
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:252
 msgid "Search form on the NavBar"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:253
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:253
 msgid "Display a search form in the NavBar. Default: On"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:260
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:260
 msgid "Float NavBar menu to the right"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:261
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:261
 msgid "Floats the primary navigation to the right. Default: On"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:269
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:269
 msgid "Secondary Navbar"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:270
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:270
 msgid ""
 "The secondary navbar is a 2nd navbar, located right above the main wrapper. "
 "You can show a menu there, by assigning it from Appearance -> Menus."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:275
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:275
 msgid "Display social networks in the secondary navigation bar."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:276
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:276
 msgid ""
 "Enable this option to display your social networks as a dropdown menu on the "
 "seondary navbar."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:283
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:283
 msgid "Secondary NavBar Margin"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:284
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:284
 msgid "Select the top and bottom margin of header in pixels. Default: 0px."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:294
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:294
 msgid "Sidebar Menus"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:295
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:295
 msgid ""
 "If you're using the \"Custom Menu\" widgets in your sidebars, you can "
 "control their styling here"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:300
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:300
 msgid "Color for sidebar menus"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:301
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:301
 msgid ""
 "Select a style for menus added to your sidebars using the custom menu widget"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:307
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:307
 msgid "Branding-Primary"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:308
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:308
 msgid "Branding-Success"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:309
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:309
 msgid "Branding-Warning"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:310
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:310
 msgid "Branding-Info"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:311
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:311
 msgid "Branding-Danger"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:316
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:316
 msgid "Inverse Sidebar_menus."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:317
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:317
 msgid ""
 "Default: OFF. See https://github.com/twittem/wp-bootstrap-navlist-walker for "
 "more details"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:489
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:489
 msgid "In-Navbar Widget Area"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:491
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:491
 msgid ""
 "This widget area will show up in your NavBars. This is most useful when "
 "using a static-left navbar."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:552
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:552
 msgid "Navbar Slide-Down Top"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:561
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:561
 msgid "Navbar Slide-Down 1"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:570
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:570
 msgid "Navbar Slide-Down 2"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:579
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:579
 msgid "Navbar Slide-Down 3"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Menus.php:588
+#: framework/bootstrap/includes/class-smallermobs_Menus.php:588
 msgid "Navbar Slide-Down 4"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Nav_Menu_Widget.php:12
+#: framework/bootstrap/includes/class-smallermobs_Nav_Menu_Widget.php:12
 msgid "Use this widget to add one of your custom menus as a widget."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Nav_Menu_Widget.php:13
+#: framework/bootstrap/includes/class-smallermobs_Nav_Menu_Widget.php:13
 msgid "Custom Menu"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Nav_Menu_Widget.php:67
+#: framework/bootstrap/includes/class-smallermobs_Nav_Menu_Widget.php:67
 msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Nav_Menu_Widget.php:72
+#: framework/bootstrap/includes/class-smallermobs_Nav_Menu_Widget.php:72
 msgid "Title:"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Nav_Menu_Widget.php:76
+#: framework/bootstrap/includes/class-smallermobs_Nav_Menu_Widget.php:76
 msgid "Select Menu:"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:63
+#: framework/bootstrap/includes/class-smallermobs_Social.php:63
 msgid "Social"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:69
+#: framework/bootstrap/includes/class-smallermobs_Social.php:69
 msgid "Social Sharing"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:74
+#: framework/bootstrap/includes/class-smallermobs_Social.php:74
 msgid "Button Text"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:75
+#: framework/bootstrap/includes/class-smallermobs_Social.php:75
 msgid "Select the text for the social sharing button."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:82
+#: framework/bootstrap/includes/class-smallermobs_Social.php:82
 msgid "Button Location"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:83
+#: framework/bootstrap/includes/class-smallermobs_Social.php:83
 msgid ""
 "Select between NONE, TOP, BOTTOM & BOTH. For archives, \"BOTH\" fallbacks to "
 "\"BOTTOM\" only."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:96
+#: framework/bootstrap/includes/class-smallermobs_Social.php:96
 msgid "Button Styling"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:97
+#: framework/bootstrap/includes/class-smallermobs_Social.php:97
 msgid "Select between standard Bootstrap's button classes"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:111
+#: framework/bootstrap/includes/class-smallermobs_Social.php:111
 msgid "Show in Posts Archives"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:112
+#: framework/bootstrap/includes/class-smallermobs_Social.php:112
 msgid "Show the sharing button in posts archives."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:119
+#: framework/bootstrap/includes/class-smallermobs_Social.php:119
 msgid "Show in Single Post"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:120
+#: framework/bootstrap/includes/class-smallermobs_Social.php:120
 msgid "Show the sharing button in single post."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:127
+#: framework/bootstrap/includes/class-smallermobs_Social.php:127
 msgid "Show in Single Page"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:128
+#: framework/bootstrap/includes/class-smallermobs_Social.php:128
 msgid "Show the sharing button in single page."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:137
+#: framework/bootstrap/includes/class-smallermobs_Social.php:137
 msgid "Social Share Networks"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:138
+#: framework/bootstrap/includes/class-smallermobs_Social.php:138
 msgid "Select the Social Networks you want to enable for social shares"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:141
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:195
+#: framework/bootstrap/includes/class-smallermobs_Social.php:141
+#: framework/bootstrap/includes/class-smallermobs_Social.php:195
 msgid "Facebook"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:142
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:222
+#: framework/bootstrap/includes/class-smallermobs_Social.php:142
+#: framework/bootstrap/includes/class-smallermobs_Social.php:222
 msgid "Google+"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:143
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:240
+#: framework/bootstrap/includes/class-smallermobs_Social.php:143
+#: framework/bootstrap/includes/class-smallermobs_Social.php:240
 msgid "LinkedIn"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:144
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:258
+#: framework/bootstrap/includes/class-smallermobs_Social.php:144
+#: framework/bootstrap/includes/class-smallermobs_Social.php:258
 msgid "Pinterest"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:145
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:267
+#: framework/bootstrap/includes/class-smallermobs_Social.php:145
+#: framework/bootstrap/includes/class-smallermobs_Social.php:267
 msgid "Reddit"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:146
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:303
+#: framework/bootstrap/includes/class-smallermobs_Social.php:146
+#: framework/bootstrap/includes/class-smallermobs_Social.php:303
 msgid "Tumblr"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:147
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:312
+#: framework/bootstrap/includes/class-smallermobs_Social.php:147
+#: framework/bootstrap/includes/class-smallermobs_Social.php:312
 msgid "Twitter"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:148
+#: framework/bootstrap/includes/class-smallermobs_Social.php:148
 msgid "Email"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:154
+#: framework/bootstrap/includes/class-smallermobs_Social.php:154
 msgid "Social Links used in Menus && Footer"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:159
+#: framework/bootstrap/includes/class-smallermobs_Social.php:159
 msgid "Blogger"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:160
+#: framework/bootstrap/includes/class-smallermobs_Social.php:160
 msgid ""
 "Provide the link you desire and the Blogger icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:168
+#: framework/bootstrap/includes/class-smallermobs_Social.php:168
 msgid "DeviantART"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:169
+#: framework/bootstrap/includes/class-smallermobs_Social.php:169
 msgid ""
 "Provide the link you desire and the DeviantART icon will appear. To remove "
 "it, just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:177
+#: framework/bootstrap/includes/class-smallermobs_Social.php:177
 msgid "Digg"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:178
+#: framework/bootstrap/includes/class-smallermobs_Social.php:178
 msgid ""
 "Provide the link you desire and the Digg icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:186
+#: framework/bootstrap/includes/class-smallermobs_Social.php:186
 msgid "Dribbble"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:187
+#: framework/bootstrap/includes/class-smallermobs_Social.php:187
 msgid ""
 "Provide the link you desire and the Dribbble icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:196
+#: framework/bootstrap/includes/class-smallermobs_Social.php:196
 msgid ""
 "Provide the link you desire and the Facebook icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:204
+#: framework/bootstrap/includes/class-smallermobs_Social.php:204
 msgid "Flickr"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:205
+#: framework/bootstrap/includes/class-smallermobs_Social.php:205
 msgid ""
 "Provide the link you desire and the Flickr icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:213
+#: framework/bootstrap/includes/class-smallermobs_Social.php:213
 msgid "GitHub"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:214
+#: framework/bootstrap/includes/class-smallermobs_Social.php:214
 msgid ""
 "Provide the link you desire and the GitHub icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:223
+#: framework/bootstrap/includes/class-smallermobs_Social.php:223
 msgid ""
 "Provide the link you desire and the Google+ icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:231
+#: framework/bootstrap/includes/class-smallermobs_Social.php:231
 msgid "Instagram"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:232
+#: framework/bootstrap/includes/class-smallermobs_Social.php:232
 msgid ""
 "Provide the link you desire and the Instagram icon will appear. To remove "
 "it, just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:241
+#: framework/bootstrap/includes/class-smallermobs_Social.php:241
 msgid ""
 "Provide the link you desire and the LinkedIn icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:249
+#: framework/bootstrap/includes/class-smallermobs_Social.php:249
 msgid "MySpace"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:250
+#: framework/bootstrap/includes/class-smallermobs_Social.php:250
 msgid ""
 "Provide the link you desire and the MySpace icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:259
+#: framework/bootstrap/includes/class-smallermobs_Social.php:259
 msgid ""
 "Provide the link you desire and the Pinterest icon will appear. To remove "
 "it, just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:268
+#: framework/bootstrap/includes/class-smallermobs_Social.php:268
 msgid ""
 "Provide the link you desire and the Reddit icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:277
+#: framework/bootstrap/includes/class-smallermobs_Social.php:277
 msgid ""
 "Provide the link you desire and the RSS icon will appear. To remove it, just "
 "leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:285
+#: framework/bootstrap/includes/class-smallermobs_Social.php:285
 msgid "Skype"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:286
+#: framework/bootstrap/includes/class-smallermobs_Social.php:286
 msgid ""
 "Provide the link you desire and the Skype icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:294
+#: framework/bootstrap/includes/class-smallermobs_Social.php:294
 msgid "SoundCloud"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:295
+#: framework/bootstrap/includes/class-smallermobs_Social.php:295
 msgid ""
 "Provide the link you desire and the SoundCloud icon will appear. To remove "
 "it, just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:304
+#: framework/bootstrap/includes/class-smallermobs_Social.php:304
 msgid ""
 "Provide the link you desire and the Tumblr icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:313
+#: framework/bootstrap/includes/class-smallermobs_Social.php:313
 msgid ""
 "Provide the link you desire and the Twitter icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:321
+#: framework/bootstrap/includes/class-smallermobs_Social.php:321
 msgid "Vimeo"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Social.php:322
+#: framework/bootstrap/includes/class-smallermobs_Social.php:322
 msgid ""
 "Provide the link you desire and the Vimeo icon will appear. To remove it, "
 "just leave it blank."
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:22
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:22
 msgid "Typography"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:27
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:27
 msgid "Base Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:50
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:50
 msgid "H1 Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:73
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:73
 msgid "H2 Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:94
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:94
 msgid "H3 Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:114
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:114
 msgid "H4 Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:135
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:135
 msgid "H5 Font"
 msgstr ""
 
-#: framework/bootstrap/includes/class-Shoestrap_Typography.php:156
+#: framework/bootstrap/includes/class-smallermobs_Typography.php:156
 msgid "H6 Font"
 msgstr ""
 
@@ -2028,7 +2028,7 @@ msgid "Use this widget to add a vCard"
 msgstr ""
 
 #: framework/bootstrap/includes/widgets.php:20
-msgid "Shoestrap: vCard"
+msgid "smallermobs: vCard"
 msgstr ""
 
 #: framework/bootstrap/includes/widgets.php:47
@@ -2094,22 +2094,22 @@ msgid ""
 "should be at least 144px x 144px."
 msgstr ""
 
-#: framework/compilers/less-php/class-Shoestrap_Less_php.php:174
-#: framework/compilers/sass-php/class-Shoestrap_Sass_php.php:127
+#: framework/compilers/less-php/class-smallermobs_Less_php.php:174
+#: framework/compilers/sass-php/class-smallermobs_Sass_php.php:127
 msgid ""
 "The following file does not exist and must be so in order to utilise this "
 "theme. Please create this file."
 msgstr ""
 
-#: framework/compilers/less-php/class-Shoestrap_Less_php.php:175
-#: framework/compilers/sass-php/class-Shoestrap_Sass_php.php:128
+#: framework/compilers/less-php/class-smallermobs_Less_php.php:175
+#: framework/compilers/sass-php/class-smallermobs_Sass_php.php:128
 msgid ""
 "Try visiting the theme options and clicking the \"Reset All\" button to "
 "attempt automatically creating it."
 msgstr ""
 
-#: framework/compilers/less-php/class-Shoestrap_Less_php.php:182
-#: framework/compilers/sass-php/class-Shoestrap_Sass_php.php:135
+#: framework/compilers/less-php/class-smallermobs_Less_php.php:182
+#: framework/compilers/sass-php/class-smallermobs_Sass_php.php:135
 msgid ""
 "The following file is not writable and must be so in order to utilise this "
 "theme. Please update the permissions."
@@ -2143,7 +2143,7 @@ msgstr ""
 msgid "None available"
 msgstr ""
 
-#: lib/class-Shoestrap_Image.php:68
+#: lib/class-smallermobs_Image.php:68
 msgid "No image URL has been entered."
 msgstr ""
 
@@ -2596,11 +2596,11 @@ msgid "Submit Comment"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Shoestrap 3"
+msgid "smallermobs 3"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://shoestrap.org"
+msgid "http://smallermobs.org"
 msgstr ""
 
 #. Description of the plugin/theme

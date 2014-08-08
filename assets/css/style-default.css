@@ -6594,13 +6594,13 @@ figure.alignnone {
 .wrap.main-section .content .bg {
   padding-top: 15px;
 }
-#shoestrap_icon {
+#smallermobs_icon {
   position: fixed;
   top: 20%;
   right: 0;
   z-index: 9999;
 }
-#shoestrap_icon a {
+#smallermobs_icon a {
   width: 30px;
   height: 30px;
   line-height: 20px;
@@ -6618,7 +6618,7 @@ figure.alignnone {
   -webkit-border-radius: 4px 0 0px 4px;
   border-radius: 4px 0px 0px 4px;
 }
-#shoestrap_icon a:hover {
+#smallermobs_icon a:hover {
   background: #428bca;
 }
 .button {
@@ -6999,8 +6999,8 @@ fieldset[disabled] .contact-form .pushbutton-wide.active {
 }
 @font-face {
   font-family: 'Elusive-Icons';
-  src: url('http://local.wordpress.dev/wp-content/themes/shoestrap-3/assets/fonts/Elusive-Icons.eot?ver=2');
-  src: url('http://local.wordpress.dev/wp-content/themes/shoestrap-3/assets/fonts/Elusive-Icons.eot?#iefix&ver=2') format('embedded-opentype'), url('http://local.wordpress.dev/wp-content/themes/shoestrap-3/assets/fonts/Elusive-Icons.svg#Elusive-Icons?ver=2') format('svg'), url('http://local.wordpress.dev/wp-content/themes/shoestrap-3/assets/fonts/Elusive-Icons.woff?ver=2') format('woff'), url('http://local.wordpress.dev/wp-content/themes/shoestrap-3/assets/fonts/Elusive-Icons.ttf?ver=2') format('truetype');
+  src: url('http://local.wordpress.dev/wp-content/themes/smallermobs-3/assets/fonts/Elusive-Icons.eot?ver=2');
+  src: url('http://local.wordpress.dev/wp-content/themes/smallermobs-3/assets/fonts/Elusive-Icons.eot?#iefix&ver=2') format('embedded-opentype'), url('http://local.wordpress.dev/wp-content/themes/smallermobs-3/assets/fonts/Elusive-Icons.svg#Elusive-Icons?ver=2') format('svg'), url('http://local.wordpress.dev/wp-content/themes/smallermobs-3/assets/fonts/Elusive-Icons.woff?ver=2') format('woff'), url('http://local.wordpress.dev/wp-content/themes/smallermobs-3/assets/fonts/Elusive-Icons.ttf?ver=2') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

@@ -7,7 +7,7 @@
  * Remove inline CSS used by posts with galleries
  * Remove self-closing tag and change ''s to "'s on rel_canonical()
  */
-function shoestrap_head_cleanup() {
+function smallermobs_head_cleanup() {
 	// Originally from http://wpengineer.com/1438/wordpress-header/
 	remove_action( 'wp_head', 'feed_links', 2 );
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
@@ -22,7 +22,7 @@ function shoestrap_head_cleanup() {
 
 	if ( ! class_exists( 'WPSEO_Frontend' ) ) {
 		remove_action( 'wp_head', 'rel_canonical' );
-		add_action( 'wp_head', 'shoestrap_rel_canonical' );
+		add_action( 'wp_head', 'smallermobs_rel_canonical' );
 	}
 }
 
@@ -31,7 +31,7 @@ function shoestrap_head_cleanup() {
  *
  * Remove dir="ltr"
  */
-function shoestrap_language_attributes() {
+function smallermobs_language_attributes() {
 	$attributes = array();
 	$output = '';
 
@@ -46,16 +46,16 @@ function shoestrap_language_attributes() {
 	}
 
 	$output = implode( ' ', $attributes );
-	$output = apply_filters( 'shoestrap_language_attributes', $output );
+	$output = apply_filters( 'smallermobs_language_attributes', $output );
 
 	return $output;
 }
-add_filter( 'language_attributes', 'shoestrap_language_attributes' );
+add_filter( 'language_attributes', 'smallermobs_language_attributes' );
 
 /**
  * Manage output of wp_title()
  */
-function shoestrap_wp_title( $title ) {
+function smallermobs_wp_title( $title ) {
 	if ( is_feed() ) {
 		return $title;
 	}
@@ -64,12 +64,12 @@ function shoestrap_wp_title( $title ) {
 
 	return $title;
 }
-add_filter( 'wp_title', 'shoestrap_wp_title', 10 );
+add_filter( 'wp_title', 'smallermobs_wp_title', 10 );
 
 /**
  * Add and remove body_class() classes
  */
-function shoestrap_body_class( $classes ) {
+function smallermobs_body_class( $classes ) {
 	// Add post/page slug
 	if ( is_single() || is_page() && ! is_front_page() ) {
 		$classes[] = basename( get_permalink() );
@@ -88,7 +88,7 @@ function shoestrap_body_class( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'shoestrap_body_class' );
+add_filter( 'body_class', 'smallermobs_body_class' );
 
 /**
  * Wrap embedded media as suggested by Readability
@@ -96,10 +96,10 @@ add_filter( 'body_class', 'shoestrap_body_class' );
  * @link https://gist.github.com/965956
  * @link http://www.readability.com/publishers/guidelines#publisher
  */
-function shoestrap_embed_wrap( $cache, $url, $attr = '', $post_ID = '' ) {
+function smallermobs_embed_wrap( $cache, $url, $attr = '', $post_ID = '' ) {
 	return '<div class="entry-content-asset">' . $cache . '</div>';
 }
-add_filter( 'embed_oembed_html', 'shoestrap_embed_wrap', 10, 4 );
+add_filter( 'embed_oembed_html', 'smallermobs_embed_wrap', 10, 4 );
 
 /**
  * Add Bootstrap thumbnail styling to images with captions
@@ -107,7 +107,7 @@ add_filter( 'embed_oembed_html', 'shoestrap_embed_wrap', 10, 4 );
  *
  * @link http://justintadlock.com/archives/2011/07/01/captions-in-wordpress
  */
-function shoestrap_caption( $output, $attr, $content ) {
+function smallermobs_caption( $output, $attr, $content ) {
 	if ( is_feed() ) {
 		return $output;
 	}
@@ -138,7 +138,7 @@ function shoestrap_caption( $output, $attr, $content ) {
 
 	return $output;
 }
-add_filter( 'img_caption_shortcode', 'shoestrap_caption', 10, 3 );
+add_filter( 'img_caption_shortcode', 'smallermobs_caption', 10, 3 );
 
 /**
  * Fix for empty search queries redirecting to home page
@@ -146,35 +146,35 @@ add_filter( 'img_caption_shortcode', 'shoestrap_caption', 10, 3 );
  * @link http://wordpress.org/support/topic/blank-search-sends-you-to-the-homepage#post-1772565
  * @link http://core.trac.wordpress.org/ticket/11330
  */
-function shoestrap_request_filter( $query_vars ) {
+function smallermobs_request_filter( $query_vars ) {
 	if ( isset( $_GET['s'] ) && empty( $_GET['s'] ) ) {
 		$query_vars['s'] = ' ';
 	}
 
 	return $query_vars;
 }
-add_filter( 'request', 'shoestrap_request_filter' );
+add_filter( 'request', 'smallermobs_request_filter' );
 
 /**
  * Tell WordPress to use searchform.php from the templates/ directory
  */
-function shoestrap_get_search_form( $form ) {
+function smallermobs_get_search_form( $form ) {
 	$form = '';
 	ss_locate_template( '/templates/searchform.php', true, false );
 	return $form;
 }
-add_filter( 'get_search_form', 'shoestrap_get_search_form' );
+add_filter( 'get_search_form', 'smallermobs_get_search_form' );
 
 
 /**
  * Remove unnecessary self-closing tags
  */
-function shoestrap_remove_self_closing_tags( $input ) {
+function smallermobs_remove_self_closing_tags( $input ) {
 	return str_replace( ' />', '>', $input );
 }
-add_filter( 'get_avatar',          'shoestrap_remove_self_closing_tags' ); // <img />
-add_filter( 'comment_id_fields',   'shoestrap_remove_self_closing_tags' ); // <input />
-add_filter( 'post_thumbnail_html', 'shoestrap_remove_self_closing_tags' ); // <img />
+add_filter( 'get_avatar',          'smallermobs_remove_self_closing_tags' ); // <img />
+add_filter( 'comment_id_fields',   'smallermobs_remove_self_closing_tags' ); // <input />
+add_filter( 'post_thumbnail_html', 'smallermobs_remove_self_closing_tags' ); // <img />
 
 /**
  * Retrieve paginated link for archive post pages.
@@ -221,7 +221,7 @@ add_filter( 'post_thumbnail_html', 'shoestrap_remove_self_closing_tags' ); // <i
  * @param string|array $args Optional. Override defaults.
  * @return array|string String of page links or array of page links.
  */
-function shoestrap_paginate_links( $args = '' ) {
+function smallermobs_paginate_links( $args = '' ) {
 	global $ss_framework;
 
 	$defaults = array(
@@ -231,8 +231,8 @@ function shoestrap_paginate_links( $args = '' ) {
 		'current'      => 0,
 		'show_all'     => false,
 		'prev_next'    => true,
-		'prev_text'    => __( '&laquo; Previous', 'shoestrap' ),
-		'next_text'    => __( 'Next &raquo;', 'shoestrap' ),
+		'prev_text'    => __( '&laquo; Previous', 'smallermobs' ),
+		'next_text'    => __( 'Next &raquo;', 'smallermobs' ),
 		'end_size'     => 1,
 		'mid_size'     => 2,
 		'type'         => 'plain',
@@ -320,7 +320,7 @@ function shoestrap_paginate_links( $args = '' ) {
 /**
  * Use pagination instead of pagers
  */
-function shoestrap_pagination_toggler() {
+function smallermobs_pagination_toggler() {
 	global $wp_query;
 
 	if ( $wp_query->max_num_pages <= 1 ) {
@@ -328,7 +328,7 @@ function shoestrap_pagination_toggler() {
 	}
 
 	$nav  = '<nav class="pagination">';
-	$nav .= shoestrap_paginate_links(
+	$nav .= smallermobs_paginate_links(
 		apply_filters( 'pagination_args', array(
 			'base'      => str_replace( 999999999, '%#%', get_pagenum_link( 999999999 ) ),
 			'format'    => '',

@@ -10,7 +10,7 @@
 ?>
 
 <li class="list-group-item">
-	<div class="support-status <?php echo shoestrap_bbps_get_topic_status(); ?>"></div>
+	<div class="support-status <?php echo smallermobs_bbps_get_topic_status(); ?>"></div>
 	<ul id="bbp-topic-<?php bbp_topic_id(); ?>" <?php bbp_topic_class(); ?>>
 
 		<li class="col-md-1">

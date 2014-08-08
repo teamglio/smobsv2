@@ -3,7 +3,7 @@
 /**
  * vCard widget
  */
-class Shoestrap_Vcard_Widget extends WP_Widget {
+class smallermobs_Vcard_Widget extends WP_Widget {
 	private $fields = array(
 		'title'          => 'Title ( optional )',
 		'street_address' => 'Street Address',
@@ -15,10 +15,10 @@ class Shoestrap_Vcard_Widget extends WP_Widget {
 	 );
 
 	function __construct() {
-		$widget_ops = array( 'classname' => 'widget_shoestrap_vcard', 'description' => __( 'Use this widget to add a vCard', 'shoestrap' ) );
+		$widget_ops = array( 'classname' => 'widget_smallermobs_vcard', 'description' => __( 'Use this widget to add a vCard', 'smallermobs' ) );
 
-		$this->WP_Widget( 'widget_shoestrap_vcard', __( 'Shoestrap: vCard', 'shoestrap' ), $widget_ops );
-		$this->alt_option_name = 'widget_shoestrap_vcard';
+		$this->WP_Widget( 'widget_smallermobs_vcard', __( 'smallermobs: vCard', 'smallermobs' ), $widget_ops );
+		$this->alt_option_name = 'widget_smallermobs_vcard';
 
 		add_action( 'save_post', array( &$this, 'flush_widget_cache' ) );
 		add_action( 'deleted_post', array( &$this, 'flush_widget_cache' ) );
@@ -26,7 +26,7 @@ class Shoestrap_Vcard_Widget extends WP_Widget {
 	}
 
 	function widget( $args, $instance ) {
-		$cache = wp_cache_get( 'widget_shoestrap_vcard', 'widget' );
+		$cache = wp_cache_get( 'widget_smallermobs_vcard', 'widget' );
 
 		if ( !is_array( $cache ) ) {
 			$cache = array();
@@ -44,7 +44,7 @@ class Shoestrap_Vcard_Widget extends WP_Widget {
 		ob_start();
 		extract( $args, EXTR_SKIP );
 
-		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'vCard', 'shoestrap' ) : $instance['title'], $instance, $this->id_base );
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'vCard', 'smallermobs' ) : $instance['title'], $instance, $this->id_base );
 
 		foreach( $this->fields as $name => $label ) {
 			if ( !isset( $instance[$name] ) ) { $instance[$name] = ''; }
@@ -71,7 +71,7 @@ class Shoestrap_Vcard_Widget extends WP_Widget {
 		echo $after_widget;
 
 		$cache[$args['widget_id']] = ob_get_flush();
-		wp_cache_set( 'widget_shoestrap_vcard', $cache, 'widget' );
+		wp_cache_set( 'widget_smallermobs_vcard', $cache, 'widget' );
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -81,15 +81,15 @@ class Shoestrap_Vcard_Widget extends WP_Widget {
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
 
-		if ( isset( $alloptions['widget_shoestrap_vcard'] ) ) {
-			delete_option( 'widget_shoestrap_vcard' );
+		if ( isset( $alloptions['widget_smallermobs_vcard'] ) ) {
+			delete_option( 'widget_smallermobs_vcard' );
 		}
 
 		return $instance;
 	}
 
 	function flush_widget_cache() {
-		wp_cache_delete( 'widget_shoestrap_vcard', 'widget' );
+		wp_cache_delete( 'widget_smallermobs_vcard', 'widget' );
 	}
 
 	function form( $instance ) {
@@ -97,7 +97,7 @@ class Shoestrap_Vcard_Widget extends WP_Widget {
 			${$name} = isset( $instance[$name] ) ? esc_attr( $instance[$name] ) : '';
 		?>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( $name ) ); ?>"><?php _e( "{$label}:", 'shoestrap' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( $name ) ); ?>"><?php _e( "{$label}:", 'smallermobs' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( $name ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $name ) ); ?>" type="text" value="<?php echo ${$name}; ?>">
 		</p>
 		<?php
@@ -105,7 +105,7 @@ class Shoestrap_Vcard_Widget extends WP_Widget {
 	}
 }
 
-function shoestrap_vcard_widget_init() {
-	register_widget( 'Shoestrap_Vcard_Widget' );
+function smallermobs_vcard_widget_init() {
+	register_widget( 'smallermobs_Vcard_Widget' );
 }
-add_action( 'widgets_init', 'shoestrap_vcard_widget_init' );
+add_action( 'widgets_init', 'smallermobs_vcard_widget_init' );

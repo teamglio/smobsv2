@@ -5,8 +5,8 @@
  *
  * See lib/sidebar.php for more details
  */
-function shoestrap_display_primary_sidebar() {
-	$sidebar_config = new Shoestrap_Sidebar(
+function smallermobs_display_primary_sidebar() {
+	$sidebar_config = new smallermobs_Sidebar(
 		array(
 			'is_404',
 			'is_front_page'
@@ -16,7 +16,7 @@ function shoestrap_display_primary_sidebar() {
 		)
 	);
 
-	return apply_filters( 'shoestrap_display_primary_sidebar', $sidebar_config->display );
+	return apply_filters( 'smallermobs_display_primary_sidebar', $sidebar_config->display );
 }
 
 /**
@@ -24,8 +24,8 @@ function shoestrap_display_primary_sidebar() {
  *
  * See lib/sidebar.php for more details
  */
-function shoestrap_display_secondary_sidebar() {
-	$sidebar_config = new Shoestrap_Sidebar(
+function smallermobs_display_secondary_sidebar() {
+	$sidebar_config = new smallermobs_Sidebar(
 		array(
 			'is_404',
 			'is_front_page'
@@ -37,22 +37,22 @@ function shoestrap_display_secondary_sidebar() {
 		)
 	);
 
-	return apply_filters( 'shoestrap_display_secondary_sidebar', $sidebar_config->display );
+	return apply_filters( 'smallermobs_display_secondary_sidebar', $sidebar_config->display );
 }
 
 
-if ( ! function_exists( 'shoestrap_section_class' ) ) :
+if ( ! function_exists( 'smallermobs_section_class' ) ) :
 /*
  * Calculates the classes of the main area, main sidebar and secondary sidebar
  */
-function shoestrap_section_class( $target, $echo = false ) {
+function smallermobs_section_class( $target, $echo = false ) {
 	global $redux, $ss_framework;
 	// Disable the wrapper by default
 	$wrapper = NULL;
 
-	if ( shoestrap_display_primary_sidebar() ) {
+	if ( smallermobs_display_primary_sidebar() ) {
 		// Both sidebars are displayed
-		if ( shoestrap_display_secondary_sidebar() ) {
+		if ( smallermobs_display_secondary_sidebar() ) {
 			if ( is_page_template( 'template-5.php' ) ) {
 				$main    = $ss_framework->column_classes( array( 'medium' => 8 ), 'string' );
 				$primary = $ss_framework->column_classes( array( 'medium' => 4 ), 'string' );
@@ -76,7 +76,7 @@ function shoestrap_section_class( $target, $echo = false ) {
 		}
 	} else {
 		// Only the secondary sidebar is displayed
-		if ( shoestrap_display_secondary_sidebar() ) {
+		if ( smallermobs_display_secondary_sidebar() ) {
 			$main      = $ss_framework->column_classes( array( 'medium' => 8 ), 'string' );
 			$secondary = $ss_framework->column_classes( array( 'medium' => 4 ), 'string' );
 		} else {
@@ -91,13 +91,13 @@ function shoestrap_section_class( $target, $echo = false ) {
 	}
 
 	if ( $target == 'primary' ) {
-		$class = apply_filters( 'shoestrap_section_class_primary', $primary );
+		$class = apply_filters( 'smallermobs_section_class_primary', $primary );
 	} elseif ( $target == 'secondary' ) {
-		$class = apply_filters( 'shoestrap_section_class_secondary', $secondary );
+		$class = apply_filters( 'smallermobs_section_class_secondary', $secondary );
 	} elseif ( $target == 'wrapper' ) {
-		$class = apply_filters( 'shoestrap_section_class_wrapper', $wrapper );
+		$class = apply_filters( 'smallermobs_section_class_wrapper', $wrapper );
 	} else {
-		$class = apply_filters( 'shoestrap_section_class_main', $main );
+		$class = apply_filters( 'smallermobs_section_class_main', $main );
 	}
 
 	if ( is_array( $class ) ) {
@@ -118,18 +118,18 @@ endif;
  * Some templates require an additional wrapper div around the Main Area and the Primary Sidebar.
  * This function creates the opening <div> tag with the appropriate classes to be used.
  */
-function shoestrap_mp_wrap_div_open() {
+function smallermobs_mp_wrap_div_open() {
 	global $ss_framework;
 
 	if ( $ss_framework->include_wrapper() ) {
-		echo '<div class="mp_wrap ' . shoestrap_section_class( 'wrapper' ) . '">' . $ss_framework->open_row( 'div' );
+		echo '<div class="mp_wrap ' . smallermobs_section_class( 'wrapper' ) . '">' . $ss_framework->open_row( 'div' );
 	}
 }
 
 /*
- * Closes the <div> opened by the shoestrap_mp_wrap_div_open() function.
+ * Closes the <div> opened by the smallermobs_mp_wrap_div_open() function.
  */
-function shoestrap_mp_wrap_div_close() {
+function smallermobs_mp_wrap_div_close() {
 	global $ss_framework;
 
 	if ( $ss_framework->include_wrapper() ) {
@@ -140,16 +140,16 @@ function shoestrap_mp_wrap_div_close() {
 /*
  * Adds the actions to open and close the wrapper divs when necessary.
  *
- * Uses the shoestrap_mp_wrap_div_open() and shoestrap_mp_wrap_div_close() functions.
+ * Uses the smallermobs_mp_wrap_div_open() and smallermobs_mp_wrap_div_close() functions.
  */
-function shoestrap_mp_wrap_div_toggler() {
-	$wrapper = shoestrap_section_class( 'wrapper' );
+function smallermobs_mp_wrap_div_toggler() {
+	$wrapper = smallermobs_section_class( 'wrapper' );
 	if ( ! is_null( $wrapper ) && ! empty( $wrapper ) ) {
-		add_action( 'shoestrap_pre_main', 'shoestrap_mp_wrap_div_open', 999 );
-		add_action( 'shoestrap_post_main', 'shoestrap_mp_wrap_div_close', 999 );
+		add_action( 'smallermobs_pre_main', 'smallermobs_mp_wrap_div_open', 999 );
+		add_action( 'smallermobs_post_main', 'smallermobs_mp_wrap_div_close', 999 );
 	}
 }
-add_action( 'wp', 'shoestrap_mp_wrap_div_toggler' );
+add_action( 'wp', 'smallermobs_mp_wrap_div_toggler' );
 
 /**
  * $content_width is a global variable used by WordPress for max image upload sizes

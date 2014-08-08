@@ -1,11 +1,11 @@
 <?php
 
-if ( ! class_exists( 'Shoestrap_Background' ) ) {
+if ( ! class_exists( 'smallermobs_Background' ) ) {
 
 	/**
 	* The "Background" module
 	*/
-	class Shoestrap_Background {
+	class smallermobs_Background {
 
 		function __construct() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'css' ), 101 );
@@ -30,12 +30,12 @@ if ( ! class_exists( 'Shoestrap_Background' ) ) {
 			// The Content background color
 			if ( $content_opacity < 100 ) {
 
-				$content_bg = 'background:' . Shoestrap_Color::get_rgba( $bg_color, $content_opacity ) . ';';
+				$content_bg = 'background:' . smallermobs_Color::get_rgba( $bg_color, $content_opacity ) . ';';
 				$style = '.wrap.main-section div.content .bg {' . $content_bg . '}';
 
 			}
 
-			wp_add_inline_style( 'shoestrap_css', $style );
+			wp_add_inline_style( 'smallermobs_css', $style );
 		}
 	}
 }

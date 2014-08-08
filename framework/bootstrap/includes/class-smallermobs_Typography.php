@@ -1,11 +1,11 @@
 <?php
 
 
-if ( ! class_exists( 'Shoestrap_Typography' ) ) {
+if ( ! class_exists( 'smallermobs_Typography' ) ) {
 	/**
 	 * The "Typography" module
 	 */
-	class Shoestrap_Typography {
+	class smallermobs_Typography {
 
 		function __construct() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'googlefont_links' ) );

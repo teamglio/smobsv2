@@ -2,14 +2,14 @@
 /**
  * Register sidebars and widgets
  */
-function shoestrap_widgets_init() {
-	$class        = apply_filters( 'shoestrap_widgets_class', '' );
-	$before_title = apply_filters( 'shoestrap_widgets_before_title', '<h3 class="widget-title">' );
-	$after_title  = apply_filters( 'shoestrap_widgets_after_title', '</h3>' );
+function smallermobs_widgets_init() {
+	$class        = apply_filters( 'smallermobs_widgets_class', '' );
+	$before_title = apply_filters( 'smallermobs_widgets_before_title', '<h3 class="widget-title">' );
+	$after_title  = apply_filters( 'smallermobs_widgets_after_title', '</h3>' );
 
 	// Sidebars
 	register_sidebar( array(
-		'name'          => __( 'Primary Sidebar', 'shoestrap' ),
+		'name'          => __( 'Primary Sidebar', 'smallermobs' ),
 		'id'            => 'sidebar-primary',
 		'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 		'after_widget'  => '</section>',
@@ -18,7 +18,7 @@ function shoestrap_widgets_init() {
 	));
 
 	register_sidebar( array(
-		'name'          => __( 'Secondary Sidebar', 'shoestrap' ),
+		'name'          => __( 'Secondary Sidebar', 'smallermobs' ),
 		'id'            => 'sidebar-secondary',
 		'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 		'after_widget'  => '</section>',
@@ -26,4 +26,4 @@ function shoestrap_widgets_init() {
 		'after_title'   => $after_title,
 	));
 }
-add_action( 'widgets_init', 'shoestrap_widgets_init' );
+add_action( 'widgets_init', 'smallermobs_widgets_init' );

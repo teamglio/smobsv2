@@ -1,15 +1,15 @@
 <?php
 
 
-if( ! class_exists( 'Shoestrap_Footer' ) ) {
+if( ! class_exists( 'smallermobs_Footer' ) ) {
 	/**
-	* Build the Shoestrap Footer module class.
+	* Build the smallermobs Footer module class.
 	*/
-	class Shoestrap_Footer {
+	class smallermobs_Footer {
 
 		function __construct() {
 			add_action( 'wp_enqueue_scripts',    array( $this, 'css' ), 101 );
-			add_action( 'shoestrap_footer_html', array( $this, 'html' ) );
+			add_action( 'smallermobs_footer_html', array( $this, 'html' ) );
 			add_action( 'widgets_init',          array( $this, 'widgets_init' ) );
 		}
 
@@ -17,13 +17,13 @@ if( ! class_exists( 'Shoestrap_Footer' ) ) {
 		 * Register sidebars and widgets
 		 */
 		function widgets_init() {
-			$class        = apply_filters( 'shoestrap_widgets_class', '' );
-			$before_title = apply_filters( 'shoestrap_widgets_before_title', '<h3 class="widget-title">' );
-			$after_title  = apply_filters( 'shoestrap_widgets_after_title', '</h3>' );
+			$class        = apply_filters( 'smallermobs_widgets_class', '' );
+			$before_title = apply_filters( 'smallermobs_widgets_before_title', '<h3 class="widget-title">' );
+			$after_title  = apply_filters( 'smallermobs_widgets_after_title', '</h3>' );
 
 			// Sidebars
 			register_sidebar( array(
-				'name'          => __( 'Primary Sidebar', 'shoestrap' ),
+				'name'          => __( 'Primary Sidebar', 'smallermobs' ),
 				'id'            => 'sidebar-primary',
 				'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 				'after_widget'  => '</section>',
@@ -32,7 +32,7 @@ if( ! class_exists( 'Shoestrap_Footer' ) ) {
 			));
 
 			register_sidebar( array(
-				'name'          => __( 'Secondary Sidebar', 'shoestrap' ),
+				'name'          => __( 'Secondary Sidebar', 'smallermobs' ),
 				'id'            => 'sidebar-secondary',
 				'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 				'after_widget'  => '</section>',
@@ -41,7 +41,7 @@ if( ! class_exists( 'Shoestrap_Footer' ) ) {
 			));
 
 			register_sidebar( array(
-				'name'          => __( 'Footer Widget Area 1', 'shoestrap' ),
+				'name'          => __( 'Footer Widget Area 1', 'smallermobs' ),
 				'id'            => 'sidebar-footer-1',
 				'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 				'after_widget'  => '</section>',
@@ -50,7 +50,7 @@ if( ! class_exists( 'Shoestrap_Footer' ) ) {
 			));
 
 			register_sidebar( array(
-				'name'          => __( 'Footer Widget Area 2', 'shoestrap' ),
+				'name'          => __( 'Footer Widget Area 2', 'smallermobs' ),
 				'id'            => 'sidebar-footer-2',
 				'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 				'after_widget'  => '</section>',
@@ -59,7 +59,7 @@ if( ! class_exists( 'Shoestrap_Footer' ) ) {
 			));
 
 			register_sidebar( array(
-				'name'          => __( 'Footer Widget Area 3', 'shoestrap' ),
+				'name'          => __( 'Footer Widget Area 3', 'smallermobs' ),
 				'id'            => 'sidebar-footer-3',
 				'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 				'after_widget'  => '</section>',
@@ -68,7 +68,7 @@ if( ! class_exists( 'Shoestrap_Footer' ) ) {
 			));
 
 			register_sidebar( array(
-				'name'          => __( 'Footer Widget Area 4', 'shoestrap' ),
+				'name'          => __( 'Footer Widget Area 4', 'smallermobs' ),
 				'id'            => 'sidebar-footer-4',
 				'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 				'after_widget'  => '</section>',
@@ -88,7 +88,7 @@ if( ! class_exists( 'Shoestrap_Footer' ) ) {
 			$cl         = $ss_settings['footer_color'];
 			$cl_brand   = $ss_settings['color_brand_primary'];
 			$opacity    = ( intval( $ss_settings['footer_opacity'] ) ) / 100;
-			$rgb        = Shoestrap_Color::get_rgb( $bg, true );
+			$rgb        = smallermobs_Color::get_rgb( $bg, true );
 			$border     = $ss_settings['footer_border'];
 			$top_margin = $ss_settings['footer_top_margin'];
 
@@ -113,7 +113,7 @@ if( ! class_exists( 'Shoestrap_Footer' ) ) {
 			$style .= '#footer_social_bar a { margin-left: 9px; padding: 3px; color:' . $cl . '; }';
 			$style .= '#footer_social_bar a:hover, #footer_social_bar a:active { color:' . $cl_brand . ' !important; text-decoration:none; }';
 
-			wp_add_inline_style( 'shoestrap_css', $style );
+			wp_add_inline_style( 'smallermobs_css', $style );
 		}
 
 		function html() {
@@ -162,7 +162,7 @@ if( ! class_exists( 'Shoestrap_Footer' ) ) {
 
 			$networks = $ss_social->get_social_links();
 
-			do_action( 'shoestrap_footer_before_copyright' );
+			do_action( 'smallermobs_footer_before_copyright' );
 
 			echo '<div id="footer-copyright">';
 				echo $ss_framework->open_row( 'div' );

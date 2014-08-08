@@ -3,33 +3,33 @@
 /**
  * Build the array of fields
  */
-function shoestrap_customizer_fields() {
+function smallermobs_customizer_fields() {
 
 	$settings = array(
 		'colors_section' => array(
 			'slug'   => 'general',
-			'title'  => __( 'General', 'shoestrap' ),
+			'title'  => __( 'General', 'smallermobs' ),
 			'fields' => array(
 				'body_bg' => array(
-					'label' => __( 'Background', 'shoestrap' ),
+					'label' => __( 'Background', 'smallermobs' ),
 					'type'  => 'background',
 					'style' => 'body, .wrap.main-section .content .bg, .form-control, .btn, .panel',
 					'priority' => 1,
 				),
 				'color_brand_primary' => array(
-					'label' => __( 'Accent', 'shoestrap' ),
+					'label' => __( 'Accent', 'smallermobs' ),
 					'type'  => 'color',
 					'style' => 'a',
 					'priority' => 3,
 				),
 				'navbar_bg' => array(
-					'label' => __( 'NavBar', 'shoestrap' ),
+					'label' => __( 'NavBar', 'smallermobs' ),
 					'type'  => 'color',
 					'style' => '',
 					'priority' => 4,
 				),
 				// 'font_base' => array(
-				// 	'label'    => __( 'Base Font', 'shoestrap' ),
+				// 	'label'    => __( 'Base Font', 'smallermobs' ),
 				// 	'type'     => 'font',
 				// 	'style'    => '',
 				// 	'priority' => 5,
@@ -44,10 +44,10 @@ function shoestrap_customizer_fields() {
 /*
  * Creates the section, settings and the controls for the customizer
  */
-function shoestrap_customizer( $wp_customize ) {
+function smallermobs_customizer( $wp_customize ) {
 	global $ss_settings;
 
-	$sections = shoestrap_customizer_fields();
+	$sections = smallermobs_customizer_fields();
 
 	foreach ( $sections as $section ) {
 
@@ -106,7 +106,7 @@ function shoestrap_customizer( $wp_customize ) {
 					);
 
 					// Add control
-					$wp_customize->add_control( new Shoestrap_Google_WebFont_Control( $wp_customize, $field, array(
+					$wp_customize->add_control( new smallermobs_Google_WebFont_Control( $wp_customize, $field, array(
 				    'label'       => $args['label'],
 				    'section'     => $section['slug'],
 				    'settings'    => $field,
@@ -116,13 +116,13 @@ function shoestrap_customizer( $wp_customize ) {
 		}
 	}
 }
-add_action( 'customize_register', 'shoestrap_customizer' );
+add_action( 'customize_register', 'smallermobs_customizer' );
 
 /*
  * Applies the customizer styles to the preview screen.
  */
-function shoestrap_background_css() {
-	$sections = shoestrap_customizer_fields();
+function smallermobs_background_css() {
+	$sections = smallermobs_customizer_fields();
 
 	echo '<style>';
 
@@ -145,20 +145,20 @@ function shoestrap_background_css() {
 
 				// Additional styles for the content background setting
 				if ( 'body_bg' == $field ) {
-					$bg_brightness = Shoestrap_Color::get_brightness( $value );
+					$bg_brightness = smallermobs_Color::get_brightness( $value );
 					// Set an "accent" color depending on the background's brightness
 					if ( $bg_brightness > 120 ) {
-						$accent = Shoestrap_Color::adjust_brightness( $value, -20 );
-						$border = Shoestrap_Color::adjust_brightness( $value, -30 );
+						$accent = smallermobs_Color::adjust_brightness( $value, -20 );
+						$border = smallermobs_Color::adjust_brightness( $value, -30 );
 					} else {
-						$accent = Shoestrap_Color::adjust_brightness( $value, 20 );
-						$border = Shoestrap_Color::adjust_brightness( $value, 30 );
+						$accent = smallermobs_Color::adjust_brightness( $value, 20 );
+						$border = smallermobs_Color::adjust_brightness( $value, 30 );
 					}
 
 					// Use lumosity difference to find a text color with great readability
-					if ( Shoestrap_Color::lumosity_difference( $value, '#ffffff' ) > 5 ) {
+					if ( smallermobs_Color::lumosity_difference( $value, '#ffffff' ) > 5 ) {
 						$text = '#ffffff';
-					} elseif ( Shoestrap_Color::lumosity_difference( $value, '#222222' ) > 5 ) {
+					} elseif ( smallermobs_Color::lumosity_difference( $value, '#222222' ) > 5 ) {
 						$text = '#222222';
 					}
 
@@ -183,12 +183,12 @@ function shoestrap_background_css() {
 				// Additional styles per setting
 				if ( 'color_brand_primary' == $field ) {
 
-					$brightness = Shoestrap_Color::get_brightness( $value );
+					$brightness = smallermobs_Color::get_brightness( $value );
 					if ( $brightness < 195 ) {
-						$border = Shoestrap_Color::adjust_brightness( $value, -20 );
+						$border = smallermobs_Color::adjust_brightness( $value, -20 );
 						$text_c = '#fff';
 					} else {
-						$border = Shoestrap_Color::adjust_brightness( $value, 20 );
+						$border = smallermobs_Color::adjust_brightness( $value, 20 );
 						$text_c = '#333';
 					}
 
@@ -207,16 +207,16 @@ function shoestrap_background_css() {
 
 	echo '</style>';
 }
-add_action( 'wp_head', 'shoestrap_background_css', 210 );
+add_action( 'wp_head', 'smallermobs_background_css', 210 );
 
 /**
  * This function takes care of copying theme mods as options in our array,
  * cleaning up the db from our theme-mods and then triggering the compiler.
  */
-function shoestrap_customizer_copy_options() {
+function smallermobs_customizer_copy_options() {
 	global $ss_settings;
 
-	$sections = shoestrap_customizer_fields();
+	$sections = smallermobs_customizer_fields();
 
 	foreach ( $sections as $section ) {
 
@@ -234,9 +234,9 @@ function shoestrap_customizer_copy_options() {
 					$ss_settings['html_bg']['background-color'] = $value;
 
 					// Use lumosity difference to find a text color with great readability
-					if ( Shoestrap_Color::lumosity_difference( $value, '#ffffff' ) > 5 ) {
+					if ( smallermobs_Color::lumosity_difference( $value, '#ffffff' ) > 5 ) {
 						$text = '#ffffff';
-					} elseif ( Shoestrap_Color::lumosity_difference( $value, '#222222' ) > 5 ) {
+					} elseif ( smallermobs_Color::lumosity_difference( $value, '#222222' ) > 5 ) {
 						$text = '#222222';
 					}
 					$ss_settings['font_base']['color'] = $text;
@@ -269,20 +269,20 @@ function shoestrap_customizer_copy_options() {
 
 	}
 
-	update_option( SHOESTRAP_OPT_NAME, $ss_settings );
+	update_option( smallermobs_OPT_NAME, $ss_settings );
 
-	$compiler = new Shoestrap_Less_PHP();
+	$compiler = new smallermobs_Less_PHP();
 	add_action( 'customize_save_after', array( $compiler, 'makecss' ), 77 );
 
 }
-add_action( 'customize_save_after', 'shoestrap_customizer_copy_options', 75 );
+add_action( 'customize_save_after', 'smallermobs_customizer_copy_options', 75 );
 
 
 /*
  * This class creates a custom Customizer control for Google Fonts
  */
 if ( class_exists( 'WP_Customize_Control' ) ) {
-  class Shoestrap_Google_WebFont_Control extends WP_Customize_Control {
+  class smallermobs_Google_WebFont_Control extends WP_Customize_Control {
     public $type = 'select';
 
     public function render_content() { ?>
@@ -292,7 +292,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
           <select <?php $this->link(); ?>>
             <option value="" data-details=''>Select a Font</option>
             <?php
-              $fonts = shoestrap_google_webfonts_array();
+              $fonts = smallermobs_google_webfonts_array();
               foreach ($fonts as $font => $details) {
                 if ($this->value() == $font) {
                   $selected = ' selected="selected"';
@@ -314,7 +314,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 /*
  * Ccall the API and enable Google Font dropdown.
  */
-function shoestrap_google_webfonts_array() {
+function smallermobs_google_webfonts_array() {
 	define('GOOGLE_FONTS_API_KEY','AIzaSyCDiOc36EIOmwdwspLG3LYwCg9avqC5YLs');
 
 	// Check if they have a valid API key and SSL on this box. Won't work without SSL.

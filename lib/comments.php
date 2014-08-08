@@ -4,7 +4,7 @@
  *
  * @link http://getbootstrap.com/components/#media
  */
-class Shoestrap_Walker_Comment extends Walker_Comment {
+class smallermobs_Walker_Comment extends Walker_Comment {
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$GLOBALS['comment_depth'] = $depth + 1; ?>
 		<ul <?php comment_class( 'media list-unstyled comment-' . get_comment_ID() ); ?>>
@@ -42,10 +42,10 @@ class Shoestrap_Walker_Comment extends Walker_Comment {
 	}
 }
 
-function shoestrap_get_avatar( $avatar, $type ) {
+function smallermobs_get_avatar( $avatar, $type ) {
 	if ( ! is_object( $type ) ) { return $avatar; }
 
 	$avatar = str_replace( "class='avatar", "class='avatar pull-left media-object", $avatar );
 	return $avatar;
 }
-add_filter( 'get_avatar', 'shoestrap_get_avatar', 10, 2 );
+add_filter( 'get_avatar', 'smallermobs_get_avatar', 10, 2 );

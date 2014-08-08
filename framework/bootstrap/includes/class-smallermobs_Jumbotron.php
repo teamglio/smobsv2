@@ -1,16 +1,16 @@
 <?php
 
 
-if ( ! class_exists( 'Shoestrap_Jumbotron' ) ) {
+if ( ! class_exists( 'smallermobs_Jumbotron' ) ) {
 
 	/**
 	* The Jumbotron module
 	*/
-	class Shoestrap_Jumbotron {
+	class smallermobs_Jumbotron {
 
 		function __construct() {
 			add_action( 'widgets_init',       array( $this, 'jumbotron_widgets_init'           ), 20  );
-			add_action( 'shoestrap_pre_wrap', array( $this, 'jumbotron_content'                ), 5   );
+			add_action( 'smallermobs_pre_wrap', array( $this, 'jumbotron_content'                ), 5   );
 			add_action( 'wp_enqueue_scripts', array( $this, 'jumbotron_css'                    ), 101 );
 			add_action( 'wp_footer',          array( $this, 'jumbotron_fittext'                ), 10  );
 			add_action( 'wp_enqueue_scripts', array( $this, 'jumbotron_fittext_enqueue_script' ), 101 );
@@ -21,7 +21,7 @@ if ( ! class_exists( 'Shoestrap_Jumbotron' ) ) {
 		 */
 		function jumbotron_widgets_init() {
 			register_sidebar( array(
-				'name'          => __( 'Jumbotron', 'shoestrap' ),
+				'name'          => __( 'Jumbotron', 'smallermobs' ),
 				'id'            => 'jumbotron',
 				'before_widget' => '<section id="%1$s"><div class="section-inner">',
 				'after_widget'  => '</div></section>',
@@ -51,13 +51,13 @@ if ( ! class_exists( 'Shoestrap_Jumbotron' ) ) {
 				echo '<div class="before-main-wrapper">';
 
 				if ( $site_style == 'boxed' && $nocontainer != 1 ) {
-					echo '<div class="' . Shoestrap_Layout::container_class() . '">';
+					echo '<div class="' . smallermobs_Layout::container_class() . '">';
 				}
 
 				echo '<div class="jumbotron">';
 
 				if ( $nocontainer != 1 && $site_style == 'wide' || $site_style == 'boxed' ) {
-					echo '<div class="' . Shoestrap_Layout::container_class() . '">';
+					echo '<div class="' . smallermobs_Layout::container_class() . '">';
 				}
 
 				dynamic_sidebar( 'Jumbotron' );
@@ -99,7 +99,7 @@ if ( ! class_exists( 'Shoestrap_Jumbotron' ) ) {
 
 			$theCSS = '.jumbotron {' . trim( $style ) . '}';
 
-			wp_add_inline_style( 'shoestrap_css', $theCSS );
+			wp_add_inline_style( 'smallermobs_css', $theCSS );
 		}
 
 		/*

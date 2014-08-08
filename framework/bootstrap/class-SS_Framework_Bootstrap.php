@@ -78,70 +78,70 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 
 			if ( class_exists( 'ReduxFrameworkPlugin' ) ) {
 
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Options.php' );         // Redux Options
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Advanced.php' );        // Advanced
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Background.php' );      // Background
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Branding.php' );        // Branding
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Blog.php' );            // Blog
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Breadcrumbs.php' );     // Breadcrumbs
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Header.php' );          // Header
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Typography.php' );      // Typography
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Footer.php' );          // Footer
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Social.php' );          // Social
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Layout.php' );          // layout
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Jumbotron.php' );       // Jumbotron
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Menus.php' );           // Menus
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Nav_Walker.php' );      // NavWalker
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Nav_Menu_Widget.php' ); // NavMenus
-				include_once( SS_FRAMEWORK_PATH . '/includes/class-Shoestrap_Navlist_Walker.php' );  // NavLists
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Options.php' );         // Redux Options
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Advanced.php' );        // Advanced
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Background.php' );      // Background
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Branding.php' );        // Branding
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Blog.php' );            // Blog
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Breadcrumbs.php' );     // Breadcrumbs
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Header.php' );          // Header
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Typography.php' );      // Typography
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Footer.php' );          // Footer
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Social.php' );          // Social
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Layout.php' );          // layout
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Jumbotron.php' );       // Jumbotron
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Menus.php' );           // Menus
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Nav_Walker.php' );      // NavWalker
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Nav_Menu_Widget.php' ); // NavMenus
+				include_once( SS_FRAMEWORK_PATH . '/includes/class-smallermobs_Navlist_Walker.php' );  // NavLists
 
 				include_once( SS_FRAMEWORK_PATH . '/includes/widgets.php' );                         // Widgets
 				include_once( SS_FRAMEWORK_PATH . '/includes/gallery.php' );                         // Custom [gallery]
 
 				// instantiate the classes
 				global $ss_layout;
-				$ss_layout      = new Shoestrap_Layout();
+				$ss_layout      = new smallermobs_Layout();
 
 				global $ss_background;
-				$ss_background  = new Shoestrap_Background();
+				$ss_background  = new smallermobs_Background();
 
 				global $ss_advanced;
-				$ss_advanced    = new Shoestrap_Advanced();
+				$ss_advanced    = new smallermobs_Advanced();
 
 				global $ss_branding;
-				$ss_branding    = new Shoestrap_Branding();
+				$ss_branding    = new smallermobs_Branding();
 
 				global $ss_blog;
-				$ss_blog        = new Shoestrap_Blog();
+				$ss_blog        = new smallermobs_Blog();
 
 				global $ss_footer;
-				$ss_footer      = new Shoestrap_Footer();
+				$ss_footer      = new smallermobs_Footer();
 
 				global $ss_headers;
-				$ss_headers     = new Shoestrap_Header();
+				$ss_headers     = new smallermobs_Header();
 
 				global $ss_jumbotron;
-				$ss_jumbotron   = new Shoestrap_Jumbotron();
+				$ss_jumbotron   = new smallermobs_Jumbotron();
 
 				global $ss_menus;
-				$ss_menus       = new Shoestrap_Menus();
+				$ss_menus       = new smallermobs_Menus();
 
 				global $ss_typography;
-				$ss_typography  = new Shoestrap_Typography();
+				$ss_typography  = new smallermobs_Typography();
 
 				global $ss_breadcrumbs;
-				$ss_breadcrumbs = new Shoestrap_Breadcrumbs();
+				$ss_breadcrumbs = new smallermobs_Breadcrumbs();
 
 				global $ss_social;
-				$ss_social      = new Shoestrap_Social();
+				$ss_social      = new smallermobs_Social();
 
-				add_filter( 'shoestrap_compiler', array( $this, 'styles_filter' ) );
+				add_filter( 'smallermobs_compiler', array( $this, 'styles_filter' ) );
 
 				if ( isset( $ss_settings['navbar_social'] ) && $ss_settings['navbar_social'] == 1 ) {
 					if ( $ss_settings['navbar_social_style'] == 1 ) {
-						add_action( 'shoestrap_inside_nav_end', array( $this, 'navbar_social_bar' ) );
+						add_action( 'smallermobs_inside_nav_end', array( $this, 'navbar_social_bar' ) );
 					} else {
-						add_action( 'shoestrap_inside_nav_end', array( $this, 'navbar_social_links' ) );
+						add_action( 'smallermobs_inside_nav_end', array( $this, 'navbar_social_links' ) );
 					}
 				}
 
@@ -154,7 +154,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 				add_filter( 'nav_menu_css_class', array( $this, 'nav_menu_css_class' ), 10, 2 );
 				add_filter( 'nav_menu_item_id',   '__return_null' );
 			}
-			add_action( 'shoestrap_pre_wrap', array( $this, 'breadcrumbs' ), 99 );
+			add_action( 'smallermobs_pre_wrap', array( $this, 'breadcrumbs' ), 99 );
 			add_filter( 'wp_nav_menu_args',   array( $this, 'nav_menu_args' ) );
 		}
 
@@ -163,7 +163,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 		 */
 		function navlist_widget_init() {
 			unregister_widget( 'WP_Nav_Menu_Widget' );
-			register_widget( 'Shoestrap_Nav_Menu_Widget' );
+			register_widget( 'smallermobs_Nav_Menu_Widget' );
 		}
 
 		/**
@@ -175,7 +175,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 			$classes = preg_replace( '/( current( -menu-|[-_]page[-_] )( item|parent|ancestor ) )/', 'active', $classes );
 			$classes = preg_replace( '/^( ( menu|page )[-_\w+]+ )+/', '', $classes );
 
-			$classes[] = 'menu-' . shoestrap_transliterate( $slug );
+			$classes[] = 'menu-' . smallermobs_transliterate( $slug );
 
 			$classes = array_unique( $classes );
 
@@ -186,7 +186,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 		 * Clean up wp_nav_menu_args
 		 *
 		 * Remove the container
-		 * Use Shoestrap_Nav_Walker() by default
+		 * Use smallermobs_Nav_Walker() by default
 		 */
 		function nav_menu_args( $args = '' ) {
 			$nav_menu_args['container'] = false;
@@ -200,11 +200,11 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 			}
 
 			if ( ! $args['walker'] ) {
-				$nav_menu_args['walker'] = new Shoestrap_Nav_Walker();
+				$nav_menu_args['walker'] = new smallermobs_Nav_Walker();
 			}
 
 			if ( ! $args['fallback_cb'] ) {
-				$nav_menu_args['fallback_cb'] = 'Shoestrap_Nav_Walker::fallback';
+				$nav_menu_args['fallback_cb'] = 'smallermobs_Nav_Walker::fallback';
 			}
 
 			return array_merge( $args, $nav_menu_args );
@@ -231,7 +231,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 				$class = 'fluid';
 			}
 
-			if ( class_exists( 'Shoestrap_Breadcrumbs' ) ) {
+			if ( class_exists( 'smallermobs_Breadcrumbs' ) ) {
 				echo '<div class="breadTrail ' . $class . '">';
 				echo $ss_breadcrumbs->breadcrumb( false );
 				echo '</div>';
@@ -394,11 +394,11 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 			} else {
 				$bg  = '#ffffff';
 			}
-			$body_bg = '#' . str_replace( '#', '', Shoestrap_Color::sanitize_hex( $bg ) );
+			$body_bg = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $bg ) );
 
 			// Calculate the gray shadows based on the body background.
 			// We basically create 2 "presets": light and dark.
-			if ( Shoestrap_Color::get_brightness( $body_bg ) > 80 ) {
+			if ( smallermobs_Color::get_brightness( $body_bg ) > 80 ) {
 				$gray_darker  = 'lighten(#000, 13.5%)';
 				$gray_dark    = 'lighten(#000, 20%)';
 				$gray         = 'lighten(#000, 33.5%)';
@@ -412,7 +412,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 				$gray_lighter = 'darken(#fff, 93.5%)';
 			}
 
-			$bg_brightness = Shoestrap_Color::get_brightness( $body_bg );
+			$bg_brightness = smallermobs_Color::get_brightness( $body_bg );
 
 			$table_bg_accent      = $bg_brightness > 50 ? 'darken(@body-bg, 2.5%)'    : 'lighten(@body-bg, 2.5%)';
 			$table_bg_hover       = $bg_brightness > 50 ? 'darken(@body-bg, 4%)'      : 'lighten(@body-bg, 4%)';
@@ -590,19 +590,19 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 			/**
 			 * BRANDING
 			 */
-			$brand_primary = '#' . str_replace( '#', '', Shoestrap_Color::sanitize_hex( $ss_settings['color_brand_primary'] ) );
-			$brand_success = '#' . str_replace( '#', '', Shoestrap_Color::sanitize_hex( $ss_settings['color_brand_success'] ) );
-			$brand_warning = '#' . str_replace( '#', '', Shoestrap_Color::sanitize_hex( $ss_settings['color_brand_warning'] ) );
-			$brand_danger  = '#' . str_replace( '#', '', Shoestrap_Color::sanitize_hex( $ss_settings['color_brand_danger'] ) );
-			$brand_info    = '#' . str_replace( '#', '', Shoestrap_Color::sanitize_hex( $ss_settings['color_brand_info'] ) );
+			$brand_primary = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $ss_settings['color_brand_primary'] ) );
+			$brand_success = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $ss_settings['color_brand_success'] ) );
+			$brand_warning = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $ss_settings['color_brand_warning'] ) );
+			$brand_danger  = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $ss_settings['color_brand_danger'] ) );
+			$brand_info    = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $ss_settings['color_brand_info'] ) );
 
-			$link_hover_color = ( Shoestrap_Color::get_brightness( $brand_primary ) > 50 ) ? 'darken(@link-color, 15%)' : 'lighten(@link-color, 15%)';
+			$link_hover_color = ( smallermobs_Color::get_brightness( $brand_primary ) > 50 ) ? 'darken(@link-color, 15%)' : 'lighten(@link-color, 15%)';
 
-			$brand_primary_brightness = Shoestrap_Color::get_brightness( $brand_primary );
-			$brand_success_brightness = Shoestrap_Color::get_brightness( $brand_success );
-			$brand_warning_brightness = Shoestrap_Color::get_brightness( $brand_warning );
-			$brand_danger_brightness  = Shoestrap_Color::get_brightness( $brand_danger );
-			$brand_info_brightness    = Shoestrap_Color::get_brightness( $brand_info );
+			$brand_primary_brightness = smallermobs_Color::get_brightness( $brand_primary );
+			$brand_success_brightness = smallermobs_Color::get_brightness( $brand_success );
+			$brand_warning_brightness = smallermobs_Color::get_brightness( $brand_warning );
+			$brand_danger_brightness  = smallermobs_Color::get_brightness( $brand_danger );
+			$brand_info_brightness    = smallermobs_Color::get_brightness( $brand_info );
 
 			// Button text colors
 			$btn_primary_color  = $brand_primary_brightness < 195 ? '#fff' : '333';
@@ -618,8 +618,8 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 			$btn_danger_border  = $brand_danger_brightness  < 195 ? 'darken(@btn-danger-bg, 5%)'  : 'lighten(@btn-danger-bg, 5%)';
 			$btn_info_border    = $brand_info_brightness    < 195 ? 'darken(@btn-info-bg, 5%)'    : 'lighten(@btn-info-bg, 5%)';
 
-			$input_border_focus = ( Shoestrap_Color::get_brightness( $brand_primary ) < 195 ) ? 'lighten(@brand-primary, 10%)' : 'darken(@brand-primary, 10%)';
-			$navbar_border      = ( Shoestrap_Color::get_brightness( $brand_primary ) < 50 ) ? 'lighten(@navbar-default-bg, 6.5%)' : 'darken(@navbar-default-bg, 6.5%)';
+			$input_border_focus = ( smallermobs_Color::get_brightness( $brand_primary ) < 195 ) ? 'lighten(@brand-primary, 10%)' : 'darken(@brand-primary, 10%)';
+			$navbar_border      = ( smallermobs_Color::get_brightness( $brand_primary ) < 50 ) ? 'lighten(@navbar-default-bg, 6.5%)' : 'darken(@navbar-default-bg, 6.5%)';
 
 			// Branding colors
 			if ( isset( $brand_primary ) && ! empty( $brand_primary ) ) {
@@ -708,18 +708,18 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 			/**
 			 * JUMBOTRON
 			 */
-			$font_jumbotron         = shoestrap_process_font( $ss_settings['font_jumbotron'] );
+			$font_jumbotron         = smallermobs_process_font( $ss_settings['font_jumbotron'] );
 			$jumbotron_bg           = $ss_settings['jumbo_bg'];
-			$jumbotron_bg           = '#' . str_replace( '#', '', Shoestrap_Color::sanitize_hex( $jumbotron_bg['background-color'] ) );
+			$jumbotron_bg           = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $jumbotron_bg['background-color'] ) );
 			$jumbotron_text_color   = '#' . str_replace( '#', '', $font_jumbotron['color'] );
 
 			if ( $ss_settings['font_jumbotron_heading_custom'] == 1 ) {
-				$font_jumbotron_headers = shoestrap_process_font( $ss_settings['font_jumbotron_headers'] );
+				$font_jumbotron_headers = smallermobs_process_font( $ss_settings['font_jumbotron_headers'] );
 
 				$font_jumbotron_headers_face   = $font_jumbotron_headers['font-family'];
 				$font_jumbotron_headers_weight = $font_jumbotron_headers['font-weight'];
 				$font_jumbotron_headers_style  = $font_jumbotron_headers['font-style'];
-				$jumbotron_headers_text_color  = '#' . str_replace( '#', '', Shoestrap_Color::sanitize_hex( $font_jumbotron_headers['color'] ) );
+				$jumbotron_headers_text_color  = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $font_jumbotron_headers['color'] ) );
 
 			} else {
 				$font_jumbotron_headers_face   = $font_jumbotron['font-family'];
@@ -786,7 +786,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 			$variables .= '@breadcrumb-padding-vertical:   ' . round( $padding_base * 8 / 6 ) . 'px;';
 			$variables .= '@breadcrumb-padding-horizontal: ' . round( $padding_base * 15 / 6 ) . 'px;';
 
-			// Shoestrap-specific variables
+			// smallermobs-specific variables
 			// --------------------------------------------------
 
 			if ( isset( $font_jumbotron['font-weight'] ) && ! empty( $font_jumbotron['font-weight'] ) ) {
@@ -824,17 +824,17 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 			/**
 			 * MENUS
 			 */
-			$font_brand        = shoestrap_process_font( $ss_settings['font_brand'] );
+			$font_brand        = smallermobs_process_font( $ss_settings['font_brand'] );
 
-			$font_navbar       = shoestrap_process_font( $ss_settings['font_navbar'] );
-			$navbar_bg         = '#' . str_replace( '#', '', Shoestrap_Color::sanitize_hex( $ss_settings['navbar_bg'] ) );
+			$font_navbar       = smallermobs_process_font( $ss_settings['font_navbar'] );
+			$navbar_bg         = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $ss_settings['navbar_bg'] ) );
 			$navbar_height     = filter_var( $ss_settings['navbar_height'], FILTER_SANITIZE_NUMBER_INT );
 			$navbar_text_color = '#' . str_replace( '#', '', $font_navbar['color'] );
 			$brand_text_color  = '#' . str_replace( '#', '', $font_brand['color'] );
-			$navbar_border     = ( Shoestrap_Color::get_brightness( $navbar_bg ) < 50 ) ? 'lighten(@navbar-default-bg, 6.5%)' : 'darken(@navbar-default-bg, 6.5%)';
+			$navbar_border     = ( smallermobs_Color::get_brightness( $navbar_bg ) < 50 ) ? 'lighten(@navbar-default-bg, 6.5%)' : 'darken(@navbar-default-bg, 6.5%)';
 			$gfb = $ss_settings['grid_float_breakpoint'];
 
-			if ( Shoestrap_Color::get_brightness( $navbar_bg ) < 165 ) {
+			if ( smallermobs_Color::get_brightness( $navbar_bg ) < 165 ) {
 				$navbar_link_hover_color    = 'darken(@navbar-default-color, 26.5%)';
 				$navbar_link_active_bg      = 'darken(@navbar-default-bg, 6.5%)';
 				$navbar_link_disabled_color = 'darken(@navbar-default-bg, 6.5%)';
@@ -904,7 +904,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 				$variables .= '@navbar-default-toggle-border-color: ' . $navbar_border . ';';
 			}
 
-			// Shoestrap-specific variables
+			// smallermobs-specific variables
 			// --------------------------------------------------
 
 			if ( isset( $font_navbar ) && ! empty( $font_navbar ) ) {
@@ -1012,7 +1012,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 				$parser->parse( $extra_vars );
 
 				// Add a filter to the compiler
-				$parser->parse( apply_filters( 'shoestrap_compiler', '' ) );
+				$parser->parse( apply_filters( 'smallermobs_compiler', '' ) );
 
 				$css = $parser->getCss();
 
@@ -1026,7 +1026,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 			$css = str_replace( 'http:', '', $css );
 			$css = str_replace( 'https:', '', $css );
 
-			return apply_filters( 'shoestrap_compiler_output', $css );
+			return apply_filters( 'smallermobs_compiler_output', $css );
 		}
 
 		/**

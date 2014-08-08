@@ -3,7 +3,7 @@
 /*
  * Get the content and widget areas for the footer
  */
-function shoestrap_footer_content() {
+function smallermobs_footer_content() {
 	global $ss_framework;
 	// Finding the number of active widget sidebars
 	$num_of_sidebars = 0;
@@ -43,5 +43,5 @@ function shoestrap_footer_content() {
 		echo $ss_framework->clearfix();
 	}
 
-	do_action( 'shoestrap_footer_html' );
+	do_action( 'smallermobs_footer_html' );
 }

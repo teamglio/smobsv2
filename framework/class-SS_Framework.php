@@ -15,7 +15,7 @@ if ( ! class_exists( 'SS_Framework' ) ) {
 
 			require_once dirname( __FILE__ ) . '/core/class-SS_Framework_Core.php';
 
-			do_action( 'shoestrap_include_frameworks' );
+			do_action( 'smallermobs_include_frameworks' );
 
 			if ( ! defined( 'SS_FRAMEWORK' ) ) {
 				$active_framework = 'bootstrap';
@@ -42,13 +42,13 @@ if ( ! class_exists( 'SS_Framework' ) ) {
 
 				if ( $compiler == 'less_php' ) {
 
-					require_once 'compilers/less-php/class-Shoestrap_Less_php.php';
-					$compiler_init = new Shoestrap_Less_PHP();
+					require_once 'compilers/less-php/class-smallermobs_Less_php.php';
+					$compiler_init = new smallermobs_Less_PHP();
 
 				} elseif ( $compiler == 'sass_php' ) {
 
-					require_once 'compilers/sass-php/class-Shoestrap_Sass_php.php';
-					$compiler_init = new Shoestrap_Sass_PHP();
+					require_once 'compilers/sass-php/class-smallermobs_Sass_php.php';
+					$compiler_init = new smallermobs_Sass_PHP();
 
 				}
 			}

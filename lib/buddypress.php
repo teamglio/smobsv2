@@ -4,7 +4,7 @@
  * Check if this is a BuddyPress page or not.
  * Returns true or false (boolean)
  */
-function shoestrap_is_bp() {
+function smallermobs_is_bp() {
 
 	$bp = false;
 	/** Pages *************************************************************/

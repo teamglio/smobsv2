@@ -1,16 +1,16 @@
 <?php
 
 
-if ( ! class_exists( 'Shoestrap_Header' ) ) {
+if ( ! class_exists( 'smallermobs_Header' ) ) {
 
 	/**
 	* The Header module
 	*/
-	class Shoestrap_Header {
+	class smallermobs_Header {
 
 		function __construct() {
 			add_action( 'widgets_init',       array( $this, 'header_widgets_init' ), 30 );
-			add_action( 'shoestrap_pre_wrap', array( $this, 'branding' ), 3 );
+			add_action( 'smallermobs_pre_wrap', array( $this, 'branding' ), 3 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'css' ), 101 );
 
 		}
@@ -20,7 +20,7 @@ if ( ! class_exists( 'Shoestrap_Header' ) ) {
 		 */
 		function header_widgets_init() {
 			register_sidebar( array(
-				'name'          => __( 'Header Area', 'shoestrap' ),
+				'name'          => __( 'Header Area', 'smallermobs' ),
 				'id'            => 'header-area',
 				'before_widget' => '<div>',
 				'after_widget'  => '</div>',
@@ -49,7 +49,7 @@ if ( ! class_exists( 'Shoestrap_Header' ) ) {
 				}
 
 				if ( $ss_settings['header_branding'] == 1 ) {
-					echo '<a class="brand-logo" href="' . home_url() . '/"><h1>' . Shoestrap_Branding::logo() . '</h1></a>';
+					echo '<a class="brand-logo" href="' . home_url() . '/"><h1>' . smallermobs_Branding::logo() . '</h1></a>';
 				}
 
 				if ( $ss_settings['header_branding'] == 1 ) {
@@ -83,18 +83,18 @@ if ( ! class_exists( 'Shoestrap_Header' ) ) {
 			global $ss_settings;
 
 			if ( is_array( $ss_settings['header_bg'] ) ) {
-				$bg = Shoestrap_Color::sanitize_hex( $ss_settings['header_bg']['background-color'] );
+				$bg = smallermobs_Color::sanitize_hex( $ss_settings['header_bg']['background-color'] );
 			} else {
-				$bg = Shoestrap_Color::sanitize_hex( $ss_settings['header_bg'] );
+				$bg = smallermobs_Color::sanitize_hex( $ss_settings['header_bg'] );
 			}
-			$cl = Shoestrap_Color::sanitize_hex( $ss_settings['header_color'] );
+			$cl = smallermobs_Color::sanitize_hex( $ss_settings['header_color'] );
 
 			$header_margin_top    = $ss_settings['header_margin_top'];
 			$header_margin_bottom = $ss_settings['header_margin_bottom'];
 
 			$opacity  = ( intval( $ss_settings['header_bg_opacity'] ) ) / 100;
 
-			$rgb      = Shoestrap_Color::get_rgb( $bg, true );
+			$rgb      = smallermobs_Color::get_rgb( $bg, true );
 
 			if ( $ss_settings['site_style'] == 'boxed' ) {
 				$element = 'body .before-main-wrapper .header-boxed';
@@ -120,7 +120,7 @@ if ( ! class_exists( 'Shoestrap_Header' ) ) {
 
 				$style .= '}';
 
-				wp_add_inline_style( 'shoestrap_css', $style );
+				wp_add_inline_style( 'smallermobs_css', $style );
 			}
 		}
 	}

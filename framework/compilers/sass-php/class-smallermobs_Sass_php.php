@@ -1,11 +1,11 @@
 <?php
 
-if ( ! class_exists( 'Shoestrap_Sass_PHP' ) ) {
+if ( ! class_exists( 'smallermobs_Sass_PHP' ) ) {
 
 	/**
-	* The Shoestrap Compiler
+	* The smallermobs Compiler
 	*/
-	class Shoestrap_Sass_PHP {
+	class smallermobs_Sass_PHP {
 
 		function __construct() {
 			global $ss_framework;
@@ -15,8 +15,8 @@ if ( ! class_exists( 'Shoestrap_Sass_PHP' ) ) {
 				require_once( 'scss.inc.php' );
 			}
 
-			add_filter( 'shoestrap_main_stylesheet_url', array( $this, 'stylesheet_url' ) );
-			add_filter( 'shoestrap_main_stylesheet_ver', array( $this, 'stylesheet_ver' ) );
+			add_filter( 'smallermobs_main_stylesheet_url', array( $this, 'stylesheet_url' ) );
+			add_filter( 'smallermobs_main_stylesheet_ver', array( $this, 'stylesheet_ver' ) );
 			add_action( 'admin_notices',                 array( $this, 'file_nag'       ) );
 
 			// If the Custom LESS exists and has changed after the last compilation, trigger the compiler.
@@ -28,7 +28,7 @@ if ( ! class_exists( 'Shoestrap_Sass_PHP' ) ) {
 
 			// Saving functions on import, etc
 			// If a compiler field was altered or import or reset defaults
-			add_action( 'redux/options/' . SHOESTRAP_OPT_NAME . '/compiler' , array( $this, 'makecss' ) );
+			add_action( 'redux/options/' . smallermobs_OPT_NAME . '/compiler' , array( $this, 'makecss' ) );
 		}
 
 		/*
@@ -84,11 +84,11 @@ if ( ! class_exists( 'Shoestrap_Sass_PHP' ) ) {
 			$value    = ( $target == 'url' ) ? $css_uri : $css_path;
 
 			if ( $target == 'ver' ) {
-				if ( ! get_transient( 'shoestrap_stylesheet_time' ) ) {
-					set_transient( 'shoestrap_stylesheet_time', filemtime( $css_path ), 24 * 60 * 60 );
+				if ( ! get_transient( 'smallermobs_stylesheet_time' ) ) {
+					set_transient( 'smallermobs_stylesheet_time', filemtime( $css_path ), 24 * 60 * 60 );
 				}
 
-				$value = get_transient( 'shoestrap_stylesheet_time' );
+				$value = get_transient( 'smallermobs_stylesheet_time' );
 			}
 
 			if ( $echo ) {
@@ -124,18 +124,18 @@ if ( ! class_exists( 'Shoestrap_Sass_PHP' ) ) {
 
 				if ( ! file_exists( $filename ) ) {
 					if ( ! $wp_filesystem->put_contents( $filename, ' ', FS_CHMOD_FILE ) ) {
-						$content = __( 'The following file does not exist and must be so in order to utilise this theme. Please create this file.', 'shoestrap' );
-						$content .= '<br>' . __( 'Try visiting the theme options and clicking the "Reset All" button to attempt automatically creating it.', 'shoestrap' );
+						$content = __( 'The following file does not exist and must be so in order to utilise this theme. Please create this file.', 'smallermobs' );
+						$content .= '<br>' . __( 'Try visiting the theme options and clicking the "Reset All" button to attempt automatically creating it.', 'smallermobs' );
 						$content .= '<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="' . $filename . '" target="_blank">' . $filename . '</a>';
-						add_settings_error( 'shoestrap', 'create_file', $content, 'error' );
+						add_settings_error( 'smallermobs', 'create_file', $content, 'error' );
 						settings_errors();
 					}
 				} else {
 					if ( ! is_writable( $filename ) ) {
-						$content = __( 'The following file is not writable and must be so in order to utilise this theme. Please update the permissions.', 'shoestrap' );
+						$content = __( 'The following file is not writable and must be so in order to utilise this theme. Please update the permissions.', 'smallermobs' );
 						$content .= '<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="' . $filename . '" target="_blank">' . $filename . '</a>';
 
-						add_settings_error( 'shoestrap', 'create_file', $content, 'error' );
+						add_settings_error( 'smallermobs', 'create_file', $content, 'error' );
 						settings_errors();
 					}
 				}
@@ -161,11 +161,11 @@ if ( ! class_exists( 'Shoestrap_Sass_PHP' ) ) {
 
 			if ( is_writeable( $file ) || ( ! file_exists( $file ) && is_writeable( dirname( $file ) ) ) ) {
 				if ( ! $wp_filesystem->put_contents( $file, $content, FS_CHMOD_FILE ) ) {
-					return apply_filters( 'shoestrap_css_output', $content );
+					return apply_filters( 'smallermobs_css_output', $content );
 				}
 			}
 			// Force re-building the stylesheet version transient
-			delete_transient( 'shoestrap_stylesheet_time' );
+			delete_transient( 'smallermobs_stylesheet_time' );
 		}
 	}
 }

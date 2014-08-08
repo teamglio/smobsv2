@@ -1,17 +1,17 @@
 <?php
 
 
-if ( ! class_exists( 'Shoestrap_Social' ) ) {
+if ( ! class_exists( 'smallermobs_Social' ) ) {
 	/**
 	* The "Social" modue
 	*/
-	class Shoestrap_Social {
+	class smallermobs_Social {
 
 		function __construct() {
 			global $ss_settings;
 
 			// When on a BuddyPress, disable social shares.
-			if ( class_exists( 'BuddyPress' ) && shoestrap_is_bp() ) {
+			if ( class_exists( 'BuddyPress' ) && smallermobs_is_bp() ) {
 				$ss_settings['social_sharing_single_post'] = 0;
 				$ss_settings['social_sharing_single_page'] = 0;
 				$ss_settings['social_sharing_archives'] = 0;
@@ -24,30 +24,30 @@ if ( ! class_exists( 'Shoestrap_Social' ) ) {
 
 			// Conditions for showing content in posts archives
 			if ( isset( $ss_settings['social_sharing_archives'] ) && $ss_settings['social_sharing_archives'] == 1 ) {
-				add_action( 'shoestrap_entry_footer', array( $this, 'social_sharing' ), 5 );
+				add_action( 'smallermobs_entry_footer', array( $this, 'social_sharing' ), 5 );
 			}
 
 			// Conditions for showing content in single posts
 			if ( isset( $ss_settings['social_sharing_single_post'] ) && $ss_settings['social_sharing_single_post'] == 1 ) {
 				if ( $ss_settings['social_sharing_location'] == 'top' ) {
-					add_action( 'shoestrap_single_pre_content',   array( $this, 'social_sharing' ), 5 );
+					add_action( 'smallermobs_single_pre_content',   array( $this, 'social_sharing' ), 5 );
 				} elseif ( $ss_settings['social_sharing_location'] == 'bottom' ) {
-					add_action( 'shoestrap_single_after_content', array( $this, 'social_sharing' ), 5 );
+					add_action( 'smallermobs_single_after_content', array( $this, 'social_sharing' ), 5 );
 				} elseif ( $ss_settings['social_sharing_location'] == 'both' ) {
-					add_action( 'shoestrap_single_pre_content',   array( $this, 'social_sharing' ), 5 );
-					add_action( 'shoestrap_single_after_content', array( $this, 'social_sharing' ), 5 );
+					add_action( 'smallermobs_single_pre_content',   array( $this, 'social_sharing' ), 5 );
+					add_action( 'smallermobs_single_after_content', array( $this, 'social_sharing' ), 5 );
 				}
 			}
 
 			// Conditions for showing content in single pages
 			if ( isset( $ss_settings['social_sharing_single_page'] ) && $ss_settings['social_sharing_single_page'] == 1 ) {
 				if ( $ss_settings['social_sharing_location'] == 'top' ) {
-					add_action( 'shoestrap_page_pre_content',   array( $this, 'social_sharing' ), 5 );
+					add_action( 'smallermobs_page_pre_content',   array( $this, 'social_sharing' ), 5 );
 				} elseif ( $ss_settings['social_sharing_location'] == 'bottom' ) {
-					add_action( 'shoestrap_page_after_content', array( $this, 'social_sharing' ), 5 );
+					add_action( 'smallermobs_page_after_content', array( $this, 'social_sharing' ), 5 );
 				} elseif ( $ss_settings['social_sharing_location'] == 'both' ) {
-					add_action( 'shoestrap_page_pre_content',   array( $this, 'social_sharing' ), 5 );
-					add_action( 'shoestrap_page_after_content', array( $this, 'social_sharing' ), 5 );
+					add_action( 'smallermobs_page_pre_content',   array( $this, 'social_sharing' ), 5 );
+					add_action( 'smallermobs_page_after_content', array( $this, 'social_sharing' ), 5 );
 				}
 			}
 		}

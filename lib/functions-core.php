@@ -5,11 +5,11 @@ define( 'themeFOLDER', get_template() );
 define( 'themePATH', get_theme_root() );
 define( 'themeNAME', wp_get_theme() );
 
-if ( ! function_exists( 'shoestrap_getVariable' ) ) :
+if ( ! function_exists( 'smallermobs_getVariable' ) ) :
 /*
  * Gets the current values from REDUX, and if not there, grabs the defaults
  */
-function shoestrap_getVariable( $name, $key = false ) {
+function smallermobs_getVariable( $name, $key = false ) {
 	global $redux;
 	$options = $redux;
 
@@ -28,17 +28,17 @@ function shoestrap_getVariable( $name, $key = false ) {
 endif;
 
 
-if ( ! function_exists( 'shoestrap_password_form' ) ) :
+if ( ! function_exists( 'smallermobs_password_form' ) ) :
 /*
  * Replace the password forms with a bootstrap-formatted version.
  */
-function shoestrap_password_form() {
+function smallermobs_password_form() {
 	global $post, $ss_framework;
 	$label    = 'pwbox-' . ( empty( $post->ID ) ? rand() : $post->ID );
 	$content  = '<form action="';
 	$content .= esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) );
 	$content .= '" method="post">';
-	$content .= __( 'This post is password protected. To view it please enter your password below:', 'shoestrap' );
+	$content .= __( 'This post is password protected. To view it please enter your password below:', 'smallermobs' );
 	$content .= '<div class="input-group">';
 	$content .= '<input name="post_password" id="' . $label . '" type="password" size="20" />';
 	$content .= '<span class="input-group-btn">';
@@ -48,41 +48,41 @@ function shoestrap_password_form() {
 	return $content;
 }
 endif;
-add_filter( 'the_password_form', 'shoestrap_password_form' );
+add_filter( 'the_password_form', 'smallermobs_password_form' );
 
 
-if ( ! function_exists( 'shoestrap_replace_reply_link_class' ) ) :
+if ( ! function_exists( 'smallermobs_replace_reply_link_class' ) ) :
 /*
  * Apply the proper classes to comment reply links
  */
-function shoestrap_replace_reply_link_class( $class ) {
+function smallermobs_replace_reply_link_class( $class ) {
 	global $ss_framework;
 	$class = str_replace( "class='comment-reply-link", "class='comment-reply-link " . $ss_framework->button_classes( 'success', 'small' ), $class );
 	return $class;
 }
 endif;
-add_filter('comment_reply_link', 'shoestrap_replace_reply_link_class');
+add_filter('comment_reply_link', 'smallermobs_replace_reply_link_class');
 
 
-if ( ! function_exists( 'shoestrap_init_filesystem' ) ) :
+if ( ! function_exists( 'smallermobs_init_filesystem' ) ) :
 /*
  * Initialize the Wordpress filesystem, no more using file_put_contents function
  */
-function shoestrap_init_filesystem() {
+function smallermobs_init_filesystem() {
 	if ( empty( $wp_filesystem ) ) {
 		require_once(ABSPATH .'/wp-admin/includes/file.php');
 		WP_Filesystem();
 	}
 }
 endif;
-add_filter('init', 'shoestrap_init_filesystem');
+add_filter('init', 'smallermobs_init_filesystem');
 
 
-if ( ! function_exists( 'shoestrap_array_delete' ) ) :
+if ( ! function_exists( 'smallermobs_array_delete' ) ) :
 /*
  * Unset a row from an array.
  */
-function shoestrap_array_delete( $idx, $array ) {  
+function smallermobs_array_delete( $idx, $array ) {  
 	unset( $array[$idx] );
 	return ( is_array( $array ) ) ? array_values( $array ) : null;
 }
@@ -91,7 +91,7 @@ endif;
 /*
  * Canonical URLs
  */
-function shoestrap_rel_canonical() {
+function smallermobs_rel_canonical() {
 	global $wp_the_query;
 
 	if ( ! is_singular() ) {
@@ -105,7 +105,7 @@ function shoestrap_rel_canonical() {
 	$link = get_permalink( $id );
 	echo "\t<link rel=\"canonical\" href=\"$link\">\n";
 }
-add_action( 'init', 'shoestrap_head_cleanup' );
+add_action( 'init', 'smallermobs_head_cleanup' );
 
 /**
  * Remove the WordPress version from RSS feeds
@@ -117,16 +117,16 @@ add_filter( 'the_generator', '__return_false' );
  *
  * @link http://www.deluxeblogtips.com/2011/01/remove-dashboard-widgets-in-wordpress.html
  */
-function shoestrap_remove_dashboard_widgets() {
+function smallermobs_remove_dashboard_widgets() {
 	remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_primary', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
 }
-add_action( 'admin_init', 'shoestrap_remove_dashboard_widgets' );
+add_action( 'admin_init', 'smallermobs_remove_dashboard_widgets' );
 
 
-function shoestrap_process_font( $font ) {
+function smallermobs_process_font( $font ) {
 
 	if ( empty( $font['font-weight'] ) ) {
 		$font['font-weight'] = "inherit";

@@ -1,17 +1,17 @@
 <?php
 
-if ( ! class_exists( 'Shoestrap_Image' ) ) {
+if ( ! class_exists( 'smallermobs_Image' ) ) {
 
 	/**
 	* The Image handling class
 	*/
-	class Shoestrap_Image {
+	class smallermobs_Image {
 
 		function __construct() {
 		}
 
 		/*
-		 * Proxy function to be called whenever an image is used. If you wish to resize, use shoestrap_image_resize()
+		 * Proxy function to be called whenever an image is used. If you wish to resize, use smallermobs_image_resize()
 		 */
 		public static function image( $img ) {
 
@@ -27,7 +27,7 @@ if ( ! class_exists( 'Shoestrap_Image' ) ) {
 			$img['width'] = $image[1];
 			$img['height'] = $image[2];
 
-			return shoestrap_image_resize( $img );
+			return smallermobs_image_resize( $img );
 		}
 
 		public static function image_resize( $data ) {
@@ -65,7 +65,7 @@ if ( ! class_exists( 'Shoestrap_Image' ) ) {
 			global $wpdb;
 
 			if ( empty( $url ) ) {
-				return new WP_Error( 'no_image_url', __( 'No image URL has been entered.', 'shoestrap' ), $url );
+				return new WP_Error( 'no_image_url', __( 'No image URL has been entered.', 'smallermobs' ), $url );
 			}
 
 			// Get default size from database
@@ -192,4 +192,4 @@ if ( ! class_exists( 'Shoestrap_Image' ) ) {
 	}
 }
 
-$image = new Shoestrap_Image();
+$image = new smallermobs_Image();

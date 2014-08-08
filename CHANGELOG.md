@@ -68,7 +68,7 @@
 
 ### 3.2
 
-* Complete rewrite [link](https://github.com/shoestrap/shoestrap-3/pull/479)
+* Complete rewrite [link](https://github.com/smallermobs/smallermobs-3/pull/479)
 
 ### 3.1.0.2
 
@@ -82,7 +82,7 @@
 * New: Modules are now Self-Contained.
 * Fix: Re-organizing file structure for modules
 * Fix: Fixed inline style generation of header margin. (props @larruda)
-* Fix: Adding variables using the shoestrap_compiler filter
+* Fix: Adding variables using the smallermobs_compiler filter
 * FIx: Variables and Less files are now per-module.
 * Fix: Other Bugfixes
 
@@ -218,7 +218,7 @@ PLEASE re-compile your stylesheets after updating.
 * Fix: Updating Redux Framework
 * Fix: fixed deprecated class name for unstyled lists
 * Fix: bugfix for avatar image in WP admin bar
-* New: Added the 'shoestrap_compiler' filter to the compiler
+* New: Added the 'smallermobs_compiler' filter to the compiler
 * Fix: Simplifications to the compiler
 * New: Update to Bootstrap 3.0.3
 * New: Adding NavList Navwalker to widget menus
@@ -229,7 +229,7 @@ PLEASE re-compile your stylesheets after updating.
 * Fix: Updating Redux Framework
 * Fix: fixed deprecated class name for unstyled lists
 * Fix: bugfix for avatar image in WP admin bar
-* New: Added the 'shoestrap_compiler' filter to the compiler
+* New: Added the 'smallermobs_compiler' filter to the compiler
 * Fix: Simplifications to the compiler
 * New: Update to Bootstrap 3.0.3
 * New: Adding [NavList Navwalker](https://github.com/twittem/wp-bootstrap-navlist-walker) to widget menus

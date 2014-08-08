@@ -4,16 +4,16 @@
  *
  * @link http://scribu.net/wordpress/theme-wrappers.html
  */
-function shoestrap_template_path() {
-	return Shoestrap_Wrapping::$main_template;
+function smallermobs_template_path() {
+	return smallermobs_Wrapping::$main_template;
 }
 
-function shoestrap_sidebar_path() {
-	$template = apply_filters( 'shoestrap_sidebar_path', 'templates/sidebar.php' );
-	return new Shoestrap_Wrapping( $template );
+function smallermobs_sidebar_path() {
+	$template = apply_filters( 'smallermobs_sidebar_path', 'templates/sidebar.php' );
+	return new smallermobs_Wrapping( $template );
 }
 
-class Shoestrap_Wrapping {
+class smallermobs_Wrapping {
 	// Stores the full path to the main template file
 	static $main_template;
 
@@ -31,7 +31,7 @@ class Shoestrap_Wrapping {
 	}
 
 	public function __toString() {
-		$this->templates = apply_filters( 'shoestrap_wrap_' . $this->slug, $this->templates );
+		$this->templates = apply_filters( 'smallermobs_wrap_' . $this->slug, $this->templates );
 		return ss_locate_template( $this->templates );
 	}
 
@@ -43,7 +43,7 @@ class Shoestrap_Wrapping {
 			self::$base = false;
 		}
 
-		return new Shoestrap_Wrapping();
+		return new smallermobs_Wrapping();
 	}
 }
-add_filter( 'template_include', array( 'Shoestrap_Wrapping', 'wrap' ), 99 );
+add_filter( 'template_include', array( 'smallermobs_Wrapping', 'wrap' ), 99 );

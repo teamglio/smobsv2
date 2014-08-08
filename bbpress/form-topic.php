@@ -92,13 +92,13 @@ endif;
 						<?php do_action( 'bbp_theme_before_topic_form_type' ); ?>
 						<div class="form-group">
 							<label for="bbp_stick_topic"><?php _e( 'Topic Type:', 'bbpress' ); ?></label><br />
-							<?php shoestrap_bbp_form_topic_type_dropdown(); ?>
+							<?php smallermobs_bbp_form_topic_type_dropdown(); ?>
 						</div>
 						<?php do_action( 'bbp_theme_after_topic_form_type' ); ?>
 						<?php do_action( 'bbp_theme_before_topic_form_status' ); ?>
 						<p>
 							<label for="bbp_topic_status"><?php _e( 'Topic Status:', 'bbpress' ); ?></label><br />
-							<?php shoestrap_bbp_form_topic_status_dropdown(); ?>
+							<?php smallermobs_bbp_form_topic_status_dropdown(); ?>
 						</p>
 						<?php do_action( 'bbp_theme_after_topic_form_status' ); ?>
 					<?php endif; ?>

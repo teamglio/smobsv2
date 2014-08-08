@@ -9,7 +9,7 @@
  *
  * @return boolean True will display the sidebar, False will not
  */
-class Shoestrap_Sidebar {
+class smallermobs_Sidebar {
 	private $conditionals;
 	private $templates;
 

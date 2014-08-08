@@ -5,14 +5,14 @@
  */
 require_once dirname( __FILE__ ) . '/class-TGM_Plugin_Activation.php';
 
-add_action( 'tgmpa_register', 'shoestrap_required_plugins' );
+add_action( 'tgmpa_register', 'smallermobs_required_plugins' );
 /**
  * Register the required plugins for this theme.
  *
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function shoestrap_required_plugins() {
+function smallermobs_required_plugins() {
 	/**
 	 * Array of plugin arrays. Required keys are name and slug.
 	 */
@@ -34,7 +34,7 @@ function shoestrap_required_plugins() {
 	 */
 
 	$config = array(
-		'domain'           => 'shoestrap',
+		'domain'           => 'smallermobs',
 		'default_path'     => '',
 		'parent_menu_slug' => 'themes.php',
 		'parent_url_slug'  => 'themes.php',
@@ -43,10 +43,10 @@ function shoestrap_required_plugins() {
 		'is_automatic'     => true,
 		'message'          => '',
 		'strings'          => array(
-			'page_title'                      => __( 'Install Required Plugins', 'shoestrap' ),
-			'menu_title'                      => __( 'Install Plugins', 'shoestrap' ),
-			'installing'                      => __( 'Installing Plugin: %s', 'shoestrap' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'shoestrap' ),
+			'page_title'                      => __( 'Install Required Plugins', 'smallermobs' ),
+			'menu_title'                      => __( 'Install Plugins', 'smallermobs' ),
+			'installing'                      => __( 'Installing Plugin: %s', 'smallermobs' ),
+			'oops'                            => __( 'Something went wrong with the plugin API.', 'smallermobs' ),
 			'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ),
 			'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.' ),
 			'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ),
@@ -57,9 +57,9 @@ function shoestrap_required_plugins() {
 			'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ),
 			'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins' ),
 			'activate_link'                   => _n_noop( 'Activate installed plugin', 'Activate installed plugins' ),
-			'return'                          => __( 'Return to Required Plugins Installer', 'shoestrap' ),
-			'plugin_activated'                => __( 'Plugin activated successfully.', 'shoestrap' ),
-			'complete'                        => __( 'All plugins installed and activated successfully. %s', 'shoestrap' ),
+			'return'                          => __( 'Return to Required Plugins Installer', 'smallermobs' ),
+			'plugin_activated'                => __( 'Plugin activated successfully.', 'smallermobs' ),
+			'complete'                        => __( 'All plugins installed and activated successfully. %s', 'smallermobs' ),
 			'nag_type'                        => 'updated'
 		)
 	);

@@ -1,23 +1,23 @@
 <?php
 
 
-if ( ! class_exists( 'Shoestrap_Layout' ) ) {
+if ( ! class_exists( 'smallermobs_Layout' ) ) {
 
 	/**
 	* The "Layout Module"
 	*/
-	class Shoestrap_Layout {
+	class smallermobs_Layout {
 
 		function __construct() {
 			global $ss_settings;
 
-			add_filter( 'shoestrap_section_class_wrapper',   array( $this, 'apply_layout_classes_wrapper'   )     );
-			add_filter( 'shoestrap_section_class_main',      array( $this, 'apply_layout_classes_main'      )     );
-			add_filter( 'shoestrap_section_class_primary',   array( $this, 'apply_layout_classes_primary'   )     );
-			add_filter( 'shoestrap_section_class_secondary', array( $this, 'apply_layout_classes_secondary' )     );
-			add_filter( 'shoestrap_container_class',         array( $this, 'container_class'                )     );
+			add_filter( 'smallermobs_section_class_wrapper',   array( $this, 'apply_layout_classes_wrapper'   )     );
+			add_filter( 'smallermobs_section_class_main',      array( $this, 'apply_layout_classes_main'      )     );
+			add_filter( 'smallermobs_section_class_primary',   array( $this, 'apply_layout_classes_primary'   )     );
+			add_filter( 'smallermobs_section_class_secondary', array( $this, 'apply_layout_classes_secondary' )     );
+			add_filter( 'smallermobs_container_class',         array( $this, 'container_class'                )     );
 			add_filter( 'body_class',                        array( $this, 'layout_body_class'              )     );
-			add_filter( 'shoestrap_navbar_container_class',  array( $this, 'navbar_container_class'         )     );
+			add_filter( 'smallermobs_navbar_container_class',  array( $this, 'navbar_container_class'         )     );
 			add_action( 'template_redirect',                 array( $this, 'content_width'                  )     );
 
 			if ( isset( $ss_settings['body_margin_top'] ) && ( $ss_settings['body_margin_top'] > 0 || $ss_settings['body_margin_bottom'] > 0 ) ) {
@@ -25,9 +25,9 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 			}
 
 			add_action( 'get_header',             array( $this, 'boxed_container_div_open' ), 1 );
-			add_action( 'shoestrap_pre_footer',   array( $this, 'boxed_container_div_open' ), 1 );
-			add_action( 'shoestrap_do_navbar',    array( $this, 'boxed_container_div_close' ), 99 );
-			add_action( 'shoestrap_after_footer', array( $this, 'boxed_container_div_close' ), 899 );
+			add_action( 'smallermobs_pre_footer',   array( $this, 'boxed_container_div_open' ), 1 );
+			add_action( 'smallermobs_do_navbar',    array( $this, 'boxed_container_div_close' ), 99 );
+			add_action( 'smallermobs_after_footer', array( $this, 'boxed_container_div_close' ), 899 );
 			add_action( 'wp',                     array( $this, 'control_primary_sidebar_display' ) );
 			add_action( 'wp',                     array( $this, 'control_secondary_sidebar_display' ) );
 
@@ -35,9 +35,9 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 			if ( isset( $ss_settings['widgets_mode'] ) ) {
 				$widgets_mode = $ss_settings['widgets_mode'];
 				if ( $widgets_mode == 0 || $widgets_mode == 1 ) {
-					add_filter( 'shoestrap_widgets_class',        array( $this, 'alter_widgets_class'        ) );
-					add_filter( 'shoestrap_widgets_before_title', array( $this, 'alter_widgets_before_title' ) );
-					add_filter( 'shoestrap_widgets_after_title',  array( $this, 'alter_widgets_after_title'  ) );
+					add_filter( 'smallermobs_widgets_class',        array( $this, 'alter_widgets_class'        ) );
+					add_filter( 'smallermobs_widgets_before_title', array( $this, 'alter_widgets_before_title' ) );
+					add_filter( 'smallermobs_widgets_after_title',  array( $this, 'alter_widgets_after_title'  ) );
 				}
 			}
 
@@ -48,28 +48,28 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 		 * Get the layout value, but only set it once!
 		 */
 		static public function get_layout() {
-			global $shoestrap_layout;
+			global $smallermobs_layout;
 			global $ss_settings;
 
-			if ( ! isset( $shoestrap_layout ) ) {
-				do_action( 'shoestrap_layout_modifier' );
+			if ( ! isset( $smallermobs_layout ) ) {
+				do_action( 'smallermobs_layout_modifier' );
 
-				$shoestrap_layout = intval( $ss_settings['layout'] );
+				$smallermobs_layout = intval( $ss_settings['layout'] );
 
 				// Looking for a per-page template ?
 				if ( is_page() && is_page_template() ) {
 					if ( is_page_template( 'template-0.php' ) ) {
-						$shoestrap_layout = 0;
+						$smallermobs_layout = 0;
 					} elseif ( is_page_template( 'template-1.php' ) ) {
-						$shoestrap_layout = 1;
+						$smallermobs_layout = 1;
 					} elseif ( is_page_template( 'template-2.php' ) ) {
-						$shoestrap_layout = 2;
+						$smallermobs_layout = 2;
 					} elseif ( is_page_template( 'template-3.php' ) ) {
-						$shoestrap_layout = 3;
+						$smallermobs_layout = 3;
 					} elseif ( is_page_template( 'template-4.php' ) ) {
-						$shoestrap_layout = 4;
+						$smallermobs_layout = 4;
 					} elseif ( is_page_template( 'template-5.php' ) ) {
-						$shoestrap_layout = 5;
+						$smallermobs_layout = 5;
 					}
 				}
 
@@ -77,24 +77,24 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 					if ( ! is_page_template() ) {
 						$post_types = get_post_types( array( 'public' => true ), 'names' );
 						foreach ( $post_types as $post_type ) {
-							$shoestrap_layout = ( is_singular( $post_type ) ) ? intval( $ss_settings[$post_type . '_layout'] ) : $shoestrap_layout;
+							$smallermobs_layout = ( is_singular( $post_type ) ) ? intval( $ss_settings[$post_type . '_layout'] ) : $smallermobs_layout;
 						}
 					}
 				}
 
-				if ( ! is_active_sidebar( 'sidebar-secondary' ) && is_active_sidebar( 'sidebar-primary' ) && $shoestrap_layout == 5 ) {
-					$shoestrap_layout = 3;
+				if ( ! is_active_sidebar( 'sidebar-secondary' ) && is_active_sidebar( 'sidebar-primary' ) && $smallermobs_layout == 5 ) {
+					$smallermobs_layout = 3;
 				}
 			}
-			return $shoestrap_layout;
+			return $smallermobs_layout;
 		}
 
 		/*
 		 *Override the layout value globally
 		 */
 		function set_layout( $val ) {
-			global $shoestrap_layout, $redux;
-			$shoestrap_layout = intval( $val );
+			global $smallermobs_layout, $redux;
+			$smallermobs_layout = intval( $val );
 		}
 
 		/*
@@ -117,7 +117,7 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 			$secondary  = NULL;
 			$wrapper    = 12;
 
-			if ( shoestrap_display_primary_sidebar() && shoestrap_display_secondary_sidebar() ) {
+			if ( smallermobs_display_primary_sidebar() && smallermobs_display_secondary_sidebar() ) {
 
 				if ( $layout == 5 ) {
 					$main       = 12 - floor( ( 12 * $first ) / ( 12 - $second ) );
@@ -134,14 +134,14 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 					$secondary  = $second;
 				}
 
-			} elseif ( shoestrap_display_primary_sidebar() && ! shoestrap_display_secondary_sidebar() ) {
+			} elseif ( smallermobs_display_primary_sidebar() && ! smallermobs_display_secondary_sidebar() ) {
 
 				if ( $layout >= 1 ) {
 					$main       = 12 - $first;
 					$primary    = $first;
 				}
 
-			} elseif ( ! shoestrap_display_primary_sidebar() && shoestrap_display_secondary_sidebar() ) {
+			} elseif ( ! smallermobs_display_primary_sidebar() && smallermobs_display_secondary_sidebar() ) {
 
 				if ( $layout >= 3 ) {
 					$main       = 12 - $second;
@@ -225,7 +225,7 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 			$class    = $ss_settings['site_style'] != 'fluid' ? 'container' : 'fluid';
 
 			// override if navbar module exists and 'navbar-toggle' is set to left.
-			if ( class_exists( 'Shoestrap_Menus' ) ) {
+			if ( class_exists( 'smallermobs_Menus' ) ) {
 				if ( $ss_settings['navbar_toggle'] == 'left' ) {
 					$class = 'fluid';
 				}
@@ -250,7 +250,7 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 			}
 
 			// override if navbar module exists and 'navbar-toggle' is set to left.
-			if ( class_exists( 'ShoestrapMenus' ) ) {
+			if ( class_exists( 'smallermobsMenus' ) ) {
 				if ( $ss_settings['navbar_toggle'] == 'left' ) {
 					$class = 'fluid';
 				}
@@ -314,7 +314,7 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 
 			$style = 'body { margin-top:'. $body_margin_top .'px; margin-bottom:'. $body_margin_bottom .'px; }';
 
-			wp_add_inline_style( 'shoestrap_css', $style );
+			wp_add_inline_style( 'smallermobs_css', $style );
 		}
 
 		/**
@@ -344,15 +344,15 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 			$layout_sidebar_on_front = $ss_settings['layout_sidebar_on_front'];
 
 			if ( self::get_layout() == 0 ) {
-				add_filter( 'shoestrap_display_primary_sidebar', '__return_false' );
+				add_filter( 'smallermobs_display_primary_sidebar', '__return_false' );
 			}
 
 			if ( is_front_page() && $layout_sidebar_on_front == 1 && self::get_layout() != 0 ) {
-				add_filter( 'shoestrap_display_primary_sidebar', '__return_true' );
+				add_filter( 'smallermobs_display_primary_sidebar', '__return_true' );
 			}
 
 			if ( ( ! is_front_page() || ( is_front_page() && $layout_sidebar_on_front == 1 ) ) && self::get_layout() != 0 ) {
-				add_filter( 'shoestrap_display_primary_sidebar', '__return_true' );
+				add_filter( 'smallermobs_display_primary_sidebar', '__return_true' );
 			}
 		}
 
@@ -365,11 +365,11 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 			$layout_sidebar_on_front = $ss_settings['layout_sidebar_on_front'];
 
 			if ( self::get_layout() < 3 ) {
-				add_filter( 'shoestrap_display_secondary_sidebar', '__return_false' );
+				add_filter( 'smallermobs_display_secondary_sidebar', '__return_false' );
 			}
 
-			if ( ( ! is_front_page() && shoestrap_display_secondary_sidebar() ) || ( is_front_page() && $layout_sidebar_on_front == 1 && self::get_layout() >= 3 ) ) {
-				add_filter( 'shoestrap_display_secondary_sidebar', '__return_true' );
+			if ( ( ! is_front_page() && smallermobs_display_secondary_sidebar() ) || ( is_front_page() && $layout_sidebar_on_front == 1 && self::get_layout() >= 3 ) ) {
+				add_filter( 'smallermobs_display_secondary_sidebar', '__return_true' );
 			}
 		}
 
@@ -413,9 +413,9 @@ if ( ! class_exists( 'Shoestrap_Layout' ) ) {
 		}
 
 		function include_wrapper() {
-			global $shoestrap_layout;
+			global $smallermobs_layout;
 
-			if ( $shoestrap_layout == 5 ) {
+			if ( $smallermobs_layout == 5 ) {
 				return true;
 			} else {
 				return false;

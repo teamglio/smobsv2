@@ -1,31 +1,31 @@
 <?php
 
-function shoestrap_bbp_forum_class( $classes ) {
+function smallermobs_bbp_forum_class( $classes ) {
 	$classes[] = 'row';
 	$classes[] = 'list-unstyled';
 
 	return $classes;
 }
-add_filter('bbp_get_forum_class', 'shoestrap_bbp_forum_class');
+add_filter('bbp_get_forum_class', 'smallermobs_bbp_forum_class');
 
-function shoestrap_bbp_topic_class( $classes ) {
+function smallermobs_bbp_topic_class( $classes ) {
 	$classes[] = 'row';
 	$classes[] = 'list-unstyled';
-	$classes[] = shoestrap_bbps_get_topic_status();
+	$classes[] = smallermobs_bbps_get_topic_status();
 
 	return $classes;
 }
-add_filter('bbp_get_topic_class', 'shoestrap_bbp_topic_class');
+add_filter('bbp_get_topic_class', 'smallermobs_bbp_topic_class');
 
-function shoestrap_bbp_reply_class( $classes ) {
+function smallermobs_bbp_reply_class( $classes ) {
 	$classes[] = 'row';
 	$classes[] = 'list-unstyled';
 
 	return $classes;
 }
-add_filter('bbp_get_reply_class', 'shoestrap_bbp_reply_class');
+add_filter('bbp_get_reply_class', 'smallermobs_bbp_reply_class');
 
-function shoestrap_bbp_styles() { ?>
+function smallermobs_bbp_styles() { ?>
 	<style type="text/css">
 		a.bbp-author-avatar { display: inline-block; }
 		.bbp-reply-author img,
@@ -37,7 +37,7 @@ function shoestrap_bbp_styles() { ?>
 	</style>
 	<?php
 }
-add_action( 'wp_head', 'shoestrap_bbp_styles' );
+add_action( 'wp_head', 'smallermobs_bbp_styles' );
 
 remove_action( 'wp_enqueue_scripts', 'bbp_enqueue_scripts', 10 );
 
@@ -53,8 +53,8 @@ remove_action( 'wp_enqueue_scripts', 'bbp_enqueue_scripts', 10 );
  *  - topic_id: Topic id
  *  - selected: Override the selected option
  */
-function shoestrap_bbp_form_topic_type_dropdown( $args = '' ) {
-	echo shoestrap_bbp_get_form_topic_type_dropdown( $args );
+function smallermobs_bbp_form_topic_type_dropdown( $args = '' ) {
+	echo smallermobs_bbp_get_form_topic_type_dropdown( $args );
 }
 	/**
 	 * Returns topic type select box (normal/sticky/super sticky)
@@ -72,7 +72,7 @@ function shoestrap_bbp_form_topic_type_dropdown( $args = '' ) {
 	 * @uses bbp_is_topic_super_sticky() To check if the topic is a super sticky
 	 * @uses bbp_is_topic_sticky() To check if the topic is a sticky
 	 */
-	function shoestrap_bbp_get_form_topic_type_dropdown( $args = '' ) {
+	function smallermobs_bbp_get_form_topic_type_dropdown( $args = '' ) {
 
 		// Parse arguments against default values
 		$r = bbp_parse_args( $args, array(
@@ -140,8 +140,8 @@ function shoestrap_bbp_form_topic_type_dropdown( $args = '' ) {
  *
  * @param int $topic_id The topic id to use
  */
-function shoestrap_bbp_form_topic_status_dropdown( $args = '' ) {
-	echo shoestrap_bbp_get_form_topic_status_dropdown( $args );
+function smallermobs_bbp_form_topic_status_dropdown( $args = '' ) {
+	echo smallermobs_bbp_get_form_topic_status_dropdown( $args );
 }
 	/**
 	 * Returns topic status downdown
@@ -158,7 +158,7 @@ function shoestrap_bbp_form_topic_status_dropdown( $args = '' ) {
 	 *  - topic_id: Topic id
 	 *  - selected: Override the selected option
 	 */
-	function shoestrap_bbp_get_form_topic_status_dropdown( $args = '' ) {
+	function smallermobs_bbp_get_form_topic_status_dropdown( $args = '' ) {
 
 		// Parse arguments against default values
 		$r = bbp_parse_args( $args, array(
@@ -222,8 +222,8 @@ function shoestrap_bbp_form_topic_status_dropdown( $args = '' ) {
  * @param bool $wrap Optional. If you want to wrap the link in <span id="subscription-toggle">.
  * @uses bbp_get_user_subscribe_link() To get the subscribe link
  */
-function shoestrap_bbp_user_subscribe_link( $args = '', $user_id = 0, $wrap = true ) {
-	echo shoestrap_bbp_get_user_subscribe_link( $args, $user_id, $wrap );
+function smallermobs_bbp_user_subscribe_link( $args = '', $user_id = 0, $wrap = true ) {
+	echo smallermobs_bbp_get_user_subscribe_link( $args, $user_id, $wrap );
 }
 	/**
 	 * Return the link to subscribe/unsubscribe from a topic
@@ -250,7 +250,7 @@ function shoestrap_bbp_user_subscribe_link( $args = '', $user_id = 0, $wrap = tr
 	 *                        link, args, user id & topic id
 	 * @return string Permanent link to topic
 	 */
-	function shoestrap_bbp_get_user_subscribe_link( $args = '', $user_id = 0, $wrap = true ) {
+	function smallermobs_bbp_get_user_subscribe_link( $args = '', $user_id = 0, $wrap = true ) {
 		if ( !bbp_is_subscriptions_active() )
 			return;
 
@@ -319,8 +319,8 @@ function shoestrap_bbp_user_subscribe_link( $args = '', $user_id = 0, $wrap = tr
  * @param bool $wrap Optional. If you want to wrap the link in <span id="favorite-toggle">.
  * @uses bbp_get_user_favorites_link() To get the user favorites link
  */
-function shoestrap_bbp_user_favorites_link( $args = array(), $user_id = 0, $wrap = true ) {
-	echo shoestrap_bbp_get_user_favorites_link( $args, $user_id, $wrap );
+function smallermobs_bbp_user_favorites_link( $args = array(), $user_id = 0, $wrap = true ) {
+	echo smallermobs_bbp_get_user_favorites_link( $args, $user_id, $wrap );
 }
 	/**
 	 * User favorites link
@@ -351,7 +351,7 @@ function shoestrap_bbp_user_favorites_link( $args = array(), $user_id = 0, $wrap
 	 *                        html, add args, remove args, user & topic id
 	 * @return string User favorites link
 	 */
-	function shoestrap_bbp_get_user_favorites_link( $args = '', $user_id = 0, $wrap = true ) {
+	function smallermobs_bbp_get_user_favorites_link( $args = '', $user_id = 0, $wrap = true ) {
 		if ( !bbp_is_favorites_active() )
 			return false;
 
@@ -413,8 +413,8 @@ function shoestrap_bbp_user_favorites_link( $args = array(), $user_id = 0, $wrap
 
 if ( function_exists( 'bbps_add_support_forum_features' ) ) :
 remove_action('bbp_template_before_single_topic', 'bbps_add_support_forum_features');
-add_action('bbp_template_before_single_topic', 'shoestrap_bbps_add_support_forum_features');
-function shoestrap_bbps_add_support_forum_features(){	
+add_action('bbp_template_before_single_topic', 'smallermobs_bbps_add_support_forum_features');
+function smallermobs_bbps_add_support_forum_features(){	
 	//only display all this stuff if the support forum option has been selected.
 	if (bbps_is_support_forum(bbp_get_forum_id())){
 		$can_edit = bbps_get_update_capabilities();
@@ -439,7 +439,7 @@ function shoestrap_bbps_add_support_forum_features(){
 		<div id ="bbps_support_forum_move">
 			<form id="bbps-topic-move" class="form-horizontal" role="form" name="bbps_support_topic_move" action="" method="post">
 				<div class="form-group">
-					<label for="bbp_forum_id" class="control-label">Move topic to: </label><?php shoestrap_bbp_dropdown(); ?>
+					<label for="bbp_forum_id" class="control-label">Move topic to: </label><?php smallermobs_bbp_dropdown(); ?>
 					<input type="hidden" value="bbps_move_topic" name="bbps_action"/>
 					<input type="hidden" value="<?php echo $topic_id ?>" name="bbps_topic_id" />
 					<input type="hidden" value="<?php echo $forum_id ?>" name="bbp_old_forum_id" />
@@ -463,8 +463,8 @@ endif;
  *
  * @param mixed $args See {@link bbp_get_dropdown()} for arguments
  */
-function shoestrap_bbp_dropdown( $args = '' ) {
-	echo shoestrap_bbp_get_dropdown( $args );
+function smallermobs_bbp_dropdown( $args = '' ) {
+	echo smallermobs_bbp_get_dropdown( $args );
 }
 	/**
 	 * Output a select box allowing to pick which forum/topic a new
@@ -510,7 +510,7 @@ function shoestrap_bbp_dropdown( $args = '' ) {
 	 *                        and args
 	 * @return string The dropdown
 	 */
-	function shoestrap_bbp_get_dropdown( $args = '' ) {
+	function smallermobs_bbp_get_dropdown( $args = '' ) {
 
 		/** Arguments *********************************************************/
 
@@ -620,7 +620,7 @@ function shoestrap_bbp_dropdown( $args = '' ) {
 	}
 
 
-function shoestrap_bbps_get_topic_status() {
+function smallermobs_bbps_get_topic_status() {
 	$topic_id = bbp_get_topic_id();
 	$default = get_option( '_bbps_default_status' );
 	$status = get_post_meta( $topic_id, '_bbps_topic_status', true );

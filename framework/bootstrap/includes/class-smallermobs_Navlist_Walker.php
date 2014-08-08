@@ -1,18 +1,18 @@
 <?php
 
 /*
- * Class Name: Shoestrap_Navlist_Walker
+ * Class Name: smallermobs_Navlist_Walker
  * Description: A custom WordPress nav walker class to implement the Bootstrap 3 navigation style in a custom theme using the WordPress built in menu manager.
  *
  * Walker_Nav_Menu (WordPress default) example output:
  *   <li id="menu-item-8" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8"><a href="/">Home</a></li>
  *   <li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a href="/sample-page/">Sample Page</a></l
  *
- * Shoestrap_Nav_Walker example output:
+ * smallermobs_Nav_Walker example output:
  *   <li class="menu-home"><a href="/">Home</a></li>
  *   <li class="menu-sample-page"><a href="/sample-page/">Sample Page</a></li>
  */
-class Shoestrap_Navlist_Walker extends Walker_Nav_Menu {
+class smallermobs_Navlist_Walker extends Walker_Nav_Menu {
 	function check_current( $classes ) {
 		return preg_match( '/(current[-_])|active/', $classes );
 	}
@@ -25,7 +25,7 @@ class Shoestrap_Navlist_Walker extends Walker_Nav_Menu {
 		$item_html = '';
 		parent::start_el( $item_html, $item, $depth, $args );
 
-		$item_html = apply_filters( 'shoestrap_wp_nav_menu_item', $item_html );
+		$item_html = apply_filters( 'smallermobs_wp_nav_menu_item', $item_html );
 		$output .= $item_html;
 	}
 

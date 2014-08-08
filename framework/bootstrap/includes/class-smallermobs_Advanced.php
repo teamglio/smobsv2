@@ -1,12 +1,12 @@
 <?php
 
 
-if ( !class_exists( 'Shoestrap_Advanced' ) ) {
+if ( !class_exists( 'smallermobs_Advanced' ) ) {
 
 	/**
 	* The "Advanced" module
 	*/
-	class Shoestrap_Advanced {
+	class smallermobs_Advanced {
 
 		function __construct() {
 			global $ss_settings;
@@ -41,7 +41,7 @@ if ( !class_exists( 'Shoestrap_Advanced' ) ) {
 					'the_permalink',
 					'wp_list_pages',
 					'wp_list_categories',
-					'shoestrap_wp_nav_menu_item',
+					'smallermobs_wp_nav_menu_item',
 					'the_content_more_link',
 					'the_tags',
 					'get_pagenum_link',
@@ -72,11 +72,11 @@ if ( !class_exists( 'Shoestrap_Advanced' ) ) {
 		 * echo any custom CSS the user has written to the <head> of the page
 		 */
 		function user_css() {
-			$settings = get_option( SHOESTRAP_OPT_NAME );
+			$settings = get_option( smallermobs_OPT_NAME );
 			$header_scripts = $settings['user_css'];
 
 			if ( trim( $header_scripts ) != '' ) {
-				wp_add_inline_style( 'shoestrap_css', $header_scripts );
+				wp_add_inline_style( 'smallermobs_css', $header_scripts );
 			}
 		}
 
@@ -84,7 +84,7 @@ if ( !class_exists( 'Shoestrap_Advanced' ) ) {
 		 * echo any custom JS the user has written to the footer of the page
 		 */
 		function user_js() {
-			$settings = get_option( SHOESTRAP_OPT_NAME );
+			$settings = get_option( smallermobs_OPT_NAME );
 			$footer_scripts = $settings['user_js'];
 
 			if ( trim( $footer_scripts ) != '' ) {
@@ -96,7 +96,7 @@ if ( !class_exists( 'Shoestrap_Advanced' ) ) {
 		 * Switch the adminbar On/Off
 		 */
 		function admin_bar() {
-			$settings = get_option( SHOESTRAP_OPT_NAME );
+			$settings = get_option( smallermobs_OPT_NAME );
 			if ( $settings['advanced_wordpress_disable_admin_bar_toggle'] == 0 ) {
 				return false;
 			} else {
@@ -108,7 +108,7 @@ if ( !class_exists( 'Shoestrap_Advanced' ) ) {
 		 * The Google Analytics code
 		 */
 		function google_analytics() {
-			$settings = get_option( SHOESTRAP_OPT_NAME );
+			$settings = get_option( smallermobs_OPT_NAME );
 			$analytics_id = $settings['analytics_id'];
 
 			if ( !is_null( $analytics_id ) && !empty( $analytics_id ) ) {
@@ -163,10 +163,10 @@ if ( !class_exists( 'Shoestrap_Advanced' ) ) {
 		 * Enqueue some extra scripts
 		 */
 		function scripts() {
-			$settings = get_option( SHOESTRAP_OPT_NAME );
+			$settings = get_option( smallermobs_OPT_NAME );
 
 			if ( $settings['retina_toggle'] == 1 ) {
-				wp_register_script( 'retinajs', SHOESTRAP_ASSETS_URL . '/js/vendor/retina.js', false, null, true );
+				wp_register_script( 'retinajs', smallermobs_ASSETS_URL . '/js/vendor/retina.js', false, null, true );
 				wp_enqueue_script( 'retinajs' );
 			}
 		}
