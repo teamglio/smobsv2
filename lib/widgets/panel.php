@@ -11,6 +11,7 @@ class PanelWidget extends WP_Widget {
             $title = esc_attr($instance['title']);
             $style = esc_attr($instance['style']);
             $size = esc_attr($instance['size']);
+            $force_col = esc_attr($instance['force_col']);
             ?>
             <p>
                 <label for="<?php echo $this->get_field_id('title'); ?>">Title:</label>
@@ -26,7 +27,14 @@ class PanelWidget extends WP_Widget {
                 </select>
                 <label for="<?php echo $this->get_field_id('size'); ?>">Size (000x000):</label>
                 <input class="widefat" id="<?php echo $this->get_field_id('size'); ?>" name="<?php echo $this->get_field_name('size'); ?>" type="text" value="<?php if (!empty ($size)) { echo $size; } ?>" />
-            
+                
+                <label for="<?php echo $this->get_field_id('force_col'); ?>">Force Col:</label>
+                <select class="widefat" id="<?php echo $this->get_field_id('force_col'); ?>" name="<?php echo $this->get_field_name('force_col'); ?>" type="number" value="<?php echo $force_col; ?>">
+                    <option value="default">Default</option>
+                    <option value="col-md-3" <?php if ($style == 'col-md-3') { echo 'selected' ;} ?> >1/4</option>
+                    <option value="col-md-4" <?php if ($style == 'col-md-4') { echo 'selected' ;} ?> >1/3</option>
+                    <option value="col-md-6" <?php if ($style == 'col-md-6') { echo 'selected' ;} ?> >1/2</option>
+                </select>
             </p>
             <?php
 
@@ -38,6 +46,7 @@ class PanelWidget extends WP_Widget {
             $instance['title'] = strip_tags($new_instance['title']);
             $instance['style'] = strip_tags($new_instance['style']);
             $instance['size'] = strip_tags($new_instance['size']);
+            $instance['force_col'] = strip_tags($new_instance['force_col']);
             return $instance;
     } //ending update
 
@@ -50,8 +59,13 @@ class PanelWidget extends WP_Widget {
             $imagesize = $instance['size'];
             if (empty ($imagesize)) {
                 $imagesize = '300x200';
-            }
-            echo $before_widget;
+            };
+            $force_col = $instance['force_col'];
+            if ($force_col != 'default') {
+                echo '<section id="%1$s" class="' . $force_col . ' widget %2$s">';
+            } else {
+                echo $before_widget;
+            };
             echo '<div class="panel ' . $panelstyle . '">';
             ?>
               <div class="panel-heading">

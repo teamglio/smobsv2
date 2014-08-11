@@ -3,10 +3,12 @@
  * Register sidebars and widgets
  */
 function smallermobs_widgets_init() {
+	global $ss_settings;
 	$class        = apply_filters( 'smallermobs_widgets_class', '' );
 	$before_title = apply_filters( 'smallermobs_widgets_before_title', '<h3 class="widget-title">' );
 	$after_title  = apply_filters( 'smallermobs_widgets_after_title', '</h3>' );
-	$home_row_one = 'col-md-4';
+	$home_row_one_setting = $ss_settings['home_row_one'];
+	$home_row_one = 'col-md-' . $home_row_one_setting;
 	$home_row_two = 'col-md-6';
 	$home_row_three = 'col-md-3';
 	$home_row_four = 'col-md-4';

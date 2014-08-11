@@ -208,6 +208,26 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 				) ),
 			);
 
+			// Homepage Settings
+			$this->sections[] = array(
+				'title'   => __( 'Homepage', 'smallermobs' ),
+				'icon'    => 'el-icon-home-alt',
+				'fields'  => apply_filters( 'smallermobs_module_homepage_options_modifier', array(
+					array(
+						'title'     => __( 'First row', 'smallermobs' ),
+						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
+						'id'        => 'home_row_one',
+						'type'      => 'button_set',
+						'options'   => array(
+							'12' => 'Full width',
+							'6' => '1/2',
+							'4' => '1/3',
+							'3' => '1/4'
+						),
+						'default' => '4'
+					),
+				) ),
+			);
 
 			$this->sections[] = array(
 				'title'       => __( 'Layout', 'smallermobs' ),
