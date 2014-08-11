@@ -49,7 +49,15 @@ if ( ! class_exists( 'smallermobs_Header' ) ) {
 				}
 
 				if ( $ss_settings['header_branding'] == 1 ) {
-					echo '<a class="brand-logo" href="' . home_url() . '/"><h1>' . smallermobs_Branding::logo() . '</h1></a>';
+					echo '<div class="row">';
+					echo '<a class="col-sm-6 brand-logo" href="' . home_url() . '/"><h1 class="no-margins">' . smallermobs_Branding::logo() . '</h1></a>';
+					//add to options
+					echo '<div class="col-sm-6 header-buttons"><div class="btn-group pull-right">';
+  					echo '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> Register or sign in</button>';
+  					echo '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart"></span> Basket <span class="badge">5</span></button>';
+					echo '<button type="button" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button>';
+					echo '</div></div>';
+					echo '</div>';
 				}
 
 				if ( $ss_settings['header_branding'] == 1 ) {
