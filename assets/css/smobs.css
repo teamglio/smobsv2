@@ -34,3 +34,6 @@ h1.no-margins {
 .header-buttons .btn-group {
     margin-top: 30px;
 }
+a.header-search {
+    color: #ffffff !important;
+}

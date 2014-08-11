@@ -34,6 +34,7 @@ if ( ! class_exists( 'smallermobs_Header' ) ) {
 		 */
 		function branding() {
 			global $ss_settings;
+			global $woocommerce;
 
 			if ( $ss_settings['header_toggle'] == 1 ) {
 				echo '<div class="before-main-wrapper">';
@@ -53,9 +54,15 @@ if ( ! class_exists( 'smallermobs_Header' ) ) {
 					echo '<a class="col-sm-6 brand-logo" href="' . home_url() . '/"><h1 class="no-margins">' . smallermobs_Branding::logo() . '</h1></a>';
 					//add to options
 					echo '<div class="col-sm-6 header-buttons"><div class="btn-group pull-right">';
-  					echo '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> Register or sign in</button>';
-  					echo '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart"></span> Basket <span class="badge">5</span></button>';
-					echo '<button type="button" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button>';
+  					echo '<a href="#" type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> Register or sign in</a>';
+  					if ($GLOBALS['WooCommerce_isActive'] == true) {
+  					echo '<a type="button" class="btn btn-default" href="';
+  					echo $woocommerce->cart->get_cart_url();
+  					echo '"><span class="glyphicon glyphicon-shopping-cart"></span> Basket <span class="badge">';
+  					echo $woocommerce->cart->get_cart_total();
+  					echo '</span></a>';
+					};
+					echo '<a href="#" type="button" class="btn btn-link header-search"><span class="glyphicon glyphicon-search"></span></a>';
 					echo '</div></div>';
 					echo '</div>';
 				}

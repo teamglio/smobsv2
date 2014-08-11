@@ -2,6 +2,7 @@
 <body <?php body_class(); ?>>
 <a href="#content" class="sr-only"><?php _e( 'Skip to main content', 'smallermobs' ); ?></a>
 <?php global $ss_framework; ?>
+<?php global $woocommerce; ?>
 
 	<!--[if lt IE 8]>
 		<?php echo $ss_framework->alert( 'warning', __(' You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'smallermobs' ) ); ?>
