@@ -253,7 +253,7 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						'default' => '3'
 					),
 					array(
-						'title'     => __( 'Four row', 'smallermobs' ),
+						'title'     => __( 'Fourth row', 'smallermobs' ),
 						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
 						'id'        => 'home_row_four',
 						'type'      => 'button_set',
