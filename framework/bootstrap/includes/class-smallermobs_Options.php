@@ -226,6 +226,58 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						),
 						'default' => '4'
 					),
+					array(
+						'title'     => __( 'Second row', 'smallermobs' ),
+						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
+						'id'        => 'home_row_two',
+						'type'      => 'button_set',
+						'options'   => array(
+							'12' => 'Full width',
+							'6' => '1/2',
+							'4' => '1/3',
+							'3' => '1/4'
+						),
+						'default' => '6'
+					),
+					array(
+						'title'     => __( 'Three row', 'smallermobs' ),
+						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
+						'id'        => 'home_row_three',
+						'type'      => 'button_set',
+						'options'   => array(
+							'12' => 'Full width',
+							'6' => '1/2',
+							'4' => '1/3',
+							'3' => '1/4'
+						),
+						'default' => '3'
+					),
+					array(
+						'title'     => __( 'Four row', 'smallermobs' ),
+						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
+						'id'        => 'home_row_four',
+						'type'      => 'button_set',
+						'options'   => array(
+							'12' => 'Full width',
+							'6' => '1/2',
+							'4' => '1/3',
+							'3' => '1/4'
+						),
+						'default' => '4'
+					),
+					array(
+						'title'     => __( 'Fifth row', 'smallermobs' ),
+						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
+						'id'        => 'home_row_five',
+						'type'      => 'button_set',
+						'options'   => array(
+							'12' => 'Full width',
+							'6' => '1/2',
+							'4' => '1/3',
+							'3' => '1/4'
+						),
+						'default' => '12'
+					),
 				) ),
 			);
 

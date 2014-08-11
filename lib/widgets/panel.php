@@ -34,6 +34,7 @@ class PanelWidget extends WP_Widget {
                     <option value="col-md-3" <?php if ($style == 'col-md-3') { echo 'selected' ;} ?> >1/4</option>
                     <option value="col-md-4" <?php if ($style == 'col-md-4') { echo 'selected' ;} ?> >1/3</option>
                     <option value="col-md-6" <?php if ($style == 'col-md-6') { echo 'selected' ;} ?> >1/2</option>
+                    <option value="col-md-8" <?php if ($style == 'col-md-8') { echo 'selected' ;} ?> >2/3</option>
                 </select>
             </p>
             <?php

@@ -7,12 +7,11 @@ function smallermobs_widgets_init() {
 	$class        = apply_filters( 'smallermobs_widgets_class', '' );
 	$before_title = apply_filters( 'smallermobs_widgets_before_title', '<h3 class="widget-title">' );
 	$after_title  = apply_filters( 'smallermobs_widgets_after_title', '</h3>' );
-	$home_row_one_setting = $ss_settings['home_row_one'];
-	$home_row_one = 'col-md-' . $home_row_one_setting;
-	$home_row_two = 'col-md-6';
-	$home_row_three = 'col-md-3';
-	$home_row_four = 'col-md-4';
-	$home_row_five = 'col-md-12';
+	$home_row_one = 'col-md-' . $ss_settings['home_row_one'];
+	$home_row_two = 'col-md-' . $ss_settings['home_row_two'];
+	$home_row_three = 'col-md-' . $ss_settings['home_row_three'];
+	$home_row_four = 'col-md-' . $ss_settings['home_row_four'];
+	$home_row_five = 'col-md-' . $ss_settings['home_row_five'];
 	// Sidebars
 	register_sidebar( array(
 		'name'          => __( 'Primary Sidebar', 'smallermobs' ),
