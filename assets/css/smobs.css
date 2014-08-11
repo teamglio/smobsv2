@@ -41,3 +41,7 @@ a.header-search {
     border-bottom-right-radius: 0px !important;
     border-top-right-radius: 0px !important;
 }
+.tab-content > .active {
+    background: #fff;
+    padding: 15px;
+}
