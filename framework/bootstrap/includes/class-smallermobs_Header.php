@@ -53,17 +53,19 @@ if ( ! class_exists( 'smallermobs_Header' ) ) {
 					echo '<div class="row">';
 					echo '<a class="col-sm-6 brand-logo" href="' . home_url() . '/"><h1 class="no-margins">' . smallermobs_Branding::logo() . '</h1></a>';
 					//add to options
-					echo '<div class="col-sm-6 header-buttons"><div class="btn-group pull-right">';
-  					echo '<a href="#" type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> Register or sign in</a>';
+					echo '<div class="col-sm-6 header-buttons">';
+					echo '<div class="btn-group pull-right">';
+  					echo '<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> Register or sign in</a>';
   					if ($GLOBALS['WooCommerce_isActive'] == true) {
-  					echo '<a type="button" class="btn btn-default" href="';
+  					echo '<a class="btn btn-default" href="';
   					echo $woocommerce->cart->get_cart_url();
   					echo '"><span class="glyphicon glyphicon-shopping-cart"></span> Basket <span class="badge">';
   					echo $woocommerce->cart->get_cart_total();
   					echo '</span></a>';
 					};
-					echo '<a href="#" type="button" class="btn btn-link header-search"><span class="glyphicon glyphicon-search"></span></a>';
-					echo '</div></div>';
+					echo '<a href="#" class="btn btn-link header-search"><span class="glyphicon glyphicon-search"></span></a>';
+					echo '</div>';
+					echo '</div>';
 					echo '</div>';
 				}
 

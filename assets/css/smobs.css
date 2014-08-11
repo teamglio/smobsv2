@@ -37,3 +37,7 @@ h1.no-margins {
 a.header-search {
     color: #ffffff !important;
 }
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
