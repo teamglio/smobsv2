@@ -1595,6 +1595,51 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 				) ),
 			);
 
+			//Quotes section
+			$this->sections[] = array(
+				'title'   => __( 'Blockqoutes', 'smallermobs' ),
+				'icon'    => 'el-icon-quotes-alt',
+				'fields'  => apply_filters( 'smallermobs_module_typography_options_modifier', array(
+					array(
+						'title'     => __( 'Quotes', 'smallermobs' ),
+						'desc'      => __( 'Set color and font for blockquotes.', 'smallermobs' ),
+						'id'        => 'quote_styles',
+						'compiler'  => false,
+						'units'     => 'px',
+						'default'   => array(
+							'font-family'   => 'Arial, Helvetica, sans-serif',
+							'font-size'     => '14px',
+							'google'        => 'false',
+							'weight'        => 'inherit',
+							'color'         => '#333333',
+							'font-style'    => 400,
+							'update_weekly' => true // Enable to force updates of Google Fonts to be weekly
+						),
+						'preview'   => array(
+							'text'        => __( 'This is my preview text!', 'smallermobs' ), //this is the text from preview box
+							'font-size'   => '24px' //this is the text size from preview box
+						),
+						'type'      => 'typography',
+						'output'    => 'blockquote',
+					),
+					array(
+						'title'       => 'Blockqoute Border',
+						'desc'        => 'Select the border options for your blockquotes',
+						'id'          => 'blockqoute_border',
+						'type'        => 'border',
+						'all'         => false,
+						'top'        => false,
+						'bottom'      => false,
+						'right'       => false,
+						'default'     => array(
+							'border-left'      => '3',
+							'border-style'    => 'solid',
+							'border-color'    => '#333333',
+						),
+						'output'    => 'blockquote',
+					),
+				) ),
+			);
 			// Social Settings
 			$this->sections[] = array(
 				'title'     => __( 'Social', 'smallermobs' ),
