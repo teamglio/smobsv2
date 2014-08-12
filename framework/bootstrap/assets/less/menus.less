@@ -87,7 +87,7 @@ a.toggle-nav {
 			color: @navbar-default-link-active-color;
 		}
 	}
-
+	/*
 	&.style1 {
 		.open > a,
 		.open > a:hover,
@@ -220,7 +220,7 @@ a.toggle-nav {
 		.dropdown-menu > li > a:focus {
 			background: @brand-primary;
 		}
-	}
+	} */
 }
 
 .navbar a.navbar-brand {
@@ -428,4 +428,29 @@ li.dropdown ul.dropdown-menu li.dropdown.pull-left {
 
 .fluid nav.nav-main {
 	padding-right: (@grid-gutter-width / 2);
+}
+
+//secondary
+.secondary.navbar {
+	background: @navbar-secondary-bg;
+	border-color: @secondary-navbar-border;
+}
+.secondary .navbar-nav > .active > a {
+	background: @navbar-secondary-link-active-bg;
+	color: @navbar-secondary-link-active-color;
+}
+.secondary .navbar-nav > .active > a:hover {
+	background: @navbar-secondary-link-active-bg;
+	color: @navbar-secondary-link-active-color;
+}
+.secondary.navbar {
+	.dropdown-menu {
+		padding: 0;
+		background: @navbar-secondary-bg;
+		li.active a,
+		li:hover a{
+			background: @navbar-secondary-link-active-bg;
+			color: @navbar-secondary-link-active-color;
+		}
+	}
 }

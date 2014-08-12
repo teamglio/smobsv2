@@ -242,8 +242,13 @@ if ( ! class_exists( 'smallermobs_Menus' ) ) {
 		function secondary_navbar() {
 			global $ss_settings, $ss_framework;
 
-			if ( has_nav_menu( 'secondary_navigation' ) ) : ?>
-
+			if ( has_nav_menu( 'secondary_navigation' ) ) :
+				if ( $ss_settings['site_style'] == 'boxed' ) {
+			        echo '<div class="container boxed-container">';
+			    } else {
+			        echo '<div>';
+			    };
+			?>
 					<header class="secondary navbar navbar-default navbar-static-top <?php echo self::navbar_class( 'secondary' ); ?>" role="banner">
 						<?php echo $ss_framework->open_container( 'div' ); ?>
 						<div class="navbar-secondary">
@@ -263,7 +268,8 @@ if ( ! class_exists( 'smallermobs_Menus' ) ) {
 						<?php echo $ss_framework->close_container( 'div' ); ?>
 					</header>
 
-			<?php endif;
+			<?php 	echo "</div>";
+					endif;
 		}
 
 		/**

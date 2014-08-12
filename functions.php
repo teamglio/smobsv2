@@ -2,7 +2,7 @@
 
 // Define the theme version
 if ( ! defined( 'smallermobs_VERSION' ) ) {
-	define( 'smallermobs_VERSION', '3.2.6' );
+	define( 'smallermobs_VERSION', '2.0.1' );
 }
 
 if ( class_exists( 'BuddyPress' ) ) {
@@ -59,6 +59,7 @@ require_once locate_template( '/lib/widgets.php' );      // Sidebars and widgets
 require_once locate_template( '/lib/post-formats.php' ); // Sidebars and widgets
 require_once locate_template( '/lib/scripts.php' );      // Scripts and stylesheets
 require_once locate_template( '/lib/deprecated.php' );   // Deprecated functions
+
 require_once locate_template( '/lib/custom.php' );   // Custom
 
 
@@ -70,4 +71,10 @@ if ( ! class_exists( 'ReduxFramework' ) ) {
 
 if ( class_exists( 'bbPress' ) ) {
 	require_once locate_template( '/lib/bbpress.php' );
+}
+
+if ( class_exists( 'woocommerce' ) ) { 
+	require_once locate_template( '/lib/woocommerce.php' );
+} else { 
+	return false; 
 }

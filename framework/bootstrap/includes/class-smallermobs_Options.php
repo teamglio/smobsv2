@@ -94,7 +94,7 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 			// Colors Settings
 			$this->sections[] = array(
 				'title'   => __( 'Colors', 'smallermobs' ),
-				'icon'    => 'el-icon-certificate',
+				'icon'    => 'el-icon-brush',
 				'fields'  => apply_filters( 'smallermobs_module_branding_options_modifier', array(
 					array(
 						'title'       => 'Colors',
@@ -167,7 +167,7 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 			// Background Settings
 			$this->sections[] = array(
 				'title'   => __( 'Background', 'smallermobs' ),
-				'icon'    => 'el-icon-photo',
+				'icon'    => 'el-icon-adjust',
 				'fields'  => apply_filters( 'smallermobs_module_background_options_modifier', array(
 					array(
 						'title'       => __( 'General Background Color', 'smallermobs' ),
@@ -183,6 +183,31 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 					array(
 						'title'       => __( 'Content Background', 'smallermobs' ),
 						'desc'        => __( 'Background for the content area. Colors also affect input areas and other colors.', 'smallermobs' ),
+						'id'          => 'content_bg',
+						'default'     => array(
+							'background-color'    => isset( $settings['color_body_bg'] ) ? $settings['color_body_bg'] : '#ffffff',
+							'background-repeat'   => isset( $settings['background_repeat'] ) ? $settings['background_repeat'] : NULL,
+							'background-position' => isset( $settings['background_position_x'] ) ? $settings['background_position_x'] . ' center' : NULL,
+							'background-image'    => isset( $settings['background_image']['url'] ) ? $settings['background_image']['url'] : NULL,
+						),
+						'compiler'    => true,
+						'transparent' => true,
+						'type'        => 'background',
+						'output'      => '.wrap.main-section .content .bg .main'
+					),
+					array(
+						'title'   => __( 'Content Background Color Opacity', 'smallermobs' ),
+						'desc'    => __( 'Select the opacity of your background color for the main content area so that background images will show through. Please note that if you have added an image for your content background, changing the opacity to something other than 100 will result in your background image not being shown. If you need to add opacity to your content background image, you will need to do it by adding transparency to the PNG background image itself.', 'smallermobs' ),
+						'id'      => 'content_bg_opacity',
+						'default' => 100,
+						'min'     => 0,
+						'step'    => 1,
+						'max'     => 100,
+						'type'    => 'slider',
+					),
+					array(
+						'title'       => __( 'Panels & Inputs', 'smallermobs' ),
+						'desc'        => __( 'Colors also affect input areas and other colors.', 'smallermobs' ),
 						'id'          => 'body_bg',
 						'default'     => array(
 							'background-color'    => isset( $settings['color_body_bg'] ) ? $settings['color_body_bg'] : '#ffffff',
@@ -193,7 +218,7 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						'compiler'    => true,
 						'transparent' => false,
 						'type'        => 'background',
-						'output'      => '.wrap.main-section .content .bg'
+						//'output'      => 'body'
 					),
 					array(
 						'title'   => __( 'Content Background Color Opacity', 'smallermobs' ),
@@ -1124,6 +1149,15 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						'type'        => 'info',
 					),
 					array(
+						'title'       => __( 'Secondary NavBar Background Color', 'smallermobs' ),
+						'desc'        => __( 'Pick a background color for the Secondary NavBar. Default: #eeeeee.', 'smallermobs' ),
+						'id'          => 'secondary_navbar_bg',
+						'default'     => '#f8f8f8',
+						'compiler'    => true,
+						'transparent' => false,
+						'type'        => 'color'
+					),
+					array(
 						'title'       => __( 'Display social networks in the secondary navigation bar.', 'smallermobs' ),
 						'desc'        => __( 'Enable this option to display your social networks as a dropdown menu on the seondary navbar.', 'smallermobs' ),
 						'id'          => 'navbar_secondary_social',
@@ -1139,6 +1173,40 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						'max'         => 200,
 						'type'        => 'slider',
 						'required'    => array( 'options_mode', '=', array( 'advanced' ) ),
+					),
+					array(
+						'title'       => __( 'Secondary Navbar Font', 'smallermobs' ),
+						'desc'        => __( 'The font used in navbars.', 'smallermobs' ),
+						'id'          => 'font_secondary_navbar',
+						'compiler'    => true,
+						'default'     => array(
+							'font-family' => 'Arial, Helvetica, sans-serif',
+							'font-size'   => 14,
+							'color'       => '#333333',
+							'google'      => 'false',
+						),
+						'preview'     => array(
+							'text'    => __( 'This is my preview text!', 'smallermobs' ), //this is the text from preview box
+							'size'    => 30 //this is the text size from preview box
+						),
+						'type'        => 'typography',
+					),
+					array(
+						'title'       => __( 'Secondary Nav Branding Font', 'smallermobs' ),
+						'desc'        => __( 'The branding font for your site.', 'smallermobs' ),
+						'id'          => 'font_secondary_brand',
+						'compiler'    => true,
+						'default'     => array(
+							'font-family' => 'Arial, Helvetica, sans-serif',
+							'font-size'   => 18,
+							'google'      => 'false',
+							'color'       => '#333333',
+						),
+						'preview'     => array(
+							'text'    => __( 'This is my preview text!', 'smallermobs' ), //this is the text from preview box
+							'size'    => 30 //this is the text size from preview box
+						),
+						'type'        => 'typography',
 					),
 				) ),
 			);

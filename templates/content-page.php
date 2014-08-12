@@ -3,8 +3,6 @@
 global $ss_framework;
 
 while ( have_posts() ) : the_post();
-	smallermobs_title_section();
-	do_action( 'smallermobs_entry_meta' );
 	do_action( 'smallermobs_page_pre_content' );
 	the_content();
 	echo $ss_framework->clearfix();

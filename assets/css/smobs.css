@@ -1,3 +1,4 @@
+/*TO BE CONVERTED TO LESS*/
 .home-feature {
     height: 300px;
     width: 100%;
@@ -18,6 +19,14 @@
     font-size: 30px;
     line-height: 50px;
     padding: 20px 30px;
+}
+.page-feature {
+    padding-top: 15px;
+    padding-bottom: 15px; 
+}
+.page-feature h1 {
+    padding: 0px;
+    margin: 0px;
 }
 
 .container > .navbar-secondary {

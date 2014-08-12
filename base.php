@@ -2,7 +2,6 @@
 <body <?php body_class(); ?>>
 <a href="#content" class="sr-only"><?php _e( 'Skip to main content', 'smallermobs' ); ?></a>
 <?php global $ss_framework; ?>
-<?php global $woocommerce; ?>
 
 	<!--[if lt IE 8]>
 		<?php echo $ss_framework->alert( 'warning', __(' You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'smallermobs' ) ); ?>
@@ -15,22 +14,8 @@
 	<?php ss_get_template_part( apply_filters( 'smallermobs_top_bar_template', 'templates/top-bar' ) ); ?>
 
 	<?php do_action( 'smallermobs_pre_wrap' ); ?>
-	<?php  if ( is_front_page() ) {
-		while ( have_posts() ) : the_post();
-		    $image_id = get_post_thumbnail_id();
-		    $image_src = wp_get_attachment_image_src($image_id,'full', true);
-		    $image_url = $image_src[0];
-		    ?>
-		    <div class="home-feature" style="background: url(<?php echo $image_url; ?>);">
-		        <div class="container">
-		            <div class="home-tagline">
-		                <?php echo get_bloginfo('description');?>
-		            </div>
-		        </div>
-		    </div>
-		    <?php
-		endwhile;
-	}; ?>
+
+	<?php do_action( 'smallermobs_page_feature' ); ?>
 
 	<?php echo $ss_framework->open_container( 'div', 'wrap-main-section', 'wrap main-section' ); ?>
 

@@ -904,6 +904,70 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 				$variables .= '@navbar-default-toggle-border-color: ' . $navbar_border . ';';
 			}
 
+			//SECONDARY
+			$font_secondary_brand        = smallermobs_process_font( $ss_settings['font_secondary_brand'] );
+			$font_secondary_navbar       = smallermobs_process_font( $ss_settings['font_secondary_navbar'] );
+			$secondary_navbar_bg = '#' . str_replace( '#', '', smallermobs_Color::sanitize_hex( $ss_settings['secondary_navbar_bg'] ) );
+			$secondary_navbar_height     = filter_var( $ss_settings['navbar_height'], FILTER_SANITIZE_NUMBER_INT );
+			$secondary_navbar_text_color = '#' . str_replace( '#', '', $font_secondary_navbar['color'] );
+			$secondary_brand_text_color  = '#' . str_replace( '#', '', $font_secondary_brand['color'] );
+			$secondary_navbar_border = ( smallermobs_Color::get_brightness( $navbar_bg ) < 50 ) ? 'lighten(@navbar-secondary-bg, 6.5%)' : 'darken(@navbar-secondary-bg, 6.5%)';
+			if ( smallermobs_Color::get_brightness( $secondary_navbar_bg ) < 165 ) {
+				$secondary_navbar_link_hover_color    = 'darken(@navbar-secondary-color, 26.5%)';
+				$secondary_navbar_link_active_bg      = 'darken(@navbar-secondary-bg, 6.5%)';
+				$secondary_navbar_link_disabled_color = 'darken(@navbar-secondary-bg, 6.5%)';
+				$secondary_navbar_brand_hover_color   = 'darken(@navbar-secondary-brand-color, 10%)';
+			} else {
+				$secondary_navbar_link_hover_color    = 'lighten(@navbar-secondary-color, 26.5%)';
+				$secondary_navbar_link_active_bg      = 'lighten(@navbar-secondary-bg, 6.5%)';
+				$secondary_navbar_link_disabled_color = 'lighten(@navbar-secondary-bg, 6.5%)';
+				$secondary_navbar_brand_hover_color   = 'lighten(@navbar-secondary-brand-color, 10%)';
+			}
+
+			if ( isset( $secondary_navbar_text_color ) && ! empty( $secondary_navbar_text_color ) ) {
+				$variables .= '@navbar-secondary-color:  ' . $secondary_navbar_text_color . ';';
+			}
+
+			if ( isset( $secondary_navbar_bg ) && ! empty( $secondary_navbar_bg ) ) {
+				$variables .= '@navbar-secondary-bg:     ' . $secondary_navbar_bg . ';';
+			}
+
+			if ( isset( $secondary_navbar_border ) && ! empty( $secondary_navbar_border ) ) {
+				$variables .= '@secondary-navbar-border: ' . $secondary_navbar_border . ';';
+			}
+
+			$variables .= '@navbar-secondary-link-color:          @navbar-secondary-color;';
+			if ( isset( $secondary_navbar_link_hover_color ) && ! empty( $secondary_navbar_link_hover_color ) ) {
+				$variables .= '@navbar-secondary-link-hover-color:    ' . $secondary_navbar_link_hover_color . ';';
+			}
+
+			$variables .= '@navbar-secondary-link-active-color:   mix(@navbar-secondary-color, @navbar-secondary-link-hover-color, 50%);';
+
+			if ( isset( $secondary_navbar_link_active_bg ) && ! empty( $secondary_navbar_link_active_bg ) ) {
+				$variables .= '@navbar-secondary-link-active-bg:      ' . $secondary_navbar_link_active_bg . ';';
+			}
+
+			if ( isset( $secondary_navbar_link_disabled_color ) && ! empty( $secondary_navbar_link_disabled_color ) ) {
+				$variables .= '@navbar-secondary-link-disabled-color: ' . $secondary_navbar_link_disabled_color . ';';
+			}
+
+			$variables .= '@navbar-secondary-brand-color:         @navbar-secondary-link-color;';
+			if ( isset( $secondary_navbar_brand_hover_color ) && ! empty( $secondary_navbar_brand_hover_color ) ) {
+				$variables .= '@navbar-secondary-brand-hover-color:   ' . $secondary_navbar_brand_hover_color . ';';
+			}
+
+			if ( isset( $secondary_navbar_border ) && ! empty( $secondary_navbar_border ) ) {
+				$variables .= '@navbar-secondary-toggle-hover-bg:     ' . $secondary_navbar_border . ';';
+			}
+
+			if ( isset( $secondary_navbar_text_color ) && ! empty( $secondary_navbar_text_color ) ) {
+				$variables .= '@navbar-secondary-toggle-icon-bar-bg:  ' . $secondary_navbar_text_color . ';';
+			}
+
+			if ( isset( $secondary_navbar_border ) && ! empty( $secondary_navbar_border ) ) {
+				$variables .= '@navbar-secondary-toggle-border-color: ' . $secondary_navbar_border . ';';
+			}
+
 			// smallermobs-specific variables
 			// --------------------------------------------------
 

@@ -13,7 +13,7 @@ function smallermobs_customizer_fields() {
 				'body_bg' => array(
 					'label' => __( 'Background', 'smallermobs' ),
 					'type'  => 'background',
-					'style' => 'body, .wrap.main-section .content .bg, .form-control, .btn, .panel',
+					'style' => 'body, .wrap.main-section .content .bg', //.form-control, .btn, .panel
 					'priority' => 1,
 				),
 				'color_brand_primary' => array(
