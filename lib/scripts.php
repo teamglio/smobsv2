@@ -14,11 +14,13 @@ function smallermobs_scripts() {
 
 	wp_register_script( 'modernizr', smallermobs_ASSETS_URL . '/js/vendor/modernizr-2.7.0.min.js', false, null, false );
 	wp_register_script( 'fitvids', smallermobs_ASSETS_URL . '/js/vendor/jquery.fitvids.js',false, null, true  );
+	wp_register_script( 'mixitup', smallermobs_ASSETS_URL . '/js/vendor/jquery.mixitup.js',false, null, true  );
 
 	wp_enqueue_script( 'jquery' );
 
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'fitvids' );
+	wp_enqueue_script( 'mixitup' );
 
 	if ( is_single() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -26,7 +26,8 @@ function set_page_feature() {
         ?>
         <div class="page-feature">
             <div class="container">
-                <h1>ARCHIVE TITLE HERE</h1>
+                <h1><?php if (is_woocommerce()) { woocommerce_page_title(); } else { echo 'ARCHIVE TITLE'; } ?></h1>
+
             </div>
         </div>
         <?php
