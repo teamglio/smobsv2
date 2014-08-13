@@ -29,9 +29,9 @@ function set_page_feature() {
                 <h1 class="pull-left"><?php if (is_woocommerce()) { woocommerce_page_title(); } else { echo 'ARCHIVE TITLE'; } ?></h1>
                 <?php if (is_shop()) { ?>
                 <div class="mixitup-controlls btn-group pull-right">
-                  <button type="button" class="btn btn-default sort" data-sort="default">Left</button>
-                  <button type="button" class="btn btn-default sort" data-sort="myorder:asc">Middle</button>
-                  <button type="button" class="btn btn-default sort" data-sort="myorder:desc">Right</button>
+                  <button type="button" class="btn btn-default sort" data-sort="default">Default</button>
+                  <button type="button" class="btn btn-default sort" data-sort="myorder:asc">Low to high</button>
+                  <button type="button" class="btn btn-default sort" data-sort="myorder:desc">Last to first</button>
                 </div>
                 <?php } ?>
             </div>
