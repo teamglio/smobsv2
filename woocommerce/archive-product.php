@@ -21,7 +21,7 @@ if (woocommerce_is_active()) {
     	$image_url = $image_src[0];
 	echo '<div class="mix product">';
 	?>
-  	<div class="col-sm-6 col-md-4">
+  	<div class="col-sm-6 col-md-3">
 	    <div class="thumbnail">
 	    	<div class="product-image">
 	    		
