@@ -27,7 +27,7 @@ if (woocommerce_is_active()) {
 	    		
 	    	</div>
 	    <a href="<?php the_permalink(); ?>" class="thumb-link">
-	      <img src="<?php echo $image_url;?>" class="img-rounded">
+	      <img src="<?php echo $image_url;?>" class="img-rounded" width="100%">
 	    </a>
 	      <div class="product-sale">On Promotion!</div>
 	      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
