@@ -55,7 +55,9 @@ if ( ! class_exists( 'smallermobs_Layout' ) ) {
 				do_action( 'smallermobs_layout_modifier' );
 
 				$smallermobs_layout = intval( $ss_settings['layout'] );
-
+				if (is_shop()) {
+					$smallermobs_layout = 0;
+				}
 				// Looking for a per-page template ?
 				if ( is_page() && is_page_template() ) {
 					if ( is_page_template( 'template-0.php' ) ) {

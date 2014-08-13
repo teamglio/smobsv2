@@ -26,8 +26,14 @@ function set_page_feature() {
         ?>
         <div class="page-feature">
             <div class="container">
-                <h1><?php if (is_woocommerce()) { woocommerce_page_title(); } else { echo 'ARCHIVE TITLE'; } ?></h1>
-
+                <h1 class="pull-left"><?php if (is_woocommerce()) { woocommerce_page_title(); } else { echo 'ARCHIVE TITLE'; } ?></h1>
+                <?php if (is_shop()) { ?>
+                <div class="mixitup-controlls btn-group pull-right">
+                  <button type="button" class="btn btn-default sort" data-sort="default">Left</button>
+                  <button type="button" class="btn btn-default sort" data-sort="myorder:asc">Middle</button>
+                  <button type="button" class="btn btn-default sort" data-sort="myorder:desc">Right</button>
+                </div>
+                <?php } ?>
             </div>
         </div>
         <?php
