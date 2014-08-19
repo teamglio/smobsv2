@@ -57,7 +57,7 @@ if ( ! class_exists( 'smallermobs_Header' ) ) {
 					echo '<div class="btn-group pull-right">';
   					echo '<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> Register or sign in</a>';
   					if (woocommerce_is_active()) {
-  					echo '<a class="btn btn-default" href="';
+  					echo '<a class="btn btn-default cart-content" href="';
   					echo $woocommerce->cart->get_cart_url();
   					echo '"><span class="glyphicon glyphicon-shopping-cart"></span> Basket <span class="badge">';
   					echo $woocommerce->cart->get_cart_total();

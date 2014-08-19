@@ -45,7 +45,7 @@ function set_page_feature() {
             ?>
             <div class="page-feature"
             <?php if ( has_post_thumbnail() ) {
-                echo 'style="background: url(' . $image_url . ')"';
+                //echo 'style="background: url(' . $image_url . ')"';
             }
             ?>
             > <!-- end of tag> -->

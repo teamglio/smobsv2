@@ -221,7 +221,7 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						//'output'      => 'body'
 					),
 					array(
-						'title'   => __( 'Content Background Color Opacity', 'smallermobs' ),
+						'title'   => __( 'Panel & Input Background Color Opacity', 'smallermobs' ),
 						'desc'    => __( 'Select the opacity of your background color for the main content area so that background images will show through. Please note that if you have added an image for your content background, changing the opacity to something other than 100 will result in your background image not being shown. If you need to add opacity to your content background image, you will need to do it by adding transparency to the PNG background image itself.', 'smallermobs' ),
 						'id'      => 'body_bg_opacity',
 						'default' => 100,
@@ -229,6 +229,29 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						'step'    => 1,
 						'max'     => 100,
 						'type'    => 'slider',
+					),
+				) ),
+			);
+
+			//Quotes section
+			$this->sections[] = array(
+				'title'   => __( 'Page Feature', 'smallermobs' ),
+				'icon'    => 'el-icon-font',
+				'fields'  => apply_filters( '', array(
+					array(
+						'title'       => __( 'Background', 'smallermobs' ),
+						'desc'        => __( 'Set the background of your page feature.', 'smallermobs' ),
+						'id'          => 'page_feature_bg',
+						'default'     => array(
+							'background-color'    => isset( $settings['color_body_bg'] ) ? $settings['color_body_bg'] : '#ffffff',
+							'background-repeat'   => isset( $settings['background_repeat'] ) ? $settings['background_repeat'] : NULL,
+							'background-position' => isset( $settings['background_position_x'] ) ? $settings['background_position_x'] . ' center' : NULL,
+							'background-image'    => isset( $settings['background_image']['url'] ) ? $settings['background_image']['url'] : NULL,
+						),
+						'compiler'    => true,
+						'transparent' => true,
+						'type'        => 'background',
+						'output'      => '.page-feature'
 					),
 				) ),
 			);

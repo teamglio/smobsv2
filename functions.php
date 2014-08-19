@@ -60,7 +60,7 @@ require_once locate_template( '/lib/post-formats.php' ); // Sidebars and widgets
 require_once locate_template( '/lib/scripts.php' );      // Scripts and stylesheets
 require_once locate_template( '/lib/deprecated.php' );   // Deprecated functions
 
-require_once locate_template( '/lib/custom.php' );   // Custom
+require_once locate_template( '/lib/page-feature.php' );   // page-feature
 
 
 // Only load TGM if REDUX is not installed

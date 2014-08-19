@@ -154,7 +154,7 @@ if ( ! class_exists( 'SS_Framework_Bootstrap' ) ) {
 				add_filter( 'nav_menu_css_class', array( $this, 'nav_menu_css_class' ), 10, 2 );
 				add_filter( 'nav_menu_item_id',   '__return_null' );
 			}
-			add_action( 'smallermobs_pre_wrap', array( $this, 'breadcrumbs' ), 99 );
+			add_action( 'smallermobs_page_feature', array( $this, 'breadcrumbs' ), 99 );
 			add_filter( 'wp_nav_menu_args',   array( $this, 'nav_menu_args' ) );
 		}
 

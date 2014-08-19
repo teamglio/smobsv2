@@ -33,6 +33,7 @@
     display: block;
     z-index: 9;
 }
+/*
 .page-feature:before {
     content: '';
     background: rgba(0,0,0,0.3);
@@ -44,6 +45,7 @@
     z-index: 0;
     display: block;
 }
+*/
 .page-feature .container {
     z-index: 99;
     position: relative;
