@@ -5,15 +5,7 @@ Template Name: Home Page
 
 global $ss_framework;
 echo '<div class="row">';
-dynamic_sidebar( 'home-page-widget-row-one' );
-echo '</div><div class="row">';
-dynamic_sidebar( 'home-page-widget-row-two' );
-echo '</div><div class="row">';
-dynamic_sidebar( 'home-page-widget-row-three' );
-echo '</div><div class="row">';
-dynamic_sidebar( 'home-page-widget-row-four' );
-echo '</div><div class="row">';
-dynamic_sidebar( 'home-page-widget-row-five' );
+dynamic_sidebar( 'home-page-widgets-area' );
 echo '</div>';
 
 while ( have_posts() ) : the_post();

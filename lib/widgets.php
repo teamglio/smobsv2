@@ -8,10 +8,6 @@ function smallermobs_widgets_init() {
 	$before_title = apply_filters( 'smallermobs_widgets_before_title', '<h3 class="widget-title">' );
 	$after_title  = apply_filters( 'smallermobs_widgets_after_title', '</h3>' );
 	$home_row_one = 'col-md-' . $ss_settings['home_row_one'];
-	$home_row_two = 'col-md-' . $ss_settings['home_row_two'];
-	$home_row_three = 'col-md-' . $ss_settings['home_row_three'];
-	$home_row_four = 'col-md-' . $ss_settings['home_row_four'];
-	$home_row_five = 'col-md-' . $ss_settings['home_row_five'];
 	// Sidebars
 	register_sidebar( array(
 		'name'          => __( 'Primary Sidebar', 'smallermobs' ),
@@ -32,41 +28,18 @@ function smallermobs_widgets_init() {
 	));
 
 	register_sidebar( array(
-		'name'          => __( 'Home page row one', 'smallermobs' ),
-		'id'            => 'home-page-widget-row-one',
+		'name'          => __( 'Home page widgets area', 'smallermobs' ),
+		'id'            => 'home-page-widgets-area',
 		'before_widget' => '<section id="%1$s" class="' . $home_row_one . ' home-widget widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => $before_title,
 		'after_title'   => $after_title,
 	));
+
 	register_sidebar( array(
-		'name'          => __( 'Home page row two', 'smallermobs' ),
-		'id'            => 'home-page-widget-row-two',
-		'before_widget' => '<section id="%1$s" class="' . $home_row_two . ' home-widget widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => $before_title,
-		'after_title'   => $after_title,
-	));
-	register_sidebar( array(
-		'name'          => __( 'Home page row three', 'smallermobs' ),
-		'id'            => 'home-page-widget-row-three',
-		'before_widget' => '<section id="%1$s" class="' . $home_row_three . ' home-widget widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => $before_title,
-		'after_title'   => $after_title,
-	));
-	register_sidebar( array(
-		'name'          => __( 'Home page row four', 'smallermobs' ),
-		'id'            => 'home-page-widget-row-four',
-		'before_widget' => '<section id="%1$s" class="' . $home_row_four . ' home-widget widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => $before_title,
-		'after_title'   => $after_title,
-	));
-	register_sidebar( array(
-		'name'          => __( 'Home page row five', 'smallermobs' ),
-		'id'            => 'home-page-widget-row-five',
-		'before_widget' => '<section id="%1$s" class="' . $home_row_five . ' home-widget widget %2$s">',
+		'name'          => __( 'Products Sidebar', 'smallermobs' ),
+		'id'            => 'products-widgets-area',
+		'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => $before_title,
 		'after_title'   => $after_title,

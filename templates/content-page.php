@@ -1,9 +1,14 @@
 <?php
 
 global $ss_framework;
+global $ss_settings;
 
 while ( have_posts() ) : the_post();
-	do_action( 'smallermobs_page_pre_content' );
+  if ( $ss_settings['title_section_style'] == 'normal' ) {
+    smallermobs_title_section();
+    do_action( 'smallermobs_entry_meta' );
+  };
+  do_action( 'smallermobs_page_pre_content' );
 	the_content();
 	echo $ss_framework->clearfix();
 	smallermobs_meta( 'cats' );

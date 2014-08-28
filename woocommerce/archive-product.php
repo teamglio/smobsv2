@@ -7,7 +7,7 @@
  * @version     2.0.1
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
+echo '<div class="col-md-9 col-sm-6">';
 if (woocommerce_is_active()) {
 	global $post, $product;
 	woocommerce_product_loop_start();
@@ -21,7 +21,7 @@ if (woocommerce_is_active()) {
     	$image_url = $image_src[0];
 	echo '<div class="mix product">';
 	?>
-  	<div class="col-sm-6 col-md-3">
+  	<div class="col-sm-12 col-md-4">
 	    <div class="thumbnail">
 	    	<div class="product-image">
 	    		
@@ -52,4 +52,8 @@ if (woocommerce_is_active()) {
 	echo '</div>';
 	woocommerce_product_loop_end();
 }
+echo '</div>';
+echo '<div class="col-md-3 col-sm-6">';
+dynamic_sidebar( 'products-widgets-area' );
+echo '</div>';
 ?>

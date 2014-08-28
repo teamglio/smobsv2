@@ -2,6 +2,7 @@
 <body <?php body_class(); ?>>
 <a href="#content" class="sr-only"><?php _e( 'Skip to main content', 'smallermobs' ); ?></a>
 <?php global $ss_framework; ?>
+<?php global $ss_settings; ?>
 
 	<!--[if lt IE 8]>
 		<?php echo $ss_framework->alert( 'warning', __(' You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'smallermobs' ) ); ?>
@@ -15,7 +16,13 @@
 
 	<?php do_action( 'smallermobs_pre_wrap' ); ?>
 
-	<?php do_action( 'smallermobs_page_feature' ); ?>
+	<?php 
+	if ( $ss_settings['title_section_style'] == 'featured' ) {
+    do_action( 'smallermobs_page_feature' );
+  };
+	?>
+
+	<!--breadcrumbs-->
 
 	<?php echo $ss_framework->open_container( 'div', 'wrap-main-section', 'wrap main-section' ); ?>
 

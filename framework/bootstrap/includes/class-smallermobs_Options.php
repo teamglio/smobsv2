@@ -55,14 +55,14 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 				'fields'  => apply_filters( 'smallermobs_module_general_options_modifier', array(
 					array(
 						'title'     => __( 'Setup Mode', 'smallermobs' ),
-						'desc'      => __( 'Select Easy or Advanced setup. Easy mode hides most options and allows for quick customization.', 'smallermobs' ),
+						'desc'      => __( 'Easy mode hides most options and allows for quick customization.', 'smallermobs' ),
 						'id'        => 'options_mode',
 						'type'      => 'button_set',
 						'options'   => array(
-							'easy'     => __( 'Easy', 'smallermobs' ),
-							'advanced' => __( 'Advanced', 'smallermobs' )
+							'advanced' => __( 'Advanced', 'smallermobs' ),
+							'easy'     => __( 'Easy', 'smallermobs' )
 						),
-						'default' => 'easy'
+						'default' => 'advanced'
 					),
 					array(
 						'title'       => __( 'Logo', 'smallermobs' ),
@@ -90,245 +90,6 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 				) ),
 			);
 
-
-			// Colors Settings
-			$this->sections[] = array(
-				'title'   => __( 'Colors', 'smallermobs' ),
-				'icon'    => 'el-icon-brush',
-				'fields'  => apply_filters( 'smallermobs_module_branding_options_modifier', array(
-					array(
-						'title'       => 'Colors',
-						'desc'        => '',
-						'id'          => 'help6',
-						'default'     => __( 'The primary color you select will also affect other elements on your site, such as table borders, widgets colors, input elements, dropdowns etc. The branding colors you select will be used throughout the site in various elements. One of the most important settings in your branding is your primary color, since this will be used more often.', 'smallermobs' ),
-						'type'        => 'info'
-					),
-					array(
-						'title'       => __( 'Enable Gradients', 'smallermobs' ),
-						'desc'        => __( 'Enable gradients for buttons and the navbar. Default: Off.', 'smallermobs' ),
-						'id'          => 'gradients_toggle',
-						'default'     => 0,
-						'compiler'    => true,
-						'type'        => 'switch',
-					),
-					array(
-						'title'       => __( 'Brand Colors: Primary', 'smallermobs' ),
-						'desc'        => __( 'Select your primary branding color. Also referred to as an accent color. This will affect various areas of your site, including the color of your primary buttons, link color, the background of some elements and many more.', 'smallermobs' ),
-						'id'          => 'color_brand_primary',
-						'default'     => '#428bca',
-						'compiler'    => true,
-						'transparent' => false,
-						'type'        => 'color'
-					),
-					array(
-						'title'       => __( 'Brand Colors: Success', 'smallermobs' ),
-						'desc'        => __( 'Select your branding color for success messages etc. Default: #5cb85c.', 'smallermobs' ),
-						'id'          => 'color_brand_success',
-						'default'     => '#5cb85c',
-						'compiler'    => true,
-						'transparent' => false,
-						'type'        => 'color',
-						'required'    => array( 'options_mode', '=', array( 'advanced' ) ),
-					),
-					array(
-						'title'       => __( 'Brand Colors: Warning', 'smallermobs' ),
-						'desc'        => __( 'Select your branding color for warning messages etc. Default: #f0ad4e.', 'smallermobs' ),
-						'id'          => 'color_brand_warning',
-						'default'     => '#f0ad4e',
-						'compiler'    => true,
-						'type'        => 'color',
-						'transparent' => false,
-						'required'    => array( 'options_mode', '=', array( 'advanced' ) ),
-					),
-					array(
-						'title'       => __( 'Brand Colors: Danger', 'smallermobs' ),
-						'desc'        => __( 'Select your branding color for success messages etc. Default: #d9534f.', 'smallermobs' ),
-						'id'          => 'color_brand_danger',
-						'default'     => '#d9534f',
-						'compiler'    => true,
-						'type'        => 'color',
-						'transparent' => false,
-						'required'    => array( 'options_mode', '=', array( 'advanced' ) ),
-					),
-					array(
-						'title'       => __( 'Brand Colors: Info', 'smallermobs' ),
-						'desc'        => __( 'Select your branding color for info messages etc. It will also be used for the Search button color as well as other areas where it semantically makes sense to use an \'info\' class. Default: #5bc0de.', 'smallermobs' ),
-						'id'          => 'color_brand_info',
-						'default'     => '#5bc0de',
-						'compiler'    => true,
-						'type'        => 'color',
-						'transparent' => false,
-						'required'    => array( 'options_mode', '=', array( 'advanced' ) ),
-					),
-				) ),
-			);
-
-
-			// Background Settings
-			$this->sections[] = array(
-				'title'   => __( 'Background', 'smallermobs' ),
-				'icon'    => 'el-icon-adjust',
-				'fields'  => apply_filters( 'smallermobs_module_background_options_modifier', array(
-					array(
-						'title'       => __( 'General Background Color', 'smallermobs' ),
-						'desc'        => __( 'Select a background color for your site. Default: #ffffff.', 'smallermobs' ),
-						'id'          => 'html_bg',
-						'default'     => array(
-							'background-color' => isset( $settings['html_color_bg'] ) ? $settings['html_color_bg'] : '#ffffff',
-						),
-						'transparent' => false,
-						'type'        => 'background',
-						'output'      => 'body'
-					),
-					array(
-						'title'       => __( 'Content Background', 'smallermobs' ),
-						'desc'        => __( 'Background for the content area. Colors also affect input areas and other colors.', 'smallermobs' ),
-						'id'          => 'content_bg',
-						'default'     => array(
-							'background-color'    => isset( $settings['color_body_bg'] ) ? $settings['color_body_bg'] : '#ffffff',
-							'background-repeat'   => isset( $settings['background_repeat'] ) ? $settings['background_repeat'] : NULL,
-							'background-position' => isset( $settings['background_position_x'] ) ? $settings['background_position_x'] . ' center' : NULL,
-							'background-image'    => isset( $settings['background_image']['url'] ) ? $settings['background_image']['url'] : NULL,
-						),
-						'compiler'    => true,
-						'transparent' => true,
-						'type'        => 'background',
-						'output'      => '.wrap.main-section .content .bg .main'
-					),
-					array(
-						'title'   => __( 'Content Background Color Opacity', 'smallermobs' ),
-						'desc'    => __( 'Select the opacity of your background color for the main content area so that background images will show through. Please note that if you have added an image for your content background, changing the opacity to something other than 100 will result in your background image not being shown. If you need to add opacity to your content background image, you will need to do it by adding transparency to the PNG background image itself.', 'smallermobs' ),
-						'id'      => 'content_bg_opacity',
-						'default' => 100,
-						'min'     => 0,
-						'step'    => 1,
-						'max'     => 100,
-						'type'    => 'slider',
-					),
-					array(
-						'title'       => __( 'Panels & Inputs', 'smallermobs' ),
-						'desc'        => __( 'Colors also affect input areas and other colors.', 'smallermobs' ),
-						'id'          => 'body_bg',
-						'default'     => array(
-							'background-color'    => isset( $settings['color_body_bg'] ) ? $settings['color_body_bg'] : '#ffffff',
-							'background-repeat'   => isset( $settings['background_repeat'] ) ? $settings['background_repeat'] : NULL,
-							'background-position' => isset( $settings['background_position_x'] ) ? $settings['background_position_x'] . ' center' : NULL,
-							'background-image'    => isset( $settings['background_image']['url'] ) ? $settings['background_image']['url'] : NULL,
-						),
-						'compiler'    => true,
-						'transparent' => false,
-						'type'        => 'background',
-						//'output'      => 'body'
-					),
-					array(
-						'title'   => __( 'Panel & Input Background Color Opacity', 'smallermobs' ),
-						'desc'    => __( 'Select the opacity of your background color for the main content area so that background images will show through. Please note that if you have added an image for your content background, changing the opacity to something other than 100 will result in your background image not being shown. If you need to add opacity to your content background image, you will need to do it by adding transparency to the PNG background image itself.', 'smallermobs' ),
-						'id'      => 'body_bg_opacity',
-						'default' => 100,
-						'min'     => 0,
-						'step'    => 1,
-						'max'     => 100,
-						'type'    => 'slider',
-					),
-				) ),
-			);
-
-			//Quotes section
-			$this->sections[] = array(
-				'title'   => __( 'Page Feature', 'smallermobs' ),
-				'icon'    => 'el-icon-font',
-				'fields'  => apply_filters( '', array(
-					array(
-						'title'       => __( 'Background', 'smallermobs' ),
-						'desc'        => __( 'Set the background of your page feature.', 'smallermobs' ),
-						'id'          => 'page_feature_bg',
-						'default'     => array(
-							'background-color'    => isset( $settings['color_body_bg'] ) ? $settings['color_body_bg'] : '#ffffff',
-							'background-repeat'   => isset( $settings['background_repeat'] ) ? $settings['background_repeat'] : NULL,
-							'background-position' => isset( $settings['background_position_x'] ) ? $settings['background_position_x'] . ' center' : NULL,
-							'background-image'    => isset( $settings['background_image']['url'] ) ? $settings['background_image']['url'] : NULL,
-						),
-						'compiler'    => true,
-						'transparent' => true,
-						'type'        => 'background',
-						'output'      => '.page-feature'
-					),
-				) ),
-			);
-
-			// Homepage Settings
-			$this->sections[] = array(
-				'title'   => __( 'Homepage', 'smallermobs' ),
-				'icon'    => 'el-icon-home-alt',
-				'fields'  => apply_filters( 'smallermobs_module_homepage_options_modifier', array(
-					array(
-						'title'     => __( 'First row', 'smallermobs' ),
-						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
-						'id'        => 'home_row_one',
-						'type'      => 'button_set',
-						'options'   => array(
-							'12' => 'Full width',
-							'6' => '1/2',
-							'4' => '1/3',
-							'3' => '1/4'
-						),
-						'default' => '4'
-					),
-					array(
-						'title'     => __( 'Second row', 'smallermobs' ),
-						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
-						'id'        => 'home_row_two',
-						'type'      => 'button_set',
-						'options'   => array(
-							'12' => 'Full width',
-							'6' => '1/2',
-							'4' => '1/3',
-							'3' => '1/4'
-						),
-						'default' => '6'
-					),
-					array(
-						'title'     => __( 'Three row', 'smallermobs' ),
-						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
-						'id'        => 'home_row_three',
-						'type'      => 'button_set',
-						'options'   => array(
-							'12' => 'Full width',
-							'6' => '1/2',
-							'4' => '1/3',
-							'3' => '1/4'
-						),
-						'default' => '3'
-					),
-					array(
-						'title'     => __( 'Fourth row', 'smallermobs' ),
-						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
-						'id'        => 'home_row_four',
-						'type'      => 'button_set',
-						'options'   => array(
-							'12' => 'Full width',
-							'6' => '1/2',
-							'4' => '1/3',
-							'3' => '1/4'
-						),
-						'default' => '4'
-					),
-					array(
-						'title'     => __( 'Fifth row', 'smallermobs' ),
-						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
-						'id'        => 'home_row_five',
-						'type'      => 'button_set',
-						'options'   => array(
-							'12' => 'Full width',
-							'6' => '1/2',
-							'4' => '1/3',
-							'3' => '1/4'
-						),
-						'default' => '12'
-					),
-				) ),
-			);
-
 			$this->sections[] = array(
 				'title'       => __( 'Layout', 'smallermobs' ),
 				'icon'        => 'el-icon-screen',
@@ -349,7 +110,7 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						'compiler'  => true,
 					),
 					array(
-						'title'     => __( 'Layout', 'smallermobs' ),
+						'title'     => __( 'Sidebar Positioning', 'smallermobs' ),
 						'desc'      => __( 'Select main content and sidebar arrangement. Choose between 1, 2 or 3 column layout.', 'smallermobs' ),
 						'id'        => 'layout',
 						'default'   => 1,
@@ -535,7 +296,7 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						),
 					),
 					array(
-						'title'     => __( 'Custom Layouts per Post Type', 'smallermobs' ),
+						'title'     => __( 'Custom sidebar positions per Post Type', 'smallermobs' ),
 						'desc'      => __( 'Set a default layout for each post type on your site.', 'smallermobs' ),
 						'id'        => 'cpt_layout_toggle',
 						'default'   => 0,
@@ -588,8 +349,8 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 			}
 
 			$this->sections[] = array(
-				'title'   => __( 'Blog', 'smallermobs' ),
-				'icon'    => 'el-icon-wordpress',
+				'title'   => __( 'Post Settings', 'smallermobs' ),
+				'icon'    => 'el-icon-pencil-alt',
 				'fields'  => apply_filters( 'smallermobs_module_blog_modifier', array(
 					array(
 						'title'     => __( 'Archives Display Mode', 'smallermobs' ),
@@ -646,13 +407,6 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						'required'  => array( 'options_mode', '=', array( 'advanced' ) ),
 					),
 					array(
-						'title'     => __( 'Show Breadcrumbs', 'smallermobs' ),
-						'desc'      => __( 'Display Breadcrumbs. Default: OFF.', 'smallermobs' ),
-						'id'        => 'breadcrumbs',
-						'default'   => 0,
-						'type'      => 'switch',
-					),
-					array(
 						'title'     => __( 'Show Post Meta in single posts', 'smallermobs' ),
 						'desc'      => __( 'Toggle Post Meta showing in the footer of single posts. Default: ON.', 'smallermobs' ),
 						'id'        => 'single_meta',
@@ -675,11 +429,44 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 				$post_type_options[$post_type]  = $post_type;
 				$post_type_defaults[$post_type] = 0;
 			}
-
+			//Page Feature section
+			$this->sections[] = array(
+				'title'   => __( 'Title Section', 'smallermobs' ),
+				'icon'    => 'el-icon-font',
+				'fields'  => apply_filters( '', array(
+					array(
+						'title'     => __( 'Title Style', 'smallermobs' ),
+						'desc'      => __( 'Normal vs Featured. Default: normal.', 'smallermobs' ),
+						'id'        => 'title_section_style',
+						'type'      => 'button_set',
+						'options'   => array(
+							'normal' => 'Normal',
+							'featured' => 'Featured'
+						),
+						'default' => 'normal'
+					),
+					array(
+						'title'       => __( 'Background', 'smallermobs' ),
+						'desc'        => __( 'Set the background of your page feature.', 'smallermobs' ),
+						'id'          => 'page_feature_bg',
+						'default'     => array(
+							'background-color'    => isset( $settings['color_body_bg'] ) ? $settings['color_body_bg'] : '#ffffff',
+							'background-repeat'   => isset( $settings['background_repeat'] ) ? $settings['background_repeat'] : NULL,
+							'background-position' => isset( $settings['background_position_x'] ) ? $settings['background_position_x'] . ' center' : NULL,
+							'background-image'    => isset( $settings['background_image']['url'] ) ? $settings['background_image']['url'] : NULL,
+						),
+						'compiler'    => true,
+						'transparent' => true,
+						'type'        => 'background',
+						'output'      => '.page-feature'
+					),
+				) ),
+			);
+			//featured images
 			$this->sections[] = array(
 				'title'   => __( 'Featured Images', 'smallermobs' ),
-				'icon'    => 'el-icon-chevron-right',
-				'subsection' => true,
+				'icon'    => 'el-icon-edit',
+				'subsection' => false,
 				'fields'  => apply_filters( 'smallermobs_module_featured_images_modifier', array(
 					array(
 						'id'        => 'help3',
@@ -784,6 +571,183 @@ if ( ! class_exists( 'smallermobs_Options' ) ) {
 						'options'   => $post_type_options,
 						'default'   => $post_type_defaults,
 						'required'  => array( 'options_mode', '=', array( 'advanced' ) ),
+					),
+				) ),
+			);
+
+			//Breadcrumbs
+			$this->sections[] = array(
+				'title'   => __( 'Breadcrumbs', 'smallermobs' ),
+				'icon'    => 'el-icon-star',
+				'fields'  => apply_filters( 'smallermobs_module_blog_modifier', array(
+					array(
+						'title'     => __( 'Show Breadcrumbs', 'smallermobs' ),
+						'desc'      => __( 'Display Breadcrumbs. Default: OFF.', 'smallermobs' ),
+						'id'        => 'breadcrumbs',
+						'default'   => 0,
+						'type'      => 'switch',
+					),
+				) ),
+			);
+
+			// Colors Settings
+			$this->sections[] = array(
+				'title'   => __( 'Colors', 'smallermobs' ),
+				'icon'    => 'el-icon-brush',
+				'fields'  => apply_filters( 'smallermobs_module_branding_options_modifier', array(
+					array(
+						'title'       => 'Colors',
+						'desc'        => '',
+						'id'          => 'help6',
+						'default'     => __( 'The primary color you select will also affect other elements on your site, such as table borders, widgets colors, input elements, dropdowns etc. The branding colors you select will be used throughout the site in various elements. One of the most important settings in your branding is your primary color, since this will be used more often.', 'smallermobs' ),
+						'type'        => 'info'
+					),
+					array(
+						'title'       => __( 'Enable Gradients', 'smallermobs' ),
+						'desc'        => __( 'Enable gradients for buttons and the navbar. Default: Off.', 'smallermobs' ),
+						'id'          => 'gradients_toggle',
+						'default'     => 0,
+						'compiler'    => true,
+						'type'        => 'switch',
+					),
+					array(
+						'title'       => __( 'Brand Colors: Primary', 'smallermobs' ),
+						'desc'        => __( 'Select your primary branding color. Also referred to as an accent color. This will affect various areas of your site, including the color of your primary buttons, link color, the background of some elements and many more.', 'smallermobs' ),
+						'id'          => 'color_brand_primary',
+						'default'     => '#428bca',
+						'compiler'    => true,
+						'transparent' => false,
+						'type'        => 'color'
+					),
+					array(
+						'title'       => __( 'Brand Colors: Success', 'smallermobs' ),
+						'desc'        => __( 'Select your branding color for success messages etc. Default: #5cb85c.', 'smallermobs' ),
+						'id'          => 'color_brand_success',
+						'default'     => '#5cb85c',
+						'compiler'    => true,
+						'transparent' => false,
+						'type'        => 'color',
+						'required'    => array( 'options_mode', '=', array( 'advanced' ) ),
+					),
+					array(
+						'title'       => __( 'Brand Colors: Warning', 'smallermobs' ),
+						'desc'        => __( 'Select your branding color for warning messages etc. Default: #f0ad4e.', 'smallermobs' ),
+						'id'          => 'color_brand_warning',
+						'default'     => '#f0ad4e',
+						'compiler'    => true,
+						'type'        => 'color',
+						'transparent' => false,
+						'required'    => array( 'options_mode', '=', array( 'advanced' ) ),
+					),
+					array(
+						'title'       => __( 'Brand Colors: Danger', 'smallermobs' ),
+						'desc'        => __( 'Select your branding color for success messages etc. Default: #d9534f.', 'smallermobs' ),
+						'id'          => 'color_brand_danger',
+						'default'     => '#d9534f',
+						'compiler'    => true,
+						'type'        => 'color',
+						'transparent' => false,
+						'required'    => array( 'options_mode', '=', array( 'advanced' ) ),
+					),
+					array(
+						'title'       => __( 'Brand Colors: Info', 'smallermobs' ),
+						'desc'        => __( 'Select your branding color for info messages etc. It will also be used for the Search button color as well as other areas where it semantically makes sense to use an \'info\' class. Default: #5bc0de.', 'smallermobs' ),
+						'id'          => 'color_brand_info',
+						'default'     => '#5bc0de',
+						'compiler'    => true,
+						'type'        => 'color',
+						'transparent' => false,
+						'required'    => array( 'options_mode', '=', array( 'advanced' ) ),
+					),
+				) ),
+			);
+
+			// Background Settings
+			$this->sections[] = array(
+				'title'   => __( 'Background', 'smallermobs' ),
+				'icon'    => 'el-icon-adjust',
+				'fields'  => apply_filters( 'smallermobs_module_background_options_modifier', array(
+					array(
+						'title'       => __( 'General Background Color', 'smallermobs' ),
+						'desc'        => __( 'Select a background color for your site. Default: #ffffff.', 'smallermobs' ),
+						'id'          => 'html_bg',
+						'default'     => array(
+							'background-color' => isset( $settings['html_color_bg'] ) ? $settings['html_color_bg'] : '#ffffff',
+						),
+						'transparent' => false,
+						'type'        => 'background',
+						'output'      => 'body'
+					),
+					array(
+						'title'       => __( 'Content Background', 'smallermobs' ),
+						'desc'        => __( 'Background for the content area. Colors also affect input areas and other colors.', 'smallermobs' ),
+						'id'          => 'content_bg',
+						'default'     => array(
+							'background-color'    => isset( $settings['color_body_bg'] ) ? $settings['color_body_bg'] : '#ffffff',
+							'background-repeat'   => isset( $settings['background_repeat'] ) ? $settings['background_repeat'] : NULL,
+							'background-position' => isset( $settings['background_position_x'] ) ? $settings['background_position_x'] . ' center' : NULL,
+							'background-image'    => isset( $settings['background_image']['url'] ) ? $settings['background_image']['url'] : NULL,
+						),
+						'compiler'    => true,
+						'transparent' => true,
+						'type'        => 'background',
+						'output'      => '.wrap.main-section .content .bg .main'
+					),
+					array(
+						'title'   => __( 'Content Background Color Opacity', 'smallermobs' ),
+						'desc'    => __( 'Select the opacity of your background color for the main content area so that background images will show through. Please note that if you have added an image for your content background, changing the opacity to something other than 100 will result in your background image not being shown. If you need to add opacity to your content background image, you will need to do it by adding transparency to the PNG background image itself.', 'smallermobs' ),
+						'id'      => 'content_bg_opacity',
+						'default' => 100,
+						'min'     => 0,
+						'step'    => 1,
+						'max'     => 100,
+						'type'    => 'slider',
+					),
+					array(
+						'title'       => __( 'Panels & Inputs', 'smallermobs' ),
+						'desc'        => __( 'Colors also affect input areas and other colors.', 'smallermobs' ),
+						'id'          => 'body_bg',
+						'default'     => array(
+							'background-color'    => isset( $settings['color_body_bg'] ) ? $settings['color_body_bg'] : '#ffffff',
+							'background-repeat'   => isset( $settings['background_repeat'] ) ? $settings['background_repeat'] : NULL,
+							'background-position' => isset( $settings['background_position_x'] ) ? $settings['background_position_x'] . ' center' : NULL,
+							'background-image'    => isset( $settings['background_image']['url'] ) ? $settings['background_image']['url'] : NULL,
+						),
+						'compiler'    => true,
+						'transparent' => false,
+						'type'        => 'background',
+						//'output'      => 'body'
+					),
+					array(
+						'title'   => __( 'Panel & Input Background Color Opacity', 'smallermobs' ),
+						'desc'    => __( 'Select the opacity of your background color for the main content area so that background images will show through. Please note that if you have added an image for your content background, changing the opacity to something other than 100 will result in your background image not being shown. If you need to add opacity to your content background image, you will need to do it by adding transparency to the PNG background image itself.', 'smallermobs' ),
+						'id'      => 'body_bg_opacity',
+						'default' => 100,
+						'min'     => 0,
+						'step'    => 1,
+						'max'     => 100,
+						'type'    => 'slider',
+					),
+				) ),
+			);
+
+			// Homepage Settings
+			$this->sections[] = array(
+				'title'   => __( 'Homepage', 'smallermobs' ),
+				'icon'    => 'el-icon-home-alt',
+				'fields'  => apply_filters( 'smallermobs_module_homepage_options_modifier', array(
+					array(
+						'title'     => __( 'Widgets', 'smallermobs' ),
+						'desc'      => __( 'What should the default width of widgets in this row be?', 'smallermobs' ),
+						'id'        => 'home_row_one',
+						'type'      => 'button_set',
+						'options'   => array(
+							'12' => 'Full width',
+							'6' => '1/2',
+							'4' => '1/3',
+							'3' => '1/4'
+						),
+						'default' => '3'
 					),
 				) ),
 			);
